@@ -1,6 +1,7 @@
 # Introdução
 
-É um serviço de transporte que tem como objetivo levar crianças de suas casas para escolas, creches, atividades extracurriculares, parques e outros locais. O serviço é voltado para pais e responsáveis que precisam de uma opção segura e confiável de transporte para seus filhos, de forma que seja possível rastrear todo o trajeto da criança, desde a entrada na van até a chegada no local de destino. E também para motoristas que podem cadastrar o seu veículo para fornecer o serviço de transporte, de modo que seja possível definir quais serão os passageiros do dia e o trajeto a ser traçado.
+É um serviço de transporte que tem como objetivo levar crianças de suas casas para escolas, creches, atividades extracurriculares, parques e outros locais. O serviço é voltado para pais e responsáveis que precisam de uma opção segura e confiável de transporte para seus filhos, de forma que seja possível rastrear todo o trajeto da criança, desde a entrada na van até a chegada no local de destino. O aplicativo permitiria que os pais e responsáveis agendem o transporte de suas crianças com facilidade e também permitiria que eles rastreiem a van em tempo real durante a viagem. Além disso, o aplicativo poderia enviar notificações aos pais e responsáveis quando a van estiver chegando ao destino e quando as crianças embarcarem ou desembarcarem. Isso garantiria uma maior segurança e tranquilidade para os pais e responsáveis, além de proporcionar uma experiência mais conveniente e moderna para os usuários do serviço.
+O aplicativo também teria uma plataforma para motoristas que podem cadastrar o seu veículo para fornecer o serviço de transporte, de modo que seja possível definir quais serão os passageiros do dia e o trajeto a ser traçado.
 
 ## Problema
 
