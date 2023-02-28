@@ -16,6 +16,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Leni Rocha Bento
 * Otávio Soares da Costa
 * Jean Estanislau de Souza Guimarães
+* Ana Clara Lima Marçal
 
 ## Orientador
 
