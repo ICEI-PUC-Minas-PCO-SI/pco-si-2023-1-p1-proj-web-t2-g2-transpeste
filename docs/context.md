@@ -1,8 +1,11 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+É um serviço de transporte que tem como objetivo levar crianças de suas casas para escolas, creches, atividades extracurriculares, parques e outros locais. O serviço é voltado para pais e responsáveis que precisam de uma opção segura e confiável de transporte para seus filhos, de forma que seja possível rastrear todo o trajeto da criança, desde a entrada na van até a chegada no local de destino. E também para motoristas que podem cadastrar o seu veículo para fornecer o serviço de transporte, de modo que seja possível definir quais serão os passageiros do dia e o trajeto a ser traçado.
 
 ## Problema
+
+Desenvolver um sistema de reservas online que permita aos pais e responsáveis agendar o transporte de suas crianças de forma rápida, fácil e segura, possibilitando aos motoristas um previsionamento do trajeto do dia.
+
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
 Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
