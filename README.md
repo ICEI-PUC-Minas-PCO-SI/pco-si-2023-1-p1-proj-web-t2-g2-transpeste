@@ -7,7 +7,7 @@
 
 `SEMESTRE: 1º`
 
-Um sistema de reservas online prático que permite uma gestão eficiente e segura do tráfego de alunos dentro de escolares, visando um maior conforto para os pais, alunos e os donos de coletivos. 
+Um sistema de reservas online prático que permite uma gestão eficiente e segura do tráfego de alunos dentro de escolares, visando um maior conforto para os pais, alunos e donos de coletivos. 
 
 ## Integrantes
 
@@ -21,7 +21,7 @@ Um sistema de reservas online prático que permite uma gestão eficiente e segur
 
 ## Orientador
 
-* Fábio Cordeiro
+* Fábio Leandro Rodrigues Cordeiro
 
 # Planejamento
 
