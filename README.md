@@ -7,7 +7,7 @@
 
 `SEMESTRE: 1º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Um sistema de reservas online prático que permite uma gestão eficiente e segura do tráfego de alunos dentro de escolares, visando um maior conforto para os pais, alunos e os donos de coletivos. 
 
 ## Integrantes
 
