@@ -37,8 +37,12 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
- Nosso píblico alvo são pais ou responsáveis legais, que tenham dificuldade quanto a locomoção do seus filhos para irem a escola, para aqueles que buscam uma opção segura, eficaz, e com preço justo, estamos aqui para servir.
- Nosso sistema conta com monitoramento das vans disponiveis para o local desejado, informamos a media de tempo entre escola e casa, por exemplo, o trajeto mais rapido, e os horários de embarque e desembarque.
+ O público alvo são pais e responsáveis legais, que têm dificuldades quanto a locomoção de crianças e adolescentes para a escola que buscam uma opção segura e eficaz.
+ 
+ 
+ A aplicação conta com monitoramento das vans disponiveis para o local desejado, informando a média de tempo entre escola e casa, alem de monitoramentos como: o trajeto mais rapido, e os horários de embarque e desembarque.
+ 
+ 
  A aplicação é desenvolvida para multiplataformas, sendo computadores desktops, notebooks, tables e celulares, podendo acessar de qualquer local, dependendo apenas de uma conexão com a internet.
 
 
