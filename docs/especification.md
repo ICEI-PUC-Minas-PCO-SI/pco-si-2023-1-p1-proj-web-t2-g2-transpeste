@@ -51,6 +51,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-003| Permitir que o usuário acompanhe se a criança chegou ao destino   | ALTA | |
 |RF-004| Permitir que um motorista cadastre seu veículo   | ALTA | |
 |RF-005| Permitir que o motorista acompanhe a lotação de sua van e o trajeto   | MÉDIA | |
+|RF-006| Permitir que o usuário avalie o serviço do motorista   | MÉDIA | |
+
 
 ### Requisitos não Funcionais
 
