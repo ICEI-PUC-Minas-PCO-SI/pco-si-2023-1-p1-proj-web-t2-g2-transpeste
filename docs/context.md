@@ -1,11 +1,11 @@
 # Introdução
 
-É um serviço de transporte que tem como objetivo levar crianças de suas casas para escolas, creches, atividades extracurriculares, parques e outros locais. O serviço é voltado para pais e responsáveis que precisam de uma opção segura e confiável de transporte para seus filhos, de forma que seja possível rastrear todo o trajeto da criança, desde a entrada na van até a chegada no local de destino. O aplicativo permitiria que os pais e responsáveis agendem o transporte de suas crianças com facilidade e também permitiria que eles rastreiem a van em tempo real durante a viagem. Além disso, o aplicativo poderia enviar notificações aos pais e responsáveis quando a van estiver chegando ao destino e quando as crianças embarcarem ou desembarcarem. Isso garantiria uma maior segurança e tranquilidade para os pais e responsáveis, além de proporcionar uma experiência mais conveniente e moderna para os usuários do serviço.
+ É um serviço de transporte que tem como objetivo levar crianças de suas casas para escolas, creches, atividades extracurriculares, parques e outros locais. O serviço é voltado para pais e responsáveis que precisam de uma opção segura e confiável de transporte para seus filhos, de forma que seja possível rastrear todo o trajeto da criança, desde a entrada na van até a chegada no local de destino. O aplicativo permitiria que os pais e responsáveis agendem o transporte de suas crianças com facilidade e também permitiria que eles rastreiem a van em tempo real durante a viagem. Além disso, o aplicativo poderia enviar notificações aos pais e responsáveis quando a van estiver chegando ao destino e quando as crianças embarcarem ou desembarcarem. Isso garantiria uma maior segurança e tranquilidade para os pais e responsáveis, além de proporcionar uma experiência mais conveniente e moderna para os usuários do serviço.
 O aplicativo também teria uma plataforma para motoristas que podem cadastrar o seu veículo para fornecer o serviço de transporte, de modo que seja possível definir quais serão os passageiros do dia e o trajeto a ser traçado.
 
 ## Problema
 
-MUitos pais tem o receio de deixar seus filhos se locomoverem para a escola e demais atividades por meio do transporte coletivo. O receio parte da segurança e rastreabilidade das crianças durante o trajeto. Com o TransPeste esse problema será solucionado a partir de uma aplicação onde os responsáveis poderão sreservar assentos em uma van, e rastrear os seus filhos durante todo o percurso, além de possibilitar avisar ao motorista possíveis faltas, de modo a otimizar o trajeto traçado pelo veículo.  
+ Muitos pais tem o receio de deixar seus filhos se locomoverem para a escola e demais atividades por meio do transporte coletivo. O receio parte da segurança e rastreabilidade das crianças durante o trajeto. Com o TransPeste esse problema será solucionado a partir de uma aplicação onde os responsáveis poderão sreservar assentos em uma van, e rastrear os seus filhos durante todo o percurso, além de possibilitar avisar ao motorista possíveis faltas, de modo a otimizar o trajeto traçado pelo veículo.  
 
 Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
 
@@ -37,8 +37,11 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+ Nosso píblico alvo são pais ou responsáveis legais, que tenham dificuldade quanto a locomoção do seus filhos para irem a escola, para aqueles que buscam uma opção segura, eficaz, e com preço justo, estamos aqui para servir.
+ Nosso sistema conta com monitoramento das vans disponiveis para o local desejado, informamos a media de tempo entre escola e casa, por exemplo, o trajeto mais rapido, e os horários de embarque e desembarque.
+ A aplicação é desenvolvida para multiplataformas, sendo computadores desktops, notebooks, tables e celulares, podendo acessar de qualquer local, dependendo apenas de uma conexão com a internet.
+
+
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
