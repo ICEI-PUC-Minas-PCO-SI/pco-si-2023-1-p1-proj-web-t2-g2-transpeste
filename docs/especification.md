@@ -46,9 +46,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA |  |
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA | |
-
+|RF-001| Permitir que o usuário reserve um assento em uma van | ALTA |  |
+|RF-002| Permitir que o usuário rastreie o trajeto   | MÉDIA | |
+|RF-003| Permitir que o usuário acompanhe se a criança chegou ao destino   | ALTA | |
+|RF-004| Permitir que um motorista cadastre seu veículo   | ALTA | |
+|RF-005| Permitir que o motorista acompanhe a lotação de sua van e o trajeto   | MÉDIA | |
 
 ### Requisitos não Funcionais
 
