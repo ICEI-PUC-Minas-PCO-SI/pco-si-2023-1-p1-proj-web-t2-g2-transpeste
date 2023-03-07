@@ -11,13 +11,13 @@ Um sistema de reservas online prático que permite uma gestão eficiente e segur
 
 ## Integrantes
 
-* Guilherme Henrique de Lima Machado
-* Pedro Henrique Morais de Assis
-* Leni Rocha Bento
-* Otávio Soares da Costa
-* Jean Estanislau de Souza Guimarães
 * Ana Clara Lima Marçal
 * Diogo Campos Palhares
+* Guilherme Henrique de Lima Machado
+* Jean Estanislau de Souza Guimarães
+* Leni Rocha Bento
+* Otávio Soares da Costa
+* Pedro Henrique Morais de Assis
 
 ## Orientador
 
