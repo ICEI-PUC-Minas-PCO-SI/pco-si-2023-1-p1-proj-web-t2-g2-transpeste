@@ -5,11 +5,7 @@ O aplicativo também teria uma plataforma para motoristas que podem cadastrar o 
 
 ## Problema
 
-Desenvolver um sistema de reservas online que permita aos pais e responsáveis agendar o transporte de suas crianças de forma rápida, fácil e segura, possibilitando aos motoristas um previsionamento do trajeto do dia.
-
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+MUitos pais tem o receio de deixar seus filhos se locomoverem para a escola e demais atividades por meio do transporte coletivo. O receio parte da segurança e rastreabilidade das crianças durante o trajeto. Com o TransPeste esse problema será solucionado a partir de uma aplicação onde os responsáveis poderão sreservar assentos em uma van, e rastrear os seus filhos durante todo o percurso, além de possibilitar avisar ao motorista possíveis faltas, de modo a otimizar o trajeto traçado pelo veículo.  
 
 Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
 
@@ -20,14 +16,17 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo do Transpeste é acabar com a preocupação dos pais na hora de transportar seus filhos até a escola, o serviço constará com um rastreador em cada veículo, que irá exibir todo o trajeto. A plataforma irá possuir uma área onde os responsáveis poderão observar os trajetos diponíveis, reservar um assento para a criança e receber o motorista e acompanhar o trajeto.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+Objetivos principais:
+-Fornecer um serviço de transporte com qualidade e segurança para pais de crianças e adolescentes para a escola e suas atividades extracurriculares;
+-Fornecer uma plataforma onde motoristas e donos de frotas poderão cadastrar seus veículos e prestar serviços;
  
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
+
 
 Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
 
