@@ -6,7 +6,9 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Milena Silva tem 34 anos é empresária, mãe de 2 filhos (Arthur de 5 anos e Laura de 7 anos) e tem uma rotina bem corrida. Ela e o marido não conseguem levar nem buscar os filhos na escola e em atividades extracurriculares, precisam de um auxílio para o transporte e locomoção dos mesmos. Com isso está buscando um meio de conseguir transporte com segurança e que possa os acompanhar mesmo longe dos filhos. 
+
+Felipe Alves tem 35 anos, é médico e pai solteiro da Amanda de 6 anos. Com a escala de plantões e consultas no dia a dia, tem dias que não consegue levar ou buscar a filha na escola, mesmo fazendo questão em alguns dias da semana. Ele precisa de um transporte confiável e que possa escolher os dias que vai precisar ou não, de acordo com seu dia, assim pagando só quando usar.  
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
