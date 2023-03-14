@@ -37,13 +37,16 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
- O público alvo são pais e responsáveis legais, que têm dificuldades quanto a locomoção de crianças e adolescentes para a escola que buscam uma opção segura e eficaz.
- 
- 
- A aplicação conta com monitoramento das vans disponiveis para o local desejado, informando a média de tempo entre escola e casa, alem de monitoramentos como: o trajeto mais rapido, e os horários de embarque e desembarque.
- 
- 
- A aplicação é desenvolvida para multiplataformas, sendo computadores desktops, notebooks, tables e celulares, podendo acessar de qualquer local, dependendo apenas de uma conexão com a internet.
+O público-alvo da TransPeste é formado por pais, responsáveis e tutores de crianças e adolescentes em idade escolar e que necessitam, esporadicamente, de serviço de transporte diário ou esporádico para seus dependentes, além dos motoristas interessados em prestar esse tipo de serviço. 
+
+As crianças e adolescentes também fazem parte do público-alvo de forma secundária, pois por mais que não sejam o agente tomador de decisão, elas podem e irão influenciar seus responsáveis através de seu comportamento e feedback a respeito do serviço. Os pais apenas têm uma visão relativamente superficial e demasiadamente prática do produto, enquanto a verdadeira experiência será vivida pelas crianças que irão utilizar o transporte. 
+
+Para atender às demandas específicas dos pais, a aplicação conta com monitoramento das vans disponíveis para o local desejado, informando a média de tempo estimada entre escola-casa e casa-escola (a depender do trajeto que está sendo feito), além de monitoramentos como o trajeto que está sendo feito, horários de embarque e desembarque, se a criança já embarcou ou desembarcou, etc. 
+
+Já para os motoristas, as necessidades são um pouco diferentes e mais específicas para o trânsito e cálculo de trajeto, por exemplo.
+
+A aplicação web é desenvolvida para multiplataformas, sendo computadores desktops, notebooks, tablets e celulares, podendo ser acessada de qualquer local, dependendo apenas de uma conexão com a Internet.
+
 
 
 
