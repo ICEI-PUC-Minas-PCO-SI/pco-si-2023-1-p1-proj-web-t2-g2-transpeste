@@ -19,8 +19,8 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 O objetivo do Transpeste é acabar com a preocupação dos pais na hora de transportar seus filhos até a escola, o serviço constará com um rastreador em cada veículo, que irá exibir todo o trajeto. A plataforma irá possuir uma área onde os responsáveis poderão observar os trajetos diponíveis, reservar um assento para a criança e receber o motorista e acompanhar o trajeto.
 
 Objetivos principais:
--Fornecer um serviço de transporte com qualidade e segurança para pais de crianças e adolescentes para a escola e suas atividades extracurriculares;
--Fornecer uma plataforma onde motoristas e donos de frotas poderão cadastrar seus veículos e prestar serviços;
+-Fornecer um serviço de transporte com qualidade e segurança para pais de crianças e adolescentes para a escola e suas atividades extracurriculares
+-Fornecer uma plataforma onde motoristas e donos de frotas poderão cadastrar seus veículos e prestar serviços
  
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
