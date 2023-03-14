@@ -27,13 +27,20 @@ Objetivos principais:
 
 ## Justificativa
 
+No artigo "Desenvolvimento de Aplicativo Mobile para Segurança do Transporte Escolar" (Almeida e Aguiar, 2020) um aplicativo mobile é desenvolvido para a fomentação do mercado de transportes escolares, por este motivo os autores pesquisaram e elencaram, problemas e dificuldades encontrados na utilização dos escolares privados, desde problemas na segurança até na gestão do negócio.  
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+Como evidênciado por Almeida e Aguiar (2020), estas dificuldades podem estar situadas tanto na relação dos motoristas com a concorrência do mercado, quanto na preocupação dos responsáveis pelos alunos e que não deixam seus filhos
+aderirem o transporte escolar por medo de não desembarcarem nos locais corretos, além da falta de rastreabilidade e controle do percurso aderido pelo condutor do transporte. Sob a ótica dos problemas enfrentados pelos responsáveis pelos alunos, faz-se necessário desenvolver uma aplicação funcional, em colaboração com os motoristas, pais e alunos, que forneça um serviço de transporte com qualidade e segurança que disponha das seguintes características: 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+> - Segurança;
+> - Eficiência;
+> - Comunicação;
+> - Redução de Custos;
+> - Conveniência.
 
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+> - Artigo citado: http://ric.cps.sp.gov.br/handle/123456789/7042
 
 ## Público-Alvo
 
