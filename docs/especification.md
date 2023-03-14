@@ -30,8 +30,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário da plataforma  | Transporte escolar           | Levar meus filhos para a escola               |
-|Motorista       | Cadastrar meu veiculo                 | Transportar crianças de suas casas para a escola |
+|Pais/Responsaveis  | Transporte escolar           | Levar meus filhos para a escola               |
+|Motorista       | Plataforma de transporte escolar                 | Trabalhar com transporte de crianças para escola |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
@@ -60,6 +60,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-008|	Permitir que o usuário (responsável) cadastre uma ou mais crianças	| ALTA	| |
 |RF-009| Permitir que o motorista avalie o comportamento da criança  | MÉDIA | |
 |RF-010| Permitir que o usuario cadastre uma forma de pagamento fixa | MÉDIA | |
+|RF-011| Permitir que o usuario (motorista ou responsavel) crie uma conta na plataforma | MÉDIA | |
+|RF-012| Permitir que o usuario (motorista ou responsavel) faça login na plataforma | MÉDIA | |
+
 
 
 ### Requisitos não Funcionais
@@ -67,7 +70,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivo móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-002| Deve processar requisições do usuário em no máximo 5s |  BAIXA | 
 |RNF-003| Deve garantir a segurança dos dados cadastrados do usuario |  ALTA |
 |RNF-004| Deve ser capaz de realizar estornos bancarios em caso de cancelamento por parte do motorista ou usuario |  MÉDIA |
 
