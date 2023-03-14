@@ -10,6 +10,8 @@ Milena Silva tem 34 anos é empresária, mãe de 2 filhos (Arthur de 5 anos e La
 
 Felipe Alves tem 35 anos, é médico e pai solteiro da Amanda de 6 anos. Com a escala de plantões e consultas no dia a dia, tem dias que não consegue levar ou buscar a filha na escola, mesmo fazendo questão em alguns dias da semana. Ele precisa de um transporte confiável e que possa escolher os dias que vai precisar ou não, de acordo com seu dia, assim pagando só quando usar.  
 
+Kleber Machado tem 41 anos, é dono de uma van escolar e enfrenta dificuldades para conseguir contratos para preencher sua rota. Pelo empecilho de adquirir clientes, ele precisa de uma maneira de ter acesso facil e rapido aos pais em busca de um transporte para seus filhos.
+
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
 > **Links Úteis**:
