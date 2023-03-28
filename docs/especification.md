@@ -32,18 +32,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
-|RF-001| Permitir que o usuário reserve um assento em uma van | ALTA |  |
-|RF-002| Permitir que o usuário rastreie o trajeto   | MÉDIA | |
-|RF-003| Permitir que o usuário acompanhe se a criança chegou ao destino   | ALTA | |
-|RF-004| Permitir que um motorista cadastre seu veículo   | ALTA | |
-|RF-005| Permitir que o motorista acompanhe a lotação de sua van e o trajeto   | MÉDIA | |
-|RF-006| Permitir que o usuário avalie o serviço do motorista   | MÉDIA | |
-|RF-007|	Permitir que o motorista aceite ou negue a solicitação do usuário	| MÉDIA |	|
-|RF-008|	Permitir que o usuário (responsável) cadastre uma ou mais crianças	| ALTA	| |
-|RF-009| Permitir que o motorista avalie o comportamento da criança  | MÉDIA | |
-|RF-010| Permitir que o usuario cadastre uma forma de pagamento fixa | MÉDIA | |
-|RF-011| Permitir que o usuario (motorista ou responsavel) crie uma conta na plataforma | MÉDIA | |
-|RF-012| Permitir que o usuario (motorista ou responsavel) faça login na plataforma | MÉDIA | |
+|RF-001| Permitir que o usuário reserve um assento em uma van | ALTA |Leni |
+|RF-002| Permitir que o usuário rastreie o trajeto   | BAIXA |Otavio|
+|RF-003| Permitir que o usuário acompanhe se a criança chegou ao destino   | ALTA |Ana Clara |
+|RF-004| Permitir que um motorista cadastre seu veículo   | ALTA |Pedro |
+|RF-005| Permitir que o motorista acompanhe a lotação de sua van e o trajeto   | MÉDIA |Otavio |
+|RF-006| Permitir que o usuário avalie o serviço do motorista   | MÉDIA |Guilherme |
+|RF-007|	Permitir que o motorista aceite ou negue a solicitação do usuário	| MÉDIA |	Otavio|
+|RF-008|	Permitir que o usuário (responsável) cadastre uma ou mais crianças	| ALTA	|Jean |
+|RF-009| Permitir que o motorista avalie o comportamento da criança  | MÉDIA |Diogo |
+|RF-010| Permitir que o usuario cadastre uma forma de pagamento fixa | MÉDIA |Pedro |
+|RF-011| Permitir que o usuario (motorista ou responsavel) crie uma conta na plataforma | MÉDIA |Otavio |
+|RF-012| Permitir que o usuario (motorista ou responsavel) faça login na plataforma | MÉDIA |Diogo|
 
 
 
