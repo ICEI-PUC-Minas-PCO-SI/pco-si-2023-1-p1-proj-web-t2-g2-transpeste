@@ -8,9 +8,15 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 Milena Silva tem 34 anos é empresária, mãe de 2 filhos (Arthur de 5 anos e Laura de 7 anos) e tem uma rotina bem corrida. Ela e o marido não conseguem levar nem buscar os filhos na escola e em atividades extracurriculares, precisam de um auxílio para o transporte e locomoção dos mesmos. Com isso está buscando um meio de conseguir transporte com segurança e que possa os acompanhar mesmo longe dos filhos. 
 
-Felipe Alves tem 35 anos, é médico e pai solteiro da Amanda de 6 anos. Com a escala de plantões e consultas no dia a dia, tem dias que não consegue levar ou buscar a filha na escola, mesmo fazendo questão em alguns dias da semana. Ele precisa de um transporte confiável e que possa escolher os dias que vai precisar ou não, de acordo com seu dia, assim pagando só quando usar.  
+Bruna Ferreira tem 30 anos, é advogada e mãe de uma menina de 8 anos chamada Sofia. Ela trabalha em um escritório de advocacia renomado e tem uma rotina corrida, com prazos apertados e reuniões constantes. Como muitas vezes precisa viajar a trabalho, precisa de um transporte seguro e confiável para levar e buscar sua filha na escola e em atividades extracurriculares. Além disso, busca um serviço que possa ser agendado com antecedência e que possibilite um acompanhamento em tempo real para ter tranquilidade enquanto está fora.
+
+Felipe Alves tem 35 anos, é médico e pai solteiro da Amanda de 6 anos. Com a escala de plantões e consultas no dia a dia, tem dias que não consegue levar ou buscar a filha na escola, mesmo fazendo questão em alguns dias da semana. Ele precisa de um transporte confiável e que possa escolher os dias que vai precisar ou não, de acordo com seu dia, assim pagando só quando usar. 
+
+Ricardo Santos tem 33 anos, é engenheiro e pai de dois filhos, João de 4 anos e Maria de 6 anos. Ele trabalha em uma empresa de construção civil e tem uma rotina de trabalho bastante instável, com horários flexíveis e reuniões inesperadas. Com isso, precisa de um transporte que possa se adaptar à sua rotina, com opções de horários flexíveis e possibilidade de agendamento de última hora. Além disso, busca um serviço que ofereça segurança e conforto para seus filhos.
 
 Kleber Machado tem 41 anos, é dono de uma van escolar e enfrenta dificuldades para conseguir contratos para preencher sua rota. Pelo empecilho de adquirir clientes, ele precisa de uma maneira de ter acesso facil e rapido aos pais em busca de um transporte para seus filhos.
+
+Ana Paula Oliveira tem 40 anos, é psicóloga e mãe de uma menina de 9 anos chamada Julia. Ela tem um consultório próprio e atende pacientes durante todo o dia, o que a impede de levar e buscar sua filha na escola e em atividades extracurriculares. Com isso, precisa de um serviço de transporte que possa garantir a segurança e o conforto de sua filha, além de permitir que ela possa acompanhar a localização da criança em tempo real. Além disso, busca um serviço que possa ser agendado com antecedência e que possa se adaptar a sua rotina de trabalho.
 
 
 ## Histórias de Usuários
