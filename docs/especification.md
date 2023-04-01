@@ -6,6 +6,8 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
+Rodrigo Amaral tem 53 anos, e está pensando em expandir seu negócio de transporte privado para a área de transporte escolar. Com diversos veículos prontos para serviço, Rodrigo busca uma forma de captar clientes com rapidez e facilidade, com o objetivo de colocar sua frota para rodar os quanto antes.
+
 Milena Silva tem 34 anos é empresária, mãe de 2 filhos (Arthur de 5 anos e Laura de 7 anos) e tem uma rotina bem corrida. Ela e o marido não conseguem levar nem buscar os filhos na escola e em atividades extracurriculares, precisam de um auxílio para o transporte e locomoção dos mesmos. Com isso está buscando um meio de conseguir transporte com segurança e que possa os acompanhar mesmo longe dos filhos. 
 
 Bruna Ferreira tem 30 anos, é advogada e mãe de uma menina de 8 anos chamada Sofia. Ela trabalha em um escritório de advocacia renomado e tem uma rotina corrida, com prazos apertados e reuniões constantes. Como muitas vezes precisa viajar a trabalho, precisa de um transporte seguro e confiável para levar e buscar sua filha na escola e em atividades extracurriculares. Além disso, busca um serviço que possa ser agendado com antecedência e que possibilite um acompanhamento em tempo real para ter tranquilidade enquanto está fora.
