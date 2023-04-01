@@ -29,6 +29,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |--------------------|------------------------------------|----------------------------------------|
 |Pais/Responsaveis  | Transporte escolar           | Levar meus filhos para a escola               |
 |Motorista       | Plataforma de transporte escolar                 | Trabalhar com transporte de crianças para escola |
+|Dono de Frota veicular      | Forma de captar clientes                 | Preencher os veiculos da rota |
 
 
 
