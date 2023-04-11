@@ -40,17 +40,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
 |RF-001| Permitir que o usuário reserve um assento em uma van | ALTA |Leni |
-|RF-002| Permitir que o usuário rastreie o trajeto   | BAIXA |Otavio|
-|RF-003| Permitir que o usuário acompanhe se a criança chegou ao destino   | BAIXA |Ana Clara |
+|RF-002| Permitir que o usuário rastreie o trajeto   | DESEJÁVEL |Otavio|
+|RF-003| Permitir que o usuário acompanhe se a criança chegou ao destino   | DESEJÁVEL |Ana Clara |
 |RF-004| Permitir que um motorista cadastre seu veículo   | ALTA |Pedro |
-|RF-005| Permitir que o motorista acompanhe a lotação de sua van e o trajeto   | BAIXA |Otavio |
-|RF-006| Permitir que o usuário avalie o serviço do motorista   | MÉDIA |Guilherme |
-|RF-007|	Permitir que o motorista aceite ou negue a solicitação do usuário	| BAIXA |	Otavio|
-|RF-008|	Permitir que o usuário (responsável) cadastre uma ou mais crianças	| ALTA	|Jean |
-|RF-009| Permitir que o motorista avalie o comportamento da criança  | BAIXA |Diogo |
-|RF-010| Permitir que o usuario cadastre uma forma de pagamento fixa | MÉDIA |Pedro |
-|RF-011| Permitir que o usuario (motorista ou responsavel) crie uma conta na plataforma | MÉDIA |Otavio |
-|RF-012| Permitir que o usuario (motorista ou responsavel) faça login na plataforma | MÉDIA |Diogo|
+|RF-005| Permitir que o motorista acompanhe a lotação de sua van  | ALTA |Otavio |
+|RF-006| Permitir que o motorista acompanhe a sua rota  | DESEJÁVEL |Otavio |
+|RF-007| Permitir que o usuário avalie o serviço do motorista   | BAIXA |Guilherme |
+|RF-008|	Permitir que o motorista aceite ou negue a solicitação do usuário	| BAIXA |	Otavio|
+|RF-009|	Permitir que o usuário (responsável) cadastre uma ou mais crianças	| ALTA	|Jean |
+|RF-010| Permitir que o motorista avalie o comportamento da criança  | DESEJÁVEL |Diogo |
+|RF-011| Permitir que o usuario cadastre uma forma de pagamento fixa | MÉDIA |Pedro |
+|RF-012| Permitir que o usuario (motorista ou responsavel) crie uma conta na plataforma | MÉDIA |Otavio |
+|RF-013| Permitir que o usuario (motorista ou responsavel) faça login na plataforma | MÉDIA |Diogo|
 
 
 
@@ -61,7 +62,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivo móvel | MÉDIA | 
 |RNF-002| Deve processar requisições do usuário em no máximo 5s |  BAIXA | 
 |RNF-003| Deve garantir a segurança dos dados cadastrados do usuario |  ALTA |
-|RNF-004| Deve ser capaz de realizar estornos bancarios em caso de cancelamento por parte do motorista ou usuario |  BAIXA |
+|RNF-004| Deve ser capaz de realizar estornos bancarios em caso de cancelamento por parte do motorista ou usuario |  DESEJÁVEL |
 
 
 ## Restrições
