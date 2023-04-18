@@ -7,8 +7,7 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 ## User Flow
 
-![User-Flow](https://user-images.githubusercontent.com/68402909/232918572-bf8ce3f5-4ec0-4536-a28c-6b2b7621fd08.png)
-
+![userflow](https://user-images.githubusercontent.com/68402909/232924309-4c5fa3c8-5ecf-40ff-a5fa-c0fcf8c2f8a5.png)
 
 
 ![Exemplo de UserFlow](img/userflow.jpg)
@@ -23,8 +22,15 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 
 ## Wireframes
 
-Página Inicial:
-![pagina-inicial](https://user-images.githubusercontent.com/68402909/232920644-ed4caaf2-9c19-4fb8-9505-a321fa82dc40.png)
+Página inicial
+![pagina-inicial](https://user-images.githubusercontent.com/68402909/232924427-97bec6c4-a403-4200-8f79-bfcf325a1b38.png)
+
+
+Cadastro
+![cadastro](https://user-images.githubusercontent.com/68402909/232924480-7a3f552c-9f77-403e-98f1-438a4ff359a5.png)
+
+Validação de dados
+![validação de dados](https://user-images.githubusercontent.com/68402909/232925050-a9c065a2-c59a-489f-937a-7ac6999253cf.png)
 
 
 ![Exemplo de Wireframe](img/wireframe-example.png)
