@@ -33,6 +33,7 @@ Validação de dados
 ![validação de dados](https://user-images.githubusercontent.com/68402909/232925050-a9c065a2-c59a-489f-937a-7ac6999253cf.png)
 
 Definir Trajeto
+
 ![Definir Trajeto](https://user-images.githubusercontent.com/124322407/233986689-8f42df7f-6653-4c34-9377-610c4017ce00.png)
 
 
