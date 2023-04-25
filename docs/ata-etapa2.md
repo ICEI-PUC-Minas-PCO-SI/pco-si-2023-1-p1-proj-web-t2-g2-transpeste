@@ -6,4 +6,4 @@ Diogo Palhares:
 Criação dos wirefranes da lotação do veiculo e da avaliação da viagem pelo motorista;
 
 Leni Rocha:
-Crianção dos wireframes de perfil do responsável e de cadastro da criança;
+Criação dos wireframes de perfil do responsável e de cadastro da criança;
