@@ -29,4 +29,14 @@ Lotação do veiculo:
 Avaliação do motorista:
 ![avaliar_viagem](https://user-images.githubusercontent.com/127258119/234387118-6044625f-a97e-428a-ba3b-61b9399b557f.png)
 
+Perfil do motorista:
+
+
+![Perfil_do_Motorista](https://user-images.githubusercontent.com/127258897/234418253-acbbc2cb-ced9-478c-90fb-20aad493de22.png)
+
+Cadastro do veículo:
+
+
+![Cadastro_do_Veículo](https://user-images.githubusercontent.com/127258897/234418419-e985327d-5265-44af-a3e3-96248111b577.png)
+
 
