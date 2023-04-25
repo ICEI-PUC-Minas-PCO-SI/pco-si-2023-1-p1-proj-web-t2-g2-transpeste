@@ -36,6 +36,11 @@ Definir Trajeto
 
 ![Definir Trajeto](https://user-images.githubusercontent.com/124322407/233986689-8f42df7f-6653-4c34-9377-610c4017ce00.png)
 
+Avaliar Viagem (motorista):
+![avaliar_viagem](https://user-images.githubusercontent.com/127258119/234378506-730bb658-cd61-4bae-a1ec-e4c8fb541624.png)
+
+Lotação do veiculo:
+![lotação_do_veiculo](https://user-images.githubusercontent.com/127258119/234378513-275d4d30-ea19-4bb5-a03b-b0cf5003f365.png)
 
 
 
