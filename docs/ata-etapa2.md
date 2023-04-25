@@ -4,3 +4,6 @@ Gerenciamento das branchs do git;
 
 Diogo Palhares: 
 Criação dos wirefranes da lotação do veiculo e da avaliação da viagem pelo motorista;
+
+Leni Rocha:
+Crianção dos wireframes de perfil do responsável e de cadastro da criança;
