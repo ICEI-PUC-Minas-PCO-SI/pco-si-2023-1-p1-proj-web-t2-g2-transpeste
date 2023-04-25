@@ -39,4 +39,15 @@ Cadastro do veículo:
 
 ![Cadastro_do_Veículo](https://user-images.githubusercontent.com/127258897/234418419-e985327d-5265-44af-a3e3-96248111b577.png)
 
+Perfil do responsável: 
+
+![Perfil do responsável](https://user-images.githubusercontent.com/125770684/234424927-8affd640-001f-44c8-8998-166cadd6bd6c.png)
+
+
+Cadastrar criança:
+
+![Cadastrar criança](https://user-images.githubusercontent.com/125770684/234426106-e2ed7f80-739c-4898-88fd-621b044d7571.png)
+
+
+
 
