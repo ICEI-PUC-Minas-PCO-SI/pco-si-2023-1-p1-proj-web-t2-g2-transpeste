@@ -36,12 +36,11 @@ Definir Trajeto
 
 ![Definir Trajeto](https://user-images.githubusercontent.com/124322407/233986689-8f42df7f-6653-4c34-9377-610c4017ce00.png)
 
-Avaliar Viagem (motorista):
-![avaliar_viagem](https://user-images.githubusercontent.com/127258119/234378506-730bb658-cd61-4bae-a1ec-e4c8fb541624.png)
-
 Lotação do veiculo:
-![lotação_do_veiculo](https://user-images.githubusercontent.com/127258119/234378513-275d4d30-ea19-4bb5-a03b-b0cf5003f365.png)
+![lotação_do_veiculo](https://user-images.githubusercontent.com/127258119/234387113-26cbebda-95d1-4f44-9d66-1becd40634ba.png)
 
+Avaliação do motorista:
+![avaliar_viagem](https://user-images.githubusercontent.com/127258119/234387118-6044625f-a97e-428a-ba3b-61b9399b557f.png)
 
 
 ![Exemplo de Wireframe](img/wireframe-example.png)
