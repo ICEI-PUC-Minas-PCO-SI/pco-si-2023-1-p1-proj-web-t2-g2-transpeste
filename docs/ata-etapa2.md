@@ -7,3 +7,6 @@ Criação dos wirefranes da lotação do veiculo e da avaliação da viagem pelo
 
 Leni Rocha:
 Criação dos wireframes de perfil do responsável e de cadastro da criança;
+
+Pedro Assis:
+Criação do Wireframe de Definição de trajeto , criação do Template padrão(footer e Header).
