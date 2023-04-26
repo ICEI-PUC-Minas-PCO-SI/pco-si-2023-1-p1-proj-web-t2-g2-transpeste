@@ -9,8 +9,8 @@ Leni Rocha:
 Criação dos wireframes de perfil do responsável e de cadastro da criança;
 
 Pedro Assis:
-Criação do Wireframe de Definição de trajeto , criação do Template padrão(footer e Header), criacão da logo;
+Criação do Wireframe de Definição de trajeto , criação do Template padrão(footer e Header), criação da logo;
 
 
 Otávio Soares da Costa: 
-Criaçãode Wireframe de avaliação de viagens, escolha de viagens e selecionar assento;
+Criação de Wireframe de avaliação de viagens, escolha de viagens e selecionar assento;
