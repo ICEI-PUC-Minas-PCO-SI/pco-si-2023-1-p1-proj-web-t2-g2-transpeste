@@ -17,3 +17,6 @@ Criação de Wireframe de avaliação de viagens, escolha de viagens e seleciona
 
 Jean Estanislau de Souza Guimarães:
 Criação do Template padrão;
+
+Ana Clara Lima Marçal
+Criação do wireframe de perfil do motorista e wireframe de cadastro de veículo.
