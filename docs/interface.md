@@ -49,5 +49,16 @@ Cadastrar criança:
 ![Cadastrar criança](https://user-images.githubusercontent.com/125770684/234426106-e2ed7f80-739c-4898-88fd-621b044d7571.png)
 
 
+Selecionar viagem: 
+![Selecionar viagem](https://user-images.githubusercontent.com/124460319/234644487-775dc7fb-e8c6-4566-a797-d5c015237e0e.png)
+
+Selecionar assento:
+![Selecionar assento](https://user-images.githubusercontent.com/124460319/234644784-fd5a470d-972f-43e8-a2e5-1b284aab938d.png)
+
+Avaliar viagem:
+![Avaliar viagem](https://user-images.githubusercontent.com/124460319/234644839-08decba9-2e2c-45d1-8675-480695a86b16.png)
+
+
+
 
 
