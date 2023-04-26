@@ -13,4 +13,4 @@ Criação do Wireframe de Definição de trajeto , criação do Template padrão
 
 
 Otávio Soares da Costa: 
-Criaçãode Wireframe de avaliação de viagens, escolha de viagens e selecionar assento;
+Criação de Wireframe de avaliação de viagens, escolha de viagens e selecionar assento;
