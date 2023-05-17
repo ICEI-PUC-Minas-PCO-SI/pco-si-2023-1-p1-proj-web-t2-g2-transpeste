@@ -144,19 +144,34 @@ button:hover{
 }
 
 .login-block input {
-  margin-top: 15px;
+  margin-top: 20px;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 .login-block button {
   width: 100%;
+  padding: 15px;
+  background-color: #EE1C47;
+  margin-top: 25px;
+  color: white;
+  border: none;
+}
+
+.login button{
+  border-radius: 0;
+  width: 50%;
   padding: 10px;
   background-color: #EE1C47;
   margin-top: 20px;
   color: white;
   border: none;
+}
+
+.login button:hover{
+  background-color: #ff7a7a;
+  cursor: pointer;
 }
 .rodape{
     background-color: #68ace7;
