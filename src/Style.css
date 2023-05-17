@@ -113,7 +113,8 @@ button:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 90vh;
+  width: auto;
   border: 1px solid black;
 
 }
@@ -131,6 +132,7 @@ button:hover{
   display: flex;
   justify-content: space-between;
   max-width: 100%;
+  height: 40vh;
 }
 
 .login-block {
@@ -164,12 +166,57 @@ button:hover{
   width: 50%;
   padding: 10px;
   background-color: #EE1C47;
-  margin-top: 20px;
+  margin-top: 40px;
   color: white;
   border: none;
 }
 
 .login button:hover{
+  background-color: #ff7a7a;
+  cursor: pointer;
+}
+
+.cadastro {
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cadastro-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.cadastro-block {
+  width: 600px;
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  background-color: #FFF;
+}
+
+.cadastro-block input {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.cadastro-block button {
+  width: 100%;
+  padding: 15px;
+  background-color: #EE1C47;
+  margin-top: 25px;
+  color: white;
+  border: none;
+}
+
+.cadastro button:hover{
   background-color: #ff7a7a;
   cursor: pointer;
 }
