@@ -10,10 +10,10 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 ## Wireframes
 
 Página inicial
-![pagina-inicial]![image](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/4ea7de46-eadf-4cf2-8c91-8ba0249868ab)
+[image](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/4ea7de46-eadf-4cf2-8c91-8ba0249868ab)
 
 Cadastro
-![cadastro]![image](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/702aa42f-19ee-4c67-aadf-2597b0303c7f)
+[image](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/702aa42f-19ee-4c67-aadf-2597b0303c7f)
 
 Validação de dados
 ![validação de dados](https://user-images.githubusercontent.com/68402909/232925050-a9c065a2-c59a-489f-937a-7ac6999253cf.png)
