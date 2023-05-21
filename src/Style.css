@@ -13,6 +13,27 @@ font-family: 'Roboto', sans-serif;
   background-position: center;
 }
 
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+.form-header {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-buttons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 nav {
   display: flex;
@@ -60,8 +81,6 @@ button:hover{
 
 .meio{
   height: 1000px;
-  background-image: url("img/backgrounddefi2.jpg");
-  
 }
 
 
@@ -235,4 +254,14 @@ footer {
     font-size: 15px;
       }
 
+      .form-header h1::after {
+        content: '';
+        display: block;
+        width: 5rem;
+        height: 0.3rem;
+        background-color: #6c63ff;
+        margin: 0 auto;
+        position: absolute;
+        border-radius: 10px;
+    }
     
