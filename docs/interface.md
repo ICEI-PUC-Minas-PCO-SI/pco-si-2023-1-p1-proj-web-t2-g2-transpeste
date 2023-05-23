@@ -10,14 +10,14 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 ## Wireframes
 
 Página inicial
-![pagina-inicial](https://user-images.githubusercontent.com/68402909/232924427-97bec6c4-a403-4200-8f79-bfcf325a1b38.png)
-
+![Pagina inicial](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/4ea7de46-eadf-4cf2-8c91-8ba0249868ab)
 
 Cadastro
-![cadastro](https://user-images.githubusercontent.com/68402909/232924480-7a3f552c-9f77-403e-98f1-438a4ff359a5.png)
+![Cadastro](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/182a0a4a-28d0-4a78-8dc8-31c22b6397cb)
+
 
 Validação de dados
-![validação de dados](https://user-images.githubusercontent.com/68402909/232925050-a9c065a2-c59a-489f-937a-7ac6999253cf.png)
+![Validação](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/eee43abd-9e75-4ce3-ba59-ca775f272f13)
 
 Definir Trajeto
 
