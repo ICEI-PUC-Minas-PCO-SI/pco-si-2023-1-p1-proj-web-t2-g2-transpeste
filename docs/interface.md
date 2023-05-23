@@ -9,15 +9,15 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 ## Wireframes
 
-Página inicial
-![Pagina inicial](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/4ea7de46-eadf-4cf2-8c91-8ba0249868ab)
+Tela de Login
+![Pagina inicial](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/fca56810-0f20-473d-959d-2322aadb21b3)
 
 Cadastro
-![Cadastro](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/182a0a4a-28d0-4a78-8dc8-31c22b6397cb)
+![Cadastro](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/ca2b4991-35ac-4376-af8e-2e15e44d7467)
 
 
 Validação de dados
-![Validação](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/eee43abd-9e75-4ce3-ba59-ca775f272f13)
+![Validação](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/38537ddd-4ec1-48ae-9211-f7746d985022)
 
 Definir Trajeto
 
