@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Perfil do Motorista</title>
+  <link href="peste.css" rel="stylesheet" type="text/css" />
+   <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  
+</head>
+
+<body>
+  <div class="primeira">
+    <nav>
+     <div>
+       <img class="logo" src="img/logo.png" alt="TransPeste">
+     </div>
+      <ul>
+        <li> <a href="#">Home</a></li>
+          <li> <a href="#">Info</a></li>
+          <li> <a href="#">Sobre</a></li>
+          <li> <a href="#">Perfil</a></li>
+      </ul>
+      <button type="button">Login</button>
+    </nav>
+    </div>
+
+    <div class="meio">
+
+      <div id="fotoperfil">
+        <img src="imagens/motorista.jpg" alt="imagemperfil">
+      </div>
+
+        <section id="peste">          
+            <h1>Seu Perfil</h1>
+
+            <p><strong>Nome:</strong> Kleber Machado</p>
+            <p><strong>Telefone:</strong> 444-444</p>
+            <p><strong>Data de Nascimento:</strong> 20/08/1990</p>
+            <p><strong>Documento:</strong> 123456789</p>
+            <p><strong>E-mail:</strong> motorista@motorista.com.br</p>
+            <p><strong>Endereço:</strong> Rua dos Bobos, nº 0, bairro Galba Velozo<p>
+            <p><strong>CNH:</strong> 12345678<p>
+            <p><strong>Data de Vencimento:</strong> 20/08/2030</p>
+
+            <div id="fotocnh">
+              <img src="imagens/cnh.jpg" alt="cnh">
+            </div>
+                                   
+            <div class="editar">
+              <p><a href="#">Editar</a></p>
+            </div>
+                             
+        </section> 
+        
+                
+    </div>
+    
+  <section class="Contato">
+        <div class="infogeral">
+            <div class="pri">
+                <p>Rua dos bobos n 0,Brazil, <br> Sp Grande São Paulo 32241 290</p>
+                <p>4002 8922</p>
+                <p>TransPeste@gmail.com</p>
+            </div>
+
+            <div class="seg">
+                <h4>Suporte</h4>
+                <p>Sobre nos</p>
+                <p>Guia de Cadastro</p>
+                <p>Termos</p>
+                <p>FAQ</p>
+                <p>Privacidade</p>
+            </div>
+
+            <div class="ter">
+                <h4>Nossas Redes Sociais</h4>
+             <div class="media">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#"><i class='bx bxl-youtube' ></i></a>
+                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                </div>
+            </div>
+
+            <div class="qua">
+                <h4>TransPeste</h4>
+                <p>Tudo sobre viagens</p>
+                <p>Segurança na hora de viajar</p>
+                <p>Certificados</p>
+                <p>Login</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="rodape">
+        <p>Copyright © @2023. All Rights Reserved.Designd By TrasPeste.</p>
+    </div>
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
