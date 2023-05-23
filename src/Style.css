@@ -4,12 +4,36 @@ margin: 0;
 box-sizing: border-box;
 font-family: 'Roboto', sans-serif;
 }
+
+
+
 .primeira {
   width: 100%;
   background-size: cover; 
   background-position: center;
 }
 
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+.form-header {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-buttons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 nav {
   display: flex;
@@ -54,8 +78,10 @@ button:hover{
   background-color: #ff7a7a;
   cursor: pointer;
 }
+
 .meio{
   height: 1000px;
+  background-image: url(".../src/img/backgrounddefi2.jpg");
   
 }
 
@@ -102,10 +128,123 @@ button:hover{
 .media i:hover{
     transform: scale(1.3);
 }
+
+
+.meio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: auto;
+  border: 1px solid black;
+
+}
+
+.login {
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: 40vh;
+}
+
+.login-block {
+  width: 600px;
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  background-color: #FFF;
+  ;
+}
+
+.login-block input {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.login-block button {
+  width: 100%;
+  padding: 15px;
+  background-color: #EE1C47;
+  margin-top: 25px;
+  color: white;
+  border: none;
+}
+
+.login button{
+  width: 50%;
+  padding: 10px;
+  background-color: #EE1C47;
+  margin-top: 40px;
+  color: white;
+  border: none;
+}
+
+.login button:hover{
+  background-color: #ff7a7a;
+  cursor: pointer;
+}
+
+.cadastro {
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cadastro-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.cadastro-block {
+  width: 600px;
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  background-color: #FFF;
+}
+
+.cadastro-block input {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.cadastro-block button {
+  width: 100%;
+  padding: 15px;
+  background-color: #EE1C47;
+  margin-top: 25px;
+  color: white;
+  border: none;
+}
+
+.cadastro button:hover{
+  background-color: #ff7a7a;
+  cursor: pointer;
+}
 .rodape{
     background-color: #68ace7;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
 }
 .rodape p{
     color: #FFF;
@@ -113,6 +252,18 @@ button:hover{
 }
 footer {
     padding: 20px;
-    margin-top: 3%;
+    margin: 0;
     font-size: 15px;
       }
+
+      .form-header h1::after {
+        content: '';
+        display: block;
+        width: 5rem;
+        height: 0.3rem;
+        background-color: #6c63ff;
+        margin: 0 auto;
+        position: absolute;
+        border-radius: 10px;
+    }
+    
