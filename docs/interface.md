@@ -24,7 +24,7 @@ Definir Trajeto
 ![Definir Trajeto](https://user-images.githubusercontent.com/124322407/233986689-8f42df7f-6653-4c34-9377-610c4017ce00.png)
 
 Lotação do veiculo:
-![lotação_do_veiculo](https://user-images.githubusercontent.com/127258119/234387113-26cbebda-95d1-4f44-9d66-1becd40634ba.png)
+![lotação_do_veiculo](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/assets/68402909/171f4619-2d1c-4298-8c95-44073b6c489d)
 
 Avaliação do motorista:
 ![avaliar_viagem](https://user-images.githubusercontent.com/127258119/234387118-6044625f-a97e-428a-ba3b-61b9399b557f.png)
