@@ -207,6 +207,7 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  border: 1px solid black ;
 }
 
 .centro {
@@ -218,6 +219,14 @@ footer {
 
 .lista-crianca {
   margin-top: -200px;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 175px;
+  height: 180px;
+  border: 1px solid black;
+}
+
+.lista-crianca2{
   max-height: 200px;
   overflow-y: auto;
   width: 175px;

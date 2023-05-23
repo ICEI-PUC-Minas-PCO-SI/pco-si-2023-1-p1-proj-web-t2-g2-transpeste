@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Lotação</title>
-  <link href="/tiaw/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/src/Style.css" rel="stylesheet" type="text/css" />
+  <title>Template</title>
+  <link href="/tiaw/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/src/diogo/Style.css" rel="stylesheet" type="text/css" />
    <script src="script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,22 +32,47 @@
     </nav>
   </div>
 </header>
-    <div class="meioD2">
-        <section class="lotacao">
-            <div class="lista-crianca">
-                <ul class="crianca">
-                    <li>Criança 1</li>
-                    <li>Criança 2</li>
-                    <li>Criança 3</li>
-                    <li>Criança 4</li>
-                    <li>Criança 5</li>
-                </ul>
-            </div>
-            <div class="ocupacao">
-                <img src="img/van ocupada.png" alt="">
-            </div>
-        </section>    
-    </div>
+      <div class="meioD">
+        <div class="lista-crianca">
+            <ul class="crianca">
+              <li><input type="checkbox"> Criança 1</li>
+              <li><input type="checkbox"> Criança 2</li>
+              <li><input type="checkbox"> Criança 3</li>
+              <li><input type="checkbox"> Criança 4</li>
+              <li><input type="checkbox"> Criança 5</li>
+            </ul>
+        </div>
+        <div class="centro">
+        <section class="rating">
+        <div class="foto">
+            <img src="/tiaw/pco-si-2023-1-p1-proj-web-t2-g2-transpeste/src/img/foto.bmp" alt="">
+            <figcaption>Fernando Rodriguez</figcaption>
+        </div>
+        <div class="data">
+            21/05/2023
+        </div>
+        
+          <div class="estrela">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1"></label>
+          </div>
+          <div class="comentario">
+            <textarea id="comment" name="comment" placeholder="Digite seu comentário..."></textarea>
+          </div>
+          <div class="botao">
+            <button type="submit">Enviar</button>
+          </div>
+        </section>
+      </div>
+      </div>
 <footer>
       <section class="Contato">
         <div class="infogeral">
