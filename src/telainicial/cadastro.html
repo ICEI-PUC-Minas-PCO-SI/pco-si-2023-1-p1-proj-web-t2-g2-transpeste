@@ -147,7 +147,7 @@ function cadastrarResponsavel() {
     .then(function(response) {
       console.log('Responsável cadastrado com sucesso!');
       // Redirecionar para a página de perfil do usuário
-      window.location.href = '../loginusuario/perfilusuario.html';
+      window.location.href = '../loginusuario/selecionarviagem.html';
     })
     .catch(function(error) {
       console.error('Erro ao cadastrar o responsável:', error);
@@ -199,7 +199,7 @@ function cadastrarMotorista() {
     .then(function(response) {
       console.log('Motorista cadastrado com sucesso!');
       // Redirecionar para a página de perfil do motorista
-      window.location.href = '../loginusuario/perfil_motorista.html';
+      window.location.href = '../loginmotorista/cadastrarrota.html';
     })
     .catch(function(error) {
       console.error('Erro ao cadastrar o motorista:', error);

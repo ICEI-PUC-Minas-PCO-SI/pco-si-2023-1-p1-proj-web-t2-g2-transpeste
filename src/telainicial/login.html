@@ -35,29 +35,29 @@
 </header>
     <div class="meio">
 
-    <section class="login">
-      <div class="login-container">
-        <div class="login-block">
-          <h2>Responsável</h2>
-          <input type="email" placeholder="E-mail" />
-          <input type="password" placeholder="Senha" />
-          <a href="../telainicial/cadastro.html">Esqueceu sua senha?</a>
-          <br />
-          <button type="submit"> <a href="../telainicialusu/cadastrarrota.html"> Login</a></button>
+      <section class="login">
+        <div class="login-container">
+          <div class="login-block">
+            <h2>Responsável</h2>
+            <input id="responsavel-email" type="email" placeholder="E-mail" />
+            <input id="responsavel-senha" type="password" placeholder="Senha" />
+            <a href="../telainicial/cadastro.html">Esqueceu sua senha?</a>
+            <br />
+            <button type="submit" onclick="loginResponsavel()">Login</button>
+          </div>
+      
+          <div class="login-block">
+            <h2>Motorista</h2>
+            <input id="motorista-email" type="email" placeholder="E-mail" />
+            <input id="motorista-senha" type="password" placeholder="Senha" />
+            <a href="../telainicial/cadastro.html">Esqueceu sua senha?</a>
+            <br />
+            <button type="submit" onclick="loginMotorista()">Login</button>
+          </div>
         </div>
-    
-        <div class="login-block">
-          <h2>Motorista</h2>
-          <input type="email" placeholder="E-mail" />
-          <input type="password" placeholder="Senha" />
-          <a href="../telainicial/cadastro.html">Esqueceu sua senha?</a>
-          <br />
-          <button type="submit"><a href="../loginmotorista/cadastrarrota.html"> Login</a></button>
-        </div>
-    </div>
-    <br>
-    <button type="submit"> <a href="../telainicial/cadastro.html">Cadastrar-se</a> </button>
-    </section>
+        <br>
+        <button type="submit"><a href="../telainicial/cadastro.html">Cadastrar-se</a></button>
+      </section>
      </div>
 <footer>
       <section class="Contato">
@@ -108,7 +108,67 @@
         <p>Copyright © @2023. All Rights Reserved.Designd By TransPeste.</p>
     </div>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+
+    <script>
+function loginResponsavel() {
+  const email = document.getElementById('responsavel-email').value;
+  const senha = document.getElementById('responsavel-senha').value;
+
+  // Verifica se os campos de email e senha estão preenchidos
+  if (email.trim() !== '' && senha.trim() !== '') {
+    axios.get('https://crud-server-json-trans-peste.vercel.app/responsaveis')
+      .then(function(response) {
+        const responsaveis = response.data;
+        const responsavelEncontrado = responsaveis.find(responsavel => responsavel.email === email && responsavel.senha === senha);
+        if (responsavelEncontrado) {
+          console.log('Login do responsável realizado com sucesso!');
+          // Redirecionar ou realizar outras ações após o login bem-sucedido
+          window.location.href = '../telainicialusu/cadastrarrota.html';
+        } else {
+          console.error('E-mail ou senha inválidos para o responsável.');
+          alert('E-mail ou senha inválidos para o responsável.');
+        }
+      })
+      .catch(function(error) {
+        console.error('Erro ao fazer login do responsável:', error);
+      });
+  } else {
+    console.error('Por favor, preencha todos os campos!');
+    alert('Por favor, preencha todos os campos!');
+  }
+}
+
+function loginMotorista() {
+  const email = document.getElementById('motorista-email').value;
+  const senha = document.getElementById('motorista-senha').value;
+
+  // Verifica se os campos de email e senha estão preenchidos
+  if (email.trim() !== '' && senha.trim() !== '') {
+    axios.get('https://crud-server-json-trans-peste.vercel.app/motoristas')
+      .then(function(response) {
+        const motoristas = response.data;
+        const motoristaEncontrado = motoristas.find(motorista => motorista.email === email && motorista.senha === senha);
+        if (motoristaEncontrado) {
+          console.log('Login do motorista realizado com sucesso!');
+          // Redirecionar ou realizar outras ações após o login bem-sucedido
+          window.location.href = '../loginmotorista/cadastrarrota.html';
+        } else {
+          console.error('E-mail ou senha inválidos para o motorista.');
+          alert('E-mail ou senha inválidos para o motorista.');
+        }
+      })
+      .catch(function(error) {
+        console.error('Erro ao fazer login do motorista:', error);
+      });
+  } else {
+    console.error('Por favor, preencha todos os campos!');
+    alert('Por favor, preencha todos os campos!');
+  }
+}
+
+    </script>
 
  
 </body>
