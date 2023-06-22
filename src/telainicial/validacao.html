@@ -36,18 +36,18 @@
 </header>
     <div class="meio">
 
-    <section class="cadastro">
-      <div class="cadastro-container">
-        <div class="cadastro-block">
-          <h2>Validar Veículo</h2>
-          <input type="Name" placeholder="CNH" />
-          <input type="Name" placeholder="CRV do Veículo" />
-          <input type="Name" placeholder="Placa do veículo" />
-          <input type="Name" placeholder="Autorização do Detran" />
-          <button type="submit"> <a href="../loginmotorista/cadastrarrota.html">Validar Veículo</a> </button>
+      <section class="cadastro">
+        <div class="cadastro-container">
+          <div class="cadastro-block">
+            <h2>Validar Veículo</h2>
+            <input type="text" id="cnh" placeholder="CNH" />
+            <input type="text" id="crv" placeholder="CRV do Veículo" />
+            <input type="text" id="placa" placeholder="Placa do veículo" />
+            <input type="text" id="autorizacao" placeholder="Autorização do Detran" />
+            <button type="submit" onclick="validarVeiculo()">Validar Veículo</button>
+          </div>
         </div>
-    </div>
-    </section>
+      </section>
      </div>
 <footer>
       <section class="Contato">
@@ -98,7 +98,32 @@
         <p>Copyright © @2023. All Rights Reserved.Designd By TrasPeste.</p>
     </div>
 
-
+    <script>
+      function validarVeiculo() {
+        const motoristaId = localStorage.getItem('motoristaId');
+        const cnh = document.getElementById('cnh').value;
+        const crv = document.getElementById('crv').value;
+        const placa = document.getElementById('placa').value;
+        const autorizacao = document.getElementById('autorizacao').value;
+      
+        const veiculo = {
+          cnh: cnh,
+          crv: crv,
+          placa: placa,
+          autorizacao: autorizacao
+        };
+      
+        axios.post(`https://crud-server-json-trans-peste.vercel.app/motoristas/${motoristaId}`, veiculo)
+          .then(function(response) {
+            console.log('Veículo validado com sucesso!');
+            // Redirecionar para a próxima página ou realizar outras ações
+            window.location.href = '../loginmotorista/cadastrarrota.html';
+          })
+          .catch(function(error) {
+            console.error('Erro ao validar o veículo:', error);
+          });
+      }
+      </script>
 
   
 </body>

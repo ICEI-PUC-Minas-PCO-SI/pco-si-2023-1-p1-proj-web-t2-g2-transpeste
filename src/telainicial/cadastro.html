@@ -196,15 +196,15 @@ function cadastrarMotorista() {
 
             // Envia a requisição de cadastro
             axios.post('https://crud-server-json-trans-peste.vercel.app/motoristas', motorista)
-    .then(function(response) {
-      console.log('Motorista cadastrado com sucesso!');
-      // Redirecionar para a página de perfil do motorista
-      window.location.href = '../loginmotorista/cadastrarrota.html';
-    })
-    .catch(function(error) {
-      console.error('Erro ao cadastrar o motorista:', error);
-    });
-} else {
+              .then(function(response) {
+                console.log('Motorista cadastrado com sucesso!');
+                // Redirecionar para a página de validação do motorista
+                window.location.href = '../validacao.html';
+              })
+              .catch(function(error) {
+                console.error('Erro ao cadastrar o motorista:', error);
+              });
+          } else {
             // Exibe mensagem de erro caso a senha não tenha 8 dígitos
             alert('A senha deve ter exatamente 8 dígitos.');
           }
@@ -218,6 +218,7 @@ function cadastrarMotorista() {
     alert('Por favor, preencha todos os campos!');
   }
 }
+
 
   $(document).ready(function() {
     // Máscara para o campo de telefone
