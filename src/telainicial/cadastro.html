@@ -7,7 +7,7 @@
   <title>Cadastro</title>
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link href="style (1).css" rel="stylesheet" type="text/css" />
-   <script src="script.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,31 +36,31 @@
 </header>
     <div class="meio">
 
-    <section class="cadastro">
-      <div class="cadastro-container">
-        <div class="cadastro-block">
-          <h2>Responsável</h2>
-          <input type="Name" placeholder="Nome" />
-          <input type="Name" placeholder="Sobrenome" />
-          <input type="Phone" placeholder="Telefone (XX)XXXXX-XXXX" />
-          <input type="email" placeholder="E-mail" />
-          <input type="password" placeholder="Senha" />
-          <input type="password" placeholder="Confirmar Senha" />
-          <button type="submit"> <a href="../telainicialusu/cadastrarrota.html">Cadastrar</a> </button>
+      <section class="cadastro">
+        <div class="cadastro-container">
+          <div class="cadastro-block">
+            <h2>Responsável</h2>
+            <input id="responsavel-nome" type="text" placeholder="Nome" />
+            <input id="responsavel-sobrenome" type="text" placeholder="Sobrenome" />
+            <input id="responsavel-telefone" type="tel" placeholder="Telefone (XX)XXXXX-XXXX" />
+            <input id="responsavel-email" type="email" placeholder="E-mail" />
+            <input id="responsavel-senha" type="password" placeholder="Senha" />
+            <input id="responsavel-confirmar-senha" type="password" placeholder="Confirmar Senha" />
+            <button type="submit" onclick="cadastrarResponsavel()">Cadastrar</button>
+          </div>
+      
+          <div class="cadastro-block">
+            <h2>Motorista</h2>
+            <input id="motorista-nome" type="text" placeholder="Nome" />
+            <input id="motorista-sobrenome" type="text" placeholder="Sobrenome" />
+            <input id="motorista-telefone" type="tel" placeholder="Telefone (XX)XXXXX-XXXX" />
+            <input id="motorista-email" type="email" placeholder="E-mail" />
+            <input id="motorista-senha" type="password" placeholder="Senha" />
+            <input id="motorista-confirmar-senha" type="password" placeholder="Confirmar Senha" />
+            <button type="submit" onclick="cadastrarMotorista()">Cadastrar</button>
+          </div>
         </div>
-    
-        <div class="cadastro-block">
-          <h2>Motorista</h2>
-          <input type="Name" placeholder="Nome" />
-          <input type="Name" placeholder="Sobrenome" />
-          <input type="Phone" placeholder="Telefone (XX)XXXXX-XXXX" />
-          <input type="email" placeholder="E-mail" />
-          <input type="password" placeholder="Senha" />
-          <input type="password" placeholder="Confirmar Senha" />
-          <button type="submit"> <a href="../telainicial/validacao.html"> Cadastrar</a></button>
-        </div>
-    </div>
-    </section>
+      </section>
      </div>
 <footer>
       <section class="Contato">
@@ -111,7 +111,57 @@
         <p>Copyright © @2023. All Rights Reserved.Designd By TransPeste.</p>
     </div>
 
+    <script>
+      function cadastrarResponsavel() {
+        const nome = document.getElementById('responsavel-nome').value;
+        const sobrenome = document.getElementById('responsavel-sobrenome').value;
+        const telefone = document.getElementById('responsavel-telefone').value;
+        const email = document.getElementById('responsavel-email').value;
+        const senha = document.getElementById('responsavel-senha').value;
 
+        const responsavel = {
+          nome: nome,
+          sobrenome: sobrenome,
+          telefone: telefone,
+          email: email,
+          senha: senha
+        };
+
+        axios.post('https://crud-server-json-trans-peste.vercel.app/responsaveis', responsavel)
+          .then(function(response) {
+            console.log('Responsável cadastrado com sucesso!');
+            // Redirecionar ou realizar outras ações após o cadastro
+          })
+          .catch(function(error) {
+            console.error('Erro ao cadastrar o responsável:', error);
+          });
+      }
+
+      function cadastrarMotorista() {
+        const nome = document.getElementById('motorista-nome').value;
+        const sobrenome = document.getElementById('motorista-sobrenome').value;
+        const telefone = document.getElementById('motorista-telefone').value;
+        const email = document.getElementById('motorista-email').value;
+        const senha = document.getElementById('motorista-senha').value;
+
+        const motorista = {
+          nome: nome,
+          sobrenome: sobrenome,
+          telefone: telefone,
+          email: email,
+          senha: senha
+        };
+
+        axios.post('https://crud-server-json-trans-peste.vercel.app/motoristas', motorista)
+          .then(function(response) {
+            console.log('Motorista cadastrado com sucesso!');
+            // Redirecionar ou realizar outras ações após o cadastro
+          })
+          .catch(function(error) {
+            console.error('Erro ao cadastrar o motorista:', error);
+          });
+      }
+    </script>
 
   
 </body>
