@@ -102,31 +102,31 @@
 
 
     <script>
-      console.log('ID do motorista:', motoristaId);
-      function validarVeiculo() {
-        const motoristaId = localStorage.getItem('motoristaId');
-        const cnh = document.getElementById('cnh').value;
-        const crv = document.getElementById('crv').value;
-        const placa = document.getElementById('placa').value;
-        const autorizacao = document.getElementById('autorizacao').value;
-      
-        const veiculo = {
-          cnh: cnh,
-          crv: crv,
-          placa: placa,
-          autorizacao: autorizacao
-        };
-      
-        axios.post(`https://crud-server-json-trans-peste.vercel.app/motoristas/${motoristaId}`, veiculo)
-          .then(function(response) {
-            console.log('Veículo validado com sucesso!');
-            // Redirecionar para a próxima página ou realizar outras ações
-            window.location.href = '../loginmotorista/cadastrarrota.html';
-          })
-          .catch(function(error) {
-            console.error('Erro ao validar o veículo:', error);
-          });
-      }
+function validarVeiculo(motoristaId) {
+  const cnh = document.getElementById('cnh').value;
+  const crv = document.getElementById('crv').value;
+  const placa = document.getElementById('placa').value;
+  const autorizacao = document.getElementById('autorizacao').value;
+
+  const veiculo = {
+    motoristaId: motoristaId,
+    cnh: cnh,
+    crv: crv,
+    placa: placa,
+    autorizacao: autorizacao
+  };
+
+  axios.post(`https://crud-server-json-trans-peste.vercel.app/motoristas/${motoristaId}`, veiculo)
+    .then(function(response) {
+      console.log('Veículo validado com sucesso!');
+      // Redirecionar para a próxima página ou realizar outras ações
+      window.location.href = '../loginmotorista/cadastrarrota.html';
+    })
+    .catch(function(error) {
+      console.error('Erro ao validar o veículo:', error);
+    });
+}
+
       </script>
 
   
