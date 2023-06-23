@@ -30,7 +30,7 @@
           <li> <a href="#">Sobre</a></li>
           <li> <a href="#">Perfil</a></li>
       </ul>
-      <button type="button">Login</button>
+      <button type="button" onclick="redirecionarParaLogin()">Login</button>
     </nav>
   </div>
 </header>
@@ -102,6 +102,11 @@
 
 
     <script>
+
+function redirecionarParaLogin() {
+    window.location.href = "../telainicial/login.html";
+  }
+
 function validarVeiculo(motoristaId) {
   const cnh = document.getElementById('cnh').value;
   const crv = document.getElementById('crv').value;
