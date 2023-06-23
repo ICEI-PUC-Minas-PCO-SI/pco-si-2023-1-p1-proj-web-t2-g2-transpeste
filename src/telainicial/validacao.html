@@ -40,11 +40,11 @@
         <div class="cadastro-container">
           <div class="cadastro-block">
             <h2>Validar Veículo</h2>
-            <input type="text" id="cnh" placeholder="CNH" />
-            <input type="text" id="crv" placeholder="CRV do Veículo" />
-            <input type="text" id="placa" placeholder="Placa do veículo" />
+            <input type="text" id="cnh" placeholder="CNH" oninput="maskCNH(this)" />
+            <input type="text" id="crv" placeholder="CRV do Veículo" oninput="maskCRV(this)" />
+            <input type="text" id="placa" placeholder="Placa do veículo" oninput="maskPlaca(this)" />
             <input type="text" id="autorizacao" placeholder="Autorização do Detran" />
-            <button type="submit" onclick="validarVeiculo()">Validar Veículo</button>
+            <button type="submit">Validar Veículo</button>
           </div>
         </div>
       </section>
@@ -99,38 +99,56 @@
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.1.3/jquery.inputmask.min.js"></script>
 
     <script>
 
 function redirecionarParaLogin() {
     window.location.href = "../telainicial/login.html";
   }
+  function maskCNH(input) {
+  const value = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+  const maskedValue = value.slice(0, 11); // Limita a 11 caracteres
+  input.value = maskedValue;
+}
 
-function validarVeiculo(motoristaId) {
+function maskCRV(input) {
+  const value = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+  const maskedValue = value.slice(0, 11); // Limita a 11 caracteres
+  input.value = maskedValue;
+}
+
+function maskPlaca(input) {
+  const value = input.value.replace(/[^a-zA-Z0-9]/g, ''); // Remove todos os caracteres não alfanuméricos
+  const maskedValue = value.slice(0, 8).replace(/([A-Za-z]{3})(\d{1})([A-Za-z]{1})(\d{2})/, '$1 $2$3$4'); // Aplica a máscara no formato AAA 1A11 e limita a 8 caracteres
+  input.value = maskedValue.toUpperCase();
+}
+
+function validarVeiculo() {
   const cnh = document.getElementById('cnh').value;
   const crv = document.getElementById('crv').value;
   const placa = document.getElementById('placa').value;
   const autorizacao = document.getElementById('autorizacao').value;
 
-  const veiculo = {
-    motoristaId: motoristaId,
-    cnh: cnh,
-    crv: crv,
-    placa: placa,
-    autorizacao: autorizacao
-  };
-
-  axios.post(`https://crud-server-json-trans-peste.vercel.app/motoristas/${motoristaId}`, veiculo)
-    .then(function(response) {
-      console.log('Veículo validado com sucesso!');
-      // Redirecionar para a próxima página ou realizar outras ações
-      window.location.href = '../loginmotorista/cadastrarrota.html';
-    })
-    .catch(function(error) {
-      console.error('Erro ao validar o veículo:', error);
-    });
+  // Restante do código de validação do veículo
 }
+
+document.getElementById('cnh').addEventListener('input', function() {
+  maskCNH(this);
+});
+
+document.getElementById('crv').addEventListener('input', function() {
+  maskCRV(this);
+});
+
+document.getElementById('placa').addEventListener('input', function() {
+  maskPlaca(this);
+});
+
+document.getElementById('autorizacao').addEventListener('input', function() {
+  maskCNH(this);
+});
 
       </script>
 
