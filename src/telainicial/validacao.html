@@ -98,7 +98,11 @@
         <p>Copyright © @2023. All Rights Reserved.Designd By TrasPeste.</p>
     </div>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
     <script>
+      console.log('ID do motorista:', motoristaId);
       function validarVeiculo() {
         const motoristaId = localStorage.getItem('motoristaId');
         const cnh = document.getElementById('cnh').value;

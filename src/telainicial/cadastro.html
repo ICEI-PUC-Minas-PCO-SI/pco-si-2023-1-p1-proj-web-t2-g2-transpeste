@@ -30,7 +30,7 @@
           <li> <a href="#">Sobre</a></li>
           <li> <a href="#">Perfil</a></li>
       </ul>
-      <button type="button">Login</button>
+      <button type="button" onclick="redirecionarParaLogin()">Login</button>
     </nav>
   </div>
 </header>
@@ -115,7 +115,11 @@
 
 
     <script>
-function cadastrarResponsavel() {
+function redirecionarParaLogin() {
+    window.location.href = "../telainicial/login.html";
+  }
+
+  function cadastrarResponsavel() {
   const nome = document.getElementById('responsavel-nome').value;
   const sobrenome = document.getElementById('responsavel-sobrenome').value;
   const telefone = document.getElementById('responsavel-telefone').value;
@@ -143,16 +147,19 @@ function cadastrarResponsavel() {
             };
 
             // Envia a requisição de cadastro
-       axios.post('https://crud-server-json-trans-peste.vercel.app/responsaveis', responsavel)
-    .then(function(response) {
-      console.log('Responsável cadastrado com sucesso!');
-      // Redirecionar para a página de perfil do usuário
-      window.location.href = '../loginusuario/selecionarviagem.html';
-    })
-    .catch(function(error) {
-      console.error('Erro ao cadastrar o responsável:', error);
-    });
-} else {
+            axios
+              .post('https://crud-server-json-trans-peste.vercel.app/responsaveis', responsavel)
+              .then(function(response) {
+                console.log('Responsável cadastrado com sucesso!');
+                // Redirecionar para a página de cadastrar rota do responsável
+                window.location.href = '../telainicialusu/cadastrarrota.html';
+              })
+              .catch(function(error) {
+                console.error('Erro ao cadastrar o responsável:', error);
+                // Redirecionar para a página de cadastrar rota do responsável mesmo em caso de erro
+                window.location.href = '../telainicialusu/cadastrarrota.html';
+              });
+          } else {
             // Exibe mensagem de erro caso a senha não tenha 8 dígitos
             alert('A senha deve ter exatamente 8 dígitos.');
           }
@@ -195,14 +202,17 @@ function cadastrarMotorista() {
             };
 
             // Envia a requisição de cadastro
-            axios.post('https://crud-server-json-trans-peste.vercel.app/motoristas', motorista)
+            axios
+              .post('https://crud-server-json-trans-peste.vercel.app/motoristas', motorista)
               .then(function(response) {
                 console.log('Motorista cadastrado com sucesso!');
-                // Redirecionar para a página de validação do motorista
-                window.location.href = '../validacao.html';
+                // Abrir a página de validação em uma nova janela ou guia do navegador
+                window.open('../telainicial/validacao.html', '_blank');
               })
               .catch(function(error) {
                 console.error('Erro ao cadastrar o motorista:', error);
+                // Abrir a página de validação em uma nova janela ou guia do navegador mesmo em caso de erro
+                window.open('../telainicial/validacao.html', '_blank');
               });
           } else {
             // Exibe mensagem de erro caso a senha não tenha 8 dígitos
@@ -212,6 +222,8 @@ function cadastrarMotorista() {
       })
       .catch(function(error) {
         console.error('Erro ao verificar o email:', error);
+        // Abrir a página de validação em uma nova janela ou guia do navegador mesmo em caso de erro
+        window.open('../validacao.html', '_blank');
       });
   } else {
     // Exibe mensagem de erro caso algum campo esteja vazio
