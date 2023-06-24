@@ -4,11 +4,12 @@ const urlrotas= "https://crud-server-json-trans-peste.vercel.app/rotas"
 const dadosurl = new URLSearchParams(window.location.search)
 const idurl = dadosurl.get('id')
 const selectrota = window.document.querySelector('select#rotas')
+const selected = window.document.querySelector('option#selected')
 const selectmotorista=window.document.querySelector('select#motorista')
 const inputpartida =window.document.querySelector('input#partida')
 const inputchegada =window.document.querySelector('input#chegada')
 var fundo = document.body;
-// banco de dados otavio 
+
 
 
 
@@ -19,16 +20,18 @@ var rotas = ["Santo Agostinho","CEFET", "funec ","Santa Maria","SESI"]
 async function preencherrotas(rotas)
 {
 
-   
+    console,log(selected)
     
 if(rotas==null)
 {
+    
     const option = document.createElement('option')
     option.innerHTML = 'Sem veiculos'
     selectveiculo.appendChild(option)
 }
 else
 {
+   
     for(var i=0;i<rotas.length;i++)
     {
         const option = document.createElement('option')
@@ -51,13 +54,20 @@ async function preenchermotorista() {
     const dadosrotas = await fetch(urlrotas);
     const rotas = await dadosrotas.json();
     const valorrotas = selectrota.value;
-    console.log(selectrota.text)
-    dadosrotas.map(
+  
+    rotas.map(
     (post)=>{
+       const textoselectrota = selectrota.options[selectrota.selectedIndex];
+       const texto = textoselectrota.text;
+      
+console.log(texto)
+      if(texto==post.escola)
+      {
+       var idmotorista = post.motoristasid;
+       verificarmotorista(idmotorista)
        
-            const option = document.createElement('option')
-            option.innerText = post.nome + " "+post.sobrenome;
-            selectmotorista.appendChild(option)
+      }
+            
         
         
     }
@@ -67,8 +77,19 @@ async function preenchermotorista() {
 
 }
 
-
-
+async function verificarmotorista(idmotorista) {
+   
+    const urlmotoristaatualizada = `https://crud-server-json-trans-peste.vercel.app/motoristas/${idmotorista}`;
+    const dadosmotoristas = await fetch(urlmotoristaatualizada);
+    const motorista = await dadosmotoristas.json(); // Corrigido para motorista em vez de motoristas
+    console.log(motorista.type);
+    
+   
+    const option = document.createElement('option');
+    option.innerText = motorista.nome + " " + motorista.sobrenome; // Corrigido para motorista.nome e motorista.sobrenome
+    selectmotorista.appendChild(option);
+  }
+  
 function salvar ()
 {
     console.log(selectmotorista.value)
