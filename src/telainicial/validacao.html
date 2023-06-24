@@ -125,35 +125,36 @@
       }
     
       function validarVeiculo() {
-  var cnh = document.getElementById("cnh").value;
-  var crv = document.getElementById("crv").value;
-  var placa = document.getElementById("placa").value;
-  var autorizacao = document.getElementById("autorizacao").value;
-
-  if (cnh === "" || crv === "" || placa === "" || autorizacao === "") {
-    alert("Por favor, preencha todos os campos.");
-    return;
-  }
-
-  fetch("https://crud-server-json-trans-peste.vercel.app/veiculos?placa=" + placa)
-    .then(response => response.json())
-    .then(data => {
-      console.log("Resposta da API:", data);
-
-      if (data && data.length > 0) {
-        alert("A placa já está cadastrada em outro veículo.");
-      } else {
-        alert("Veículo validado com sucesso!");
-        window.location.href = "../telainicial/login.html";
+        var cnh = document.getElementById("cnh").value;
+        var crv = document.getElementById("crv").value;
+        var placa = document.getElementById("placa").value;
+        var autorizacao = document.getElementById("autorizacao").value;
+    
+        if (cnh === "" || crv === "" || placa === "" || autorizacao === "") {
+          alert("Por favor, preencha todos os campos.");
+          return;
+        }
+    
+        fetch("https://crud-server-json-trans-peste.vercel.app/veiculos")
+          .then(response => response.json())
+          .then(data => {
+            console.log("Resposta da API:", data);
+    
+            const veiculoEncontrado = data.find(veiculo => veiculo.placa === placa);
+    
+            if (veiculoEncontrado) {
+              alert("A placa já está cadastrada em outro veículo.");
+            } else {
+              alert("Veículo validado com sucesso!");
+              window.location.href = "../telainicial/login.html";
+            }
+          })
+          .catch(error => {
+            console.error("Ocorreu um erro ao verificar a placa:", error);
+            alert("Ocorreu um erro ao verificar a placa. Por favor, tente novamente mais tarde.");
+          });
       }
-    })
-    .catch(error => {
-      console.error("Ocorreu um erro ao verificar a placa:", error);
-      alert("Ocorreu um erro ao verificar a placa. Por favor, tente novamente mais tarde.");
-    });
-}
-
-  
+    
       document.getElementById('cnh').addEventListener('input', function() {
         maskCNH(this);
       });
@@ -170,6 +171,8 @@
         maskCNH(this);
       });
     </script>
+    
+    
     
     
     
