@@ -152,15 +152,15 @@ function redirecionarParaLogin() {
               // Envia a requisição de cadastro
               axios
                 .post('https://crud-server-json-trans-peste.vercel.app/responsaveis', responsavel)
-                .then(function(response) {
+                .then(function(responseCadastro) {
                   console.log('Responsável cadastrado com sucesso!');
-                  // Redirecionar para a página de cadastrar rota do responsável
-                  window.location.href = '../telainicialusu/cadastrarrota.html';
+                  // Redireciona para a página de login
+                  window.location.href = '../telainicial/login.html';
                 })
                 .catch(function(error) {
                   console.error('Erro ao cadastrar o responsável:', error);
-                  // Redirecionar para a página de cadastrar rota do responsável mesmo em caso de erro
-                  window.location.href = '../telainicialusu/cadastrarrota.html';
+                  // Redireciona para a página de login mesmo em caso de erro
+                  window.location.href = '../telainicial/login.html';
                 });
             } else {
               // Exibe mensagem de erro caso a senha e a confirmação de senha sejam diferentes
@@ -180,6 +180,12 @@ function redirecionarParaLogin() {
     alert('Por favor, preencha todos os campos!');
   }
 }
+
+
+
+
+
+
 
 function cadastrarMotorista() {
   const nome = document.getElementById('motorista-nome').value;
