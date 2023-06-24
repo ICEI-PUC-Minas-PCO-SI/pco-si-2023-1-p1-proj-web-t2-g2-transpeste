@@ -20,7 +20,7 @@ var rotas = ["Santo Agostinho","CEFET", "funec ","Santa Maria","SESI"]
 async function preencherrotas(rotas)
 {
 
-    console,log(selected)
+    console.log(selected)
     
 if(rotas==null)
 {
@@ -31,7 +31,7 @@ if(rotas==null)
 }
 else
 {
-   
+  
     for(var i=0;i<rotas.length;i++)
     {
         const option = document.createElement('option')
@@ -45,24 +45,30 @@ else
 }
 
 preencherrotas(rotas)
+
+
 async function preenchermotorista() {
+    
   if ( selectrota.value=="null") {
    
    alert('voce ainda não selecionou uma rota')
   } else {
-    
+  
     const dadosrotas = await fetch(urlrotas);
     const rotas = await dadosrotas.json();
     const valorrotas = selectrota.value;
   
     rotas.map(
     (post)=>{
+        selectmotorista.innerHTML=""
        const textoselectrota = selectrota.options[selectrota.selectedIndex];
        const texto = textoselectrota.text;
+      
       
 console.log(texto)
       if(texto==post.escola)
       {
+      
        var idmotorista = post.motoristasid;
        verificarmotorista(idmotorista)
        
@@ -112,9 +118,9 @@ else
 
 if(!idurl)
 {
-    
+    window.location.href="../telainicial/login.html"
 }
 else
 {
-    
+    alert(idurl)
 }
