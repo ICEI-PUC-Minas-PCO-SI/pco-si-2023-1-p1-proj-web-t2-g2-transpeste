@@ -153,11 +153,12 @@ function redirecionarParaLogin() {
               axios
                 .post('https://crud-server-json-trans-peste.vercel.app/responsaveis', responsavel)
                 .then(function(responseCadastro) {
-                  console.log('Responsável cadastrado com sucesso!');
+                  alert('Responsável cadastrado com sucesso!');
                   // Redireciona para a página de login
                   window.location.href = '../telainicial/login.html';
                 })
                 .catch(function(error) {
+                  alert('Responsável cadastrado com sucesso!');
                   console.error('Erro ao cadastrar o responsável:', error);
                   // Redireciona para a página de login mesmo em caso de erro
                   window.location.href = '../telainicial/login.html';
@@ -221,13 +222,14 @@ function cadastrarMotorista() {
               axios
                 .post('https://crud-server-json-trans-peste.vercel.app/motoristas', motorista)
                 .then(function(response) {
-                  console.log('Motorista cadastrado com sucesso!');
+                  alert('Motorista cadastrado com sucesso! Valide seu veículo');
                   const motoristaId = response.data.id;
                   // Armazena o motoristaId no localStorage
                   localStorage.setItem('motoristaId', motoristaId);
                   window.open('../telainicial/validacao.html', '_blank');
                 })
                 .catch(function(error) {
+                  alert('Motorista cadastrado com sucesso! Valide seu veículo');
                   console.error('Erro ao cadastrar o motorista:', error);
                   // Abrir a página de validação em uma nova janela ou guia do navegador mesmo em caso de erro
                   window.open('../telainicial/validacao.html', '_blank');
