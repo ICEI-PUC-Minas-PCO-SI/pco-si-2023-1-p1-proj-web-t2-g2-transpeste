@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link href="rotacss.css" rel="stylesheet" type="text/css" />
   <script src="script.js"></script>
+  <script src="../telainicialusu/scripts.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -43,25 +44,23 @@
     <div class="esquerdo">
       <form class="formulario">
         <div id="rota">
-        <select name="rota">
-          <option value="valor2" selected>Selecione sua rota</option>
-          <option value="volvo">Rota 1</option>
-          <option value="volvo">Rota 2</option>
+        <select  id="rotas" name="rotas">
+          <option value="null" selected>Selecione sua rota</option>
+          
         </select>
     </div>
         <div style="margin-top: 20px;">
-          <input type="text" placeholder="Local de partida">
+          <input id="partida" class="place" type="text" placeholder="Local de partida">
         </div>
         <div style="margin-top: 20px;">
-          <input type="text" placeholder="Local de final">
+          <input id="chegada" class="place" type="text" placeholder="Local de final">
         </div>
-        <select name="rota" style="margin-top: 20px;">
-          <option value="valor2" selected>Selecione um veiculo</option>
-          <option value="volvo">Veiculo 1</option>
-          <option value="volvo">Veiculo 2</option>
+        <select onclick="preenchermotorista()" name="motorista"  id="motorista" style="margin-top: 20px;">
+          <option id="selected" value="null" selected>Selecione o Motorista</option>
+        
         </select>
         <div id="but">
-          <button type="button" style="margin-top: 20px;"> <a href="../loginusuario/avaliarviagem.html">Salvar</a> </button>
+          <button onclick="salvar()"  type="button" style="margin-top: 20px;"> <a >Salvar</a> </button>
         </div>
       </form>
 
