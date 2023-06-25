@@ -20,7 +20,7 @@ var rotas = ["Santo Agostinho","CEFET", "funec ","Santa Maria","SESI"]
 async function preencherrotas(rotas)
 {
 
-    console.log(selected)
+    
     
 if(rotas==null)
 {
@@ -83,6 +83,18 @@ console.log(texto)
 
 }
 
+async function bemvindo(idresponsavel) {
+   
+    const urlresponsavelatualizada = `https://crud-server-json-trans-peste.vercel.app/responsaveis/${idresponsavel}`;
+    console.log(urlresponsavelatualizada)
+    const dadosresponsavel = await fetch(urlresponsavelatualizada);
+    const responsavel = await dadosresponsavel.json(); // Corrigido para motorista em vez de motoristas
+    console.log(responsavel.type);
+    
+   
+     alert( ` Bem vindo ${responsavel.nome} ${responsavel.sobrenome}`)
+    
+}
 async function verificarmotorista(idmotorista) {
    
     const urlmotoristaatualizada = `https://crud-server-json-trans-peste.vercel.app/motoristas/${idmotorista}`;
@@ -96,12 +108,13 @@ async function verificarmotorista(idmotorista) {
     selectmotorista.appendChild(option);
   }
   
-function salvar ()
+function salvar()
 {
-    console.log(selectmotorista.value)
-    console.log(selectrota.value)
+   
+    console.log(inputpartida.value)
+    console.log(inputchegada.value)
     
-if(selectrota.value=="null" || selectmotorista.value=="null"|inputchegada.value==null|| inputchegada.value==null)
+if(selectrota.value=="null" || selectmotorista.value=="null"|inputchegada.value==""|| inputpartida.value=="")
 {
 alert('Ta faltando informação doidão')
 }
@@ -114,6 +127,29 @@ else
 
 }
 
+var nomemotorista = "";
+var dados = {};
+
+async function enviardados() {
+   
+  const textoselectrota = selectrota.options[selectrota.selectedIndex];
+  const textorota = textoselectrota.text;
+  const textoselectmotorista = selectmotorista.options[selectmotorista.selectedIndex];
+  const textomotorista = textoselectmotorista.text;
+  const textopartida = inputpartida.value;
+  const textochegada = inputchegada.value;
+  const idmotorista = idurl;
+
+ 
+}
+
+function redirecionarperfil()
+{
+    window.location.href = `http://127.0.0.1:5500/src/loginusuario/perfilusuario.html?id=${idurl}`
+}
+  
+
+  
 
 
 if(!idurl)
@@ -122,5 +158,6 @@ if(!idurl)
 }
 else
 {
-    alert(idurl)
+ 
+   bemvindo(idurl)
 }
