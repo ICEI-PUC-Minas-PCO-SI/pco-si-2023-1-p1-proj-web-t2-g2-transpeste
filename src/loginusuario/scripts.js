@@ -4,6 +4,8 @@ const idurl = dadosurl.get('id')
 const campopreencher = document.querySelector('section#responsavel')
 
 
+
+
 function redirecionarhome()
 {
         window.location.href= `../telainicialusu/cadastrarrota.html?id=${idurl}`

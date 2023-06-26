@@ -108,44 +108,40 @@ async function verificarmotorista(idmotorista) {
     selectmotorista.appendChild(option);
   }
   
-function salvar()
-{
-   
-    console.log(inputpartida.value)
-    console.log(inputchegada.value)
-    
-if(selectrota.value=="null" || selectmotorista.value=="null"|inputchegada.value==""|| inputpartida.value=="")
-{
-alert('Ta faltando informação doidão')
-}
-else
-{
-    alert('preencheu tudo boa garoto')
-    window.location.href="../loginusuario/avaliarviagem.html"
-}
 
-
-}
 
 var nomemotorista = "";
 var dados = {};
 
 async function enviardados() {
    
-  const textoselectrota = selectrota.options[selectrota.selectedIndex];
-  const textorota = textoselectrota.text;
-  const textoselectmotorista = selectmotorista.options[selectmotorista.selectedIndex];
-  const textomotorista = textoselectmotorista.text;
-  const textopartida = inputpartida.value;
-  const textochegada = inputchegada.value;
-  const idmotorista = idurl;
-
+    if(selectrota.value=="null" || selectmotorista.value=="null"|inputchegada.value==""|| inputpartida.value=="")
+{
+alert('Ta faltando informação doidão')
+}
+else
+{
+    const textoselectrota = selectrota.options[selectrota.selectedIndex];
+    const textorota = textoselectrota.text;
+    const textoselectmotorista = selectmotorista.options[selectmotorista.selectedIndex];
+    const textomotorista = textoselectmotorista.text;
+    const textopartida = inputpartida.value;
+    const textochegada = inputchegada.value;
+    const idmotorista = idurl;
+  const pedido = {escola:textorota,solicitante:idurl,partida:textopartida,motoristasid:textomotorista}
+    axios.post('https://crud-server-json-trans-peste.vercel.app/solicitacao',pedido)
+  .then(function(response){
+      
+  }
+  )
+  .catch(function(error) { alert("Solitação cadastrada")});
+}
  
 }
 
 function redirecionarperfil()
 {
-    window.location.href = `http://127.0.0.1:5500/src/loginusuario/perfilusuario.html?id=${idurl}`
+    window.location.href = `../loginusuario/perfilusuario.html?id=${idurl}`
 }
   
 
