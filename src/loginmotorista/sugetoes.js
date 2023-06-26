@@ -21,9 +21,8 @@ async function preencher(){
             div.appendChild(p);
             div.appendChild(aceitar);
             div.appendChild(recusar);
-            caixa_sugestoes.appendChild(div); 
-
-        } 
+            caixa_sugestoes.appendChild(div);
+        }
     )
 }
 preencher()
