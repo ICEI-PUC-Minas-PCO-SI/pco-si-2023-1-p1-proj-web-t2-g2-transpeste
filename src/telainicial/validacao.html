@@ -22,10 +22,12 @@
   <div class="primeira">
     <nav>
      <div>
-       <img class="logo" src="../imagens/logosemfundo.png" alt="TransPeste">
+      <a href="../index.html">
+        <img class="logo" src="../imagens/logosemfundo.png" alt="TransPeste">
+       </a>
      </div>
       <ul>
-        <li> <a href="../telainicial/login.html">Home</a></li>
+        <li> <a href="../telainicial/index.html">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
           <li> <a href="#">Perfil</a></li>
@@ -44,7 +46,7 @@
             <input type="text" id="crv" placeholder="CRV do Veículo" oninput="maskCRV(this)" />
             <input type="text" id="placa" placeholder="Placa do veículo" oninput="maskPlaca(this)" />
             <input type="text" id="autorizacao" placeholder="Autorização do Detran" />
-            <button type="submit" onclick="validarVeiculo()">Validar Veículo</button>
+            <button type="button" onclick="validarVeiculo()">Validar Veículo</button>
           </div>
         </div>
       </section>
@@ -155,22 +157,26 @@
           });
       }
     
-      document.getElementById('cnh').addEventListener('input', function() {
-        maskCNH(this);
-      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('cnh').addEventListener('input', function() {
+          maskCNH(this);
+        });
     
-      document.getElementById('crv').addEventListener('input', function() {
-        maskCRV(this);
-      });
+        document.getElementById('crv').addEventListener('input', function() {
+          maskCRV(this);
+        });
     
-      document.getElementById('placa').addEventListener('input', function() {
-        maskPlaca(this);
-      });
+        document.getElementById('placa').addEventListener('input', function() {
+          maskPlaca(this);
+        });
     
-      document.getElementById('autorizacao').addEventListener('input', function() {
-        maskCNH(this);
+        document.getElementById('autorizacao').addEventListener('input', function() {
+          maskCNH(this);
+        });
       });
     </script>
+    </body>
+    
     
     
     
