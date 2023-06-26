@@ -5,8 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Cadastro de rota</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script> <script src="axios.js"></script>
+
   <link href="rotacss.css" rel="stylesheet" type="text/css" />
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,11 +30,11 @@
       </div>
       <div>
         <ul>
-          <li> <a href="../loginmotorista/cadastrarrota.html">Home</a></li>
+          <li > <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
-          <li> <a href="../loginmotorista/perfildefi.html">Perfil</a></li>
-          <li><button type="button"> <a href="../loginmotorista/perfildefi.html">Meu Perfil</a> </button></li>
+          <li onclick="redirecionarperfil()"> <a href="#">Perfil</a></li>
+          <li onclick="redirecionarperfil()"><button type="button"> <a href="#">Meu Perfil</a> </button></li>
         </ul>
       </div>
     </nav>
@@ -43,25 +48,23 @@
     <div class="esquerdo">
       <form class="formulario">
         <div id="rota">
-        <select name="rota">
-          <option value="valor2" selected>Selecione sua rota</option>
-          <option value="volvo">Rota 1</option>
-          <option value="volvo">Rota 2</option>
+        <select id="rotas" name="rota">
+          <option value="null" selected>Selecione sua rota</option>
+          
         </select>
     </div>
         <div style="margin-top: 20px;">
-          <input type="text" placeholder="Local de partida">
+          <input id="partida" type="text" placeholder="Local de partida">
         </div>
         <div style="margin-top: 20px;">
-          <input type="text" placeholder="Local de final">
+          <input id="chegada" type="text" placeholder="Local de final">
         </div>
-        <select name="rota" style="margin-top: 20px;">
-          <option value="valor2" selected>Selecione um veiculo</option>
-          <option value="volvo">Veiculo 1</option>
-          <option value="volvo">Veiculo 2</option>
+        <select onclick="preenhcerveiculo()" id="motorista" name="rota" style="margin-top: 20px;">
+          <option value="null" selected>Selecione um veiculo</option>
+         
         </select>
         <div id="but">
-          <button type="button" style="margin-top: 20px;">Salvar</button>
+          <button onclick="enviardados()" type="button" style="margin-top: 20px;">Salvar</button>
         </div>
       </form>
 
@@ -80,6 +83,7 @@
         <p>Guia de Cadastro</p>
         <p>Termos</p>
         <p>FAQ</p>
+        
         <p>Privacidade</p>
       </div>
       <div class="ter">

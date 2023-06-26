@@ -306,3 +306,53 @@
     flex-grow: 1;
     margin-right: 10px;
   }
+
+  #caixa_sugestoes > div{    
+    border: solid black 1px;
+    text-align: center; 
+    margin-left: 75px;
+    margin-top: 20px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+  }
+
+  h1{
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  #caixa_sugestoes > div > p{
+    padding-bottom: 8px;
+  }
+
+  #caixa_sugestoes > div > h2{
+    padding: 5px;
+  }
+
+  #caixa_sugestoes{
+    display: inline-block;
+  }
+
+  div > #button1 {
+    border: none;
+    background: #2df095;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.2s;
+    margin: 5px;
+  }
+
+  div > #button2 {
+    border: none;
+    background: #f01212;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.2s;
+    margin: 5px;
+  }

@@ -21,10 +21,12 @@
   <div class="primeira">
     <nav>
      <div>
+      <a href="../index.html">
        <img class="logo" src="../imagens/logosemfundo.png" alt="TransPeste">
+      </a>
      </div>
       <ul>
-        <li> <a href="../telainicial/login.html">Home</a></li>
+        <li> <a href="../index.html">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
           <li> <a href="#">Perfil</a></li>
@@ -122,10 +124,12 @@ function loginResponsavel() {
       .then(function(response) {
         const responsaveis = response.data;
         const responsavelEncontrado = responsaveis.find(responsavel => responsavel.email === email && responsavel.senha === senha);
+        console.log(idLogado);
         if (responsavelEncontrado) {
+          var idLogado = responsavelEncontrado.id;
           console.log('Login do responsável realizado com sucesso!');
           // Redirecionar ou realizar outras ações após o login bem-sucedido
-          window.location.href = '../telainicialusu/cadastrarrota.html';
+          window.location.href = `../telainicialusu/cadastrarrota.html?id=${idLogado}`;
         } else {
           console.error('E-mail ou senha inválidos para o responsável.');
           alert('E-mail ou senha inválidos para o responsável.');
@@ -151,9 +155,11 @@ function loginMotorista() {
         const motoristas = response.data;
         const motoristaEncontrado = motoristas.find(motorista => motorista.email === email && motorista.senha === senha);
         if (motoristaEncontrado) {
+          var idLogado = motoristaEncontrado.id;
+          console.log(idLogado);
           console.log('Login do motorista realizado com sucesso!');
           // Redirecionar ou realizar outras ações após o login bem-sucedido
-          window.location.href = '../loginmotorista/cadastrarrota.html';
+          window.location.href = `../loginmotorista/cadastrarrota.html?id=${idLogado}`;
         } else {
           console.error('E-mail ou senha inválidos para o motorista.');
           alert('E-mail ou senha inválidos para o motorista.');
@@ -167,6 +173,7 @@ function loginMotorista() {
     alert('Por favor, preencha todos os campos!');
   }
 }
+
 
     </script>
 
