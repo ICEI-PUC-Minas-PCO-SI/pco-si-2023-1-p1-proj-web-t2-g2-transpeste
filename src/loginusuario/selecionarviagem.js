@@ -12,10 +12,10 @@ async function preencher(){
         h2.innerHTML = preencherDadosJson.solicitante;
         const p = document.createElement("p");
         p.innerHTML = "<strong>Rota: </strong>" + preencherDadosJson.escola + "<br>" + "<strong>Partida: </strong>" + preencherDadosJson.partida;
-        const aceitar = document.createElement("button1");
+        const aceitar = document.createElement("button");
         aceitar.setAttribute("id","button1") 
         aceitar.innerHTML = "Aceitar";
-        const recusar = document.createElement("button2");
+        const recusar = document.createElement("button");
         recusar.setAttribute("id","button2");
         recusar.innerHTML = "Recusar";
         const div = document.createElement("div");
@@ -24,6 +24,6 @@ async function preencher(){
         div.appendChild(aceitar);
         div.appendChild(recusar);
         caixa_sugestoes.appendChild(div);
-        
+
 }
 preencher()
