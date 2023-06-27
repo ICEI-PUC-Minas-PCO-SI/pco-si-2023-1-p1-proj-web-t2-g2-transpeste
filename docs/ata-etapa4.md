@@ -3,7 +3,7 @@ Jean Estanislau:
 
 Ana Clara Lima Marçal: 
 
-Diogo Campos: 
+Diogo Campos: Implementação do codigo em JavaScript da pagina de avaliação das crianças por parte do motorista, fazendo integração com as outras páginas.
 
 Pedro Morais: 
 
