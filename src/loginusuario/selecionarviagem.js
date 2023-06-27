@@ -12,23 +12,20 @@ async function preencher() {
     h2.innerHTML = await obterNomeSolicitante(dados.solicitante);
     const p = document.createElement("p");
     p.innerHTML =
-      "<strong>Rota: </strong>" +
-      dados.escola +
-      "<br>" +
-      "<strong>Partida: </strong>" +
-      dados.partida;
+    "<strong>Rota: </strong>" + dados.escola + "<br>" + "<strong>Partida: </strong>" + dados.partida;
     const aceitar = document.createElement("button");
     aceitar.setAttribute("id", "button1");
     aceitar.setAttribute("onclick", "aceitar()");
     aceitar.innerHTML = "Aceitar";
-    const recusar = document.createElement("button");
-    recusar.setAttribute("id", "button2");
-    recusar.innerHTML = "Recusar";
+    const deletar = document.createElement("button");
+    deletar.setAttribute("id", "button2");
+    deletar.setAttribute("onclick", "deletar()");    
+    deletar.innerHTML = "deletar";
     const div = document.createElement("div");
     div.appendChild(h2);
     div.appendChild(p);
     div.appendChild(aceitar);
-    div.appendChild(recusar);
+    div.appendChild(deletar);
     caixa_sugestoes.appendChild(div);
   });
 }
@@ -48,10 +45,14 @@ preencher();
 
 async function aceitar() {
   const preencherDados1 = await fetch(url + "/" + urlID);
+  console.log(url + "/" + urlID);
   const preencherDadosJson1 = await preencherDados1.json();
   const veiculoid = 1;
-  const criancasid = preencherDadosJson1.criancas;
-  const responsavelid = preencherDadosJson1.responsavel;
+  console.log(veiculoid);
+  const criancasid = preencherDadosJson1.crianca;
+  console.log(preencherDadosJson1.crianca);
+  const responsavelid = preencherDadosJson1.solicitante;  
+  console.log(preencherDadosJson1.solicitante);
   const dados = {
     veiculoid: veiculoid,
     criancas: criancasid,
@@ -59,10 +60,58 @@ async function aceitar() {
   };
   axios
     .post("https://crud-server-json-trans-peste.vercel.app/ocupacao", dados)
-    .then(function (response) {})
+    .then(function (response) {
+      
+    })
     .catch(function (error) {
       alert("Solicitação aceita!");
+      location.reload();
     });
 }
 
+// async function recusar() {
+//   const preencherDados2 = await fetch(url1 + "/" + urlID);
+//   const preencherDadosJson2 = await preencherDados2.json();
+//   const veiculoid = 1;
+//   const criancasid = preencherDadosJson2.criancas;
+//   const responsavelid = preencherDadosJson2.responsavel;
+//   const dados = {
+//     veiculoid: veiculoid,
+//     criancas: criancasid,
+//     responsavel: responsavelid,
+//   };
+//   axios
+//    .post("https://crud-server-json-trans-peste.vercel.app/ocupacao", dados)
+//    .then(function (response) {
+//       // Recarregar a página após a solicitação ser recusada
+//       location.reload();
+//     })
+//    .catch(function (error) {
+//       alert("Solicitação recusada!");
+//     });
+// }
 
+async function deletar() {  
+  axios
+   .delete("https://my-json-server.typicode.com/Machada1/CRUD-SERVER-JSON-TransPeste/responsaveis/1" )
+    .then(function (response) {
+      
+      location.reload();
+    })
+   .catch(function (error) {
+      alert("Deletado!");
+      const div = document.createElement("div");
+      div.innerHTML = "Deletado!";
+      location.reload();
+    });
+}
+
+function redirecionarhome()
+{
+        window.location.href= `../telainicialusu/cadastrarrota.html?id=${urlID} `
+}
+
+function redirecionarperfil()
+{
+        window.location.href= `../loginusuario/perfilusuario.html?id=${urlID} `
+}
