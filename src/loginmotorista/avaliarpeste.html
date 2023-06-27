@@ -125,6 +125,48 @@
     <div class="rodape">
         <p>Copyright © @2023. All Rights Reserved.Designd By TransPeste.</p>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
+    <script src="httpvscode-file://vscode-app/c:/programa%C3%A7%C3%A3o/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.htmls://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js%22%3E"></script>
+    <script>
+    const atual = new URL(window.location.href);
+    const params = new URLSearchParams(atual.search);
+    const id = params.get('id');
+      var ratingValue = 0;
+      function updateRating(event) {
+        ratingValue = parseInt(event.target.value);
+        console.log("Valor da estrela selecionada: " + ratingValue);
+      }
+      var stars = document.querySelectorAll('.estrela input[type="radio"]');
+      stars.forEach(function(star) {
+      star.addEventListener('click', updateRating);
+      });
+      function getRating() {
+        return axios.get('https://crud-server-json-trans-peste.vercel.app/criancas/'+id)
+          .then(function(response) {
+            return response.data.avalicao;
+           })
+          .catch(function(error) {
+            console.error(error);
+            throw error; 
+          });
+        }
+      var oldrating=getRating();
+      var newrating=(oldrating+ratingValue)/2;
+      var url = 'https://crud-server-json-trans-peste.vercel.app/criancas?id='+id;
+      axios.post(url, {
+        avalicao: ratingValue
+      })
+      .then(function(response) {
+        return response.data;
+        alert('Avaliação enviada com sucesso!');
+        window.location.href='.../loginmotorista/lotacao.html';
+      })
+      .catch(function(error) {
+        console.error(error);
+                throw error; 
+      });
+    </script>
 
 
 

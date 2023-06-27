@@ -7,7 +7,9 @@
   <title>Login</title>
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link href="style (1).css" rel="stylesheet" type="text/css" />
-   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
+  <script src="script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -132,7 +134,12 @@ function loginResponsavel() {
           window.location.href = `../telainicialusu/cadastrarrota.html?id=${idLogado}`;
         } else {
           console.error('E-mail ou senha inválidos para o responsável.');
-          alert('E-mail ou senha inválidos para o responsável.');
+          Swal.fire({
+                      icon: 'error',
+                      title: 'Oops...',
+                      text: 'E-mail ou senha inválidos para o responsável!',
+                      confirmButtonColor: '#EE1C47'
+                    })
         }
       })
       .catch(function(error) {
@@ -140,7 +147,12 @@ function loginResponsavel() {
       });
   } else {
     console.error('Por favor, preencha todos os campos!');
-    alert('Por favor, preencha todos os campos!');
+    Swal.fire({
+                      icon: 'error',
+                      title: 'Oops...',
+                      text: 'Por favor, preencha todos os campos!',
+                      confirmButtonColor: '#EE1C47'
+              })
   }
 }
 
@@ -162,7 +174,12 @@ function loginMotorista() {
           window.location.href = `../loginmotorista/cadastrarrota.html?id=${idLogado}`;
         } else {
           console.error('E-mail ou senha inválidos para o motorista.');
-          alert('E-mail ou senha inválidos para o motorista.');
+          Swal.fire({
+                      icon: 'error',
+                      title: 'Oops...',
+                      text: 'E-mail ou senha inválidos para o motorista!',
+                      confirmButtonColor: '#EE1C47'
+                    })
         }
       })
       .catch(function(error) {
@@ -170,7 +187,12 @@ function loginMotorista() {
       });
   } else {
     console.error('Por favor, preencha todos os campos!');
-    alert('Por favor, preencha todos os campos!');
+    Swal.fire({
+                      icon: 'error',
+                      title: 'Oops...',
+                      text: 'Por favor, preencha todos os campos!',
+                      confirmButtonColor: '#EE1C47'
+              })
   }
 }
 
