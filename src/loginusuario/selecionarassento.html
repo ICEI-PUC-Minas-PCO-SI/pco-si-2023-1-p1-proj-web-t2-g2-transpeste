@@ -3,135 +3,144 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Selecionar assento</title>
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link href="assentocss.css" rel="stylesheet" type="text/css" />
-  <script src="script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="style.css" /> -->
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-   <!-- Bootstrap CSS -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-
-<script src="https://kit.fontawesome.com/2eba641b80.js" crossorigin="anonymous"></script>
+  <!-- Optional JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/2eba641b80.js" crossorigin="anonymous"></script>
+  <script src="selecionarassento.js"></script>
 </head>
 
 <body>
   <div class="primeira">
     <nav>
       <div>
-        <img  class="logo" src="../imagens/logosemfundo.png" alt="TransPeste">
+        <img class="logo" src="../imagens/logosemfundo.png" alt="TransPeste">
       </div>
       <div>
         <ul>
-            <li> <a href="../telainicialusu/cadastrarrota.html">Home</a></li>
-            <li> <a href="#">Info</a></li>
-            <li> <a href="#">Sobre</a></li>
-            <li> <a href="../loginusuario/perfilusuario.html">Perfil</a></li>
-            <li><button type="button"> <a href="../loginusuario/perfilusuario.html">Meu Perfil</a> </button></li>
-          </ul>
+          <li> <a href="#" onclick="redirecionarhome()">Home</a></li>
+          <li> <a href="#">Info</a></li>
+          <li> <a href="#">Sobre</a></li>
+          <li> <a href="#" onclick="redirecionarperfil()">Perfil</a></li>
+          <li><button type="button"> <a href="#" onclick = "redirecionarperfil()">Meu Perfil</a> </button></li>
+        </ul>
       </div>
     </nav>
   </div>
 
   <div class="meio" style="display: block; position: relative;">
 
-    <div class="container-fluid" style="position: absolute; display: block; justify-content: center;">
-        <div class="row" style="width: 100%;">
-            <div class="col-md-12 pt-4">
-                <div class="form">
-                    <div class="form-header">
-                        <div class="title">
-                            <h1>Selecione seu assento</h1>
-                        </div>
-                    </div>
-                </div>
+    <div class="container-fluid" style="align-items: center;">
+      <div class="row" style="width: 100%;">
+        <div class="col-md-12 pt-4">
+          <div class="form">
+            <div class="form-header">
+              <div class="title">
+                <h1>Gestão de Assentos</h1>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- A quantidade de cards irá variar conforme o cadastro da van no sistema -->
-        <div class="row" style="position: relative;">
+      </div>
+      <!-- A quantidade de cards irá variar conforme o cadastro da van no sistema -->
 
-            <div class="col-md-3 pt-4">
-
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="/src/imagens/bancodevan.jpeg" alt="Assento da van">
-                    <div class="card-body">
-                        <h5 class="card-title">1º assento</h5>
-                        <p class="card-text">Assento na primeira fileira, canto esquerdo.</p>
-                        <div class="card-buttons">
-                            <button type="button" class="btn btn-success" style="margin-right: 1rem;"><i
-                                    class="fa-solid fa-check"></i></button>
-                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-xmark"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-3 pt-4">
-
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="/src/imagens/bancodevan.jpeg" alt="Assento da van">
-                    <div class="card-body">
-                        <h5 class="card-title">2º assento</h5>
-                        <p class="card-text">Assento na primeira fileira, segundo banco da esquerda.</p>
-                        <div class="card-buttons">
-                            <button type="button" class="btn btn-success" style="margin-right: 1rem;"><i
-                                    class="fa-solid fa-check"></i></button>
-                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-xmark"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+      <div class="row">
+        <div class="col-md-4 pt-4">
+          <div class='card-holder'>
 
 
-            <div class="col-md-3 pt-4">
 
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="/src/imagens/bancodevan.jpeg" alt="Assento da van">
-                    <div class="card-body">
-                        <h5 class="card-title">3º assento</h5>
-                        <p class="card-text">Assento na primeira fileira, terceiro banco canto direito.</p>
-                        <div class="card-buttons">
-                            <button type="button" class="btn btn-success" style="margin-right: 1rem;"><i
-                                    class="fa-solid fa-check"></i></button>
-                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-xmark"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-3 pt-4">
-
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="/src/imagens/bancodevan.jpeg" alt="Assento da van">
-                    <div class="card-body">
-                        <h5 class="card-title">4º assento</h5>
-                        <p class="card-text">Assento na primeira fileira, canto direito.</p>
-                        <div class="card-buttons">
-                            <button type="button" class="btn btn-success" style="margin-right: 1rem;"><i
-                                    class="fa-solid fa-check"></i></button>
-                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-xmark"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+          </div>
         </div>
 
+        <div class="col-md-4 pt-4">
+          <div class='card-holder2'>
+
+
+
+          </div>
+        </div>
+
+        <div class="col-md-4 pt-4">
+          <div class='card-holder3'>
+
+
+
+          </div>
+        </div>
+
+      </div>
+
+      <br>
+      <br>
+
+      <div class="row">
+
+        <div class="pagination-place">
+  
+          <ul class="pagination">
+            <div class="first">
+              <li class="page-item">
+                <a class="page-link" href="#" id="firstBtn">&#171;</a>
+              </li>
+            </div>
+  
+            <div class="previous">
+              <li class="page-item">
+                <a class="page-link" id="previousBtn" href="#">
+                  < </a>
+              </li>
+            </div>
+  
+            <div class="numbers">
+              <li class="page-item disabled"><a class="page-link" id="numberBtn" href="#">1</a></li>
+            </div>
+  
+            <div class="next">
+              <li class="page-item">
+                <a class="page-link" id="nextBtn" href="#"> > </a>
+              </li>
+            </div>
+  
+            <div class="last">
+              <li class="page-item">
+                <a class="page-link" id="lastBtn" href="#"> &#187; </a>
+              </li>
+            </div>
+  
+          </ul>
+  
+        </div>
+  
+      </div>
     </div>
-</div>
+
+  </div>
+  </div>
   <section class="contato">
     <div class="infogeral">
       <div class="pri">
@@ -174,7 +183,7 @@
 
 
 
-  
+
 </body>
 
 </html>
