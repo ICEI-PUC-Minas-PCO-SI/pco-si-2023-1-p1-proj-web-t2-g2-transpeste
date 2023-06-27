@@ -27,7 +27,7 @@ const div = document.createElement('div')
          
          h1.innerHTML = "Seu veículo"
          botaoeditar.innerHTML = "Editar"
-         botaoeditar.setAttribute('href',`../loginmotorista/perfilmoto.html?id=${veiculo.id}`)
+         botaoeditar.setAttribute('href',`../loginmotorista/cadastroveiculo.html?id=${veiculo.id}`)
          botaoassento.innerHTML = "Assento"
          botaoassento.setAttribute('href',`../loginusuario/selecionarassento.html?id=${veiculo.id}`)
          modelo.innerHTML = `<strong>Modelo</strong>:${veiculo.modelo}`
@@ -72,5 +72,5 @@ function redirecionarhome()
 
 function redirecionarperfil()
 {
-        window.location.href= `../loginmotorista/perfildefi.html?id=${idurl} `
+        window.location.href= `../loginusuario/perfil_motorista.html?id=${idurl} `
 }

@@ -34,6 +34,7 @@ if(post.responsaveisid==idurl)
 if(valid==0)
 { const option = document.querySelector('option')
 option.innerHTML ="0 crianças cadastrada"
+option.setAttribute('value',"null")
 selectcrianca.appendChild(option)
 }
 }
@@ -77,7 +78,15 @@ async function preenchermotorista() {
     
   if ( selectrota.value=="null") {
    
-   alert('voce ainda não selecionou uma rota')
+    $(document).ready(function(){
+
+      Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Selecione uma rota!',
+    
+  })
+    })
   } else {
   
     const dadosrotas = await fetch(urlrotas);
@@ -108,6 +117,7 @@ async function preenchermotorista() {
    {
     const option =document.createElement('option')
     option.innerHTML = "Não há motoristas"
+    option.setAttribute('value',"null")
     selectmotorista.appendChild(option)
    }
     
@@ -164,7 +174,7 @@ async function enviardados() {
   Swal.fire({
     icon: 'error',
     title: 'Oops...',
-    text: 'Esta faltando informações!',
+    text: 'Preencha todas as informações!',
     
   })
 })

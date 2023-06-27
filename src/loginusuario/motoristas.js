@@ -33,7 +33,7 @@ const div = document.createElement('div')
          botaosolicita.innerHTML = "Solicitações pendentes"
          botaosolicita.setAttribute('href',`../loginmotorista/sugestoes.html?id=${motoristas.id}`)
          botaomeusveiculos.innerHTML = "Meus veículos"
-         botaomeusveiculos.setAttribute('href',`../loginusuario/ .html?id=${motoristas.id}`)
+         botaomeusveiculos.setAttribute('href',`../loginusuario/perfil_veiculo.html?id=${motoristas.id}`)
 
          nome.innerHTML = `<strong>Nome</strong>:${motoristas.nome}  ${motoristas.sobrenome}`
          email.innerHTML = `<strong>email</strong>:${motoristas.email}`
@@ -50,11 +50,8 @@ const div = document.createElement('div')
         cnh.innerHTML =`<strong>CNH</strong>:${motoristas.cnh}`
         const cnhvenc = document.createElement('p')
         cnhvenc.innerHTML =`<strong>Validade da CNH</strong>:${motoristas.cnhvenc}`
-        const idmotorista = document.createElement('p')
-        idmotorista.innerHTML =`<strong>Validade da CNH</strong>:${motoristas.idmotorista}`
-        
+                
         div.appendChild(h1)
-        div.appendChild(idmotorista)
         div.appendChild(nome)
         div.appendChild(cpf)
         div.appendChild(endereco)
@@ -81,5 +78,5 @@ function redirecionarhome()
 
 function redirecionarperfil()
 {
-        window.location.href= `../loginmotorista/perfildefi.html?id=${idurl} `
+        window.location.href= `../loginusuario/perfil_motorista.html?id=${idurl} `
 }
