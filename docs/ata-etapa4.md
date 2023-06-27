@@ -1,5 +1,6 @@
 Leni Rocha: 
-Jean Estanislau: 
+
+Jean Estanislau: Reestruturação da tela de gestão de assentos, criação do javascript e das funções desta tela, ajuda na substituição dos alerts por popups da biblioteca sweet alert.
 
 Ana Clara Lima Marçal: 
 
