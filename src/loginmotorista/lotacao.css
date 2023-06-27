@@ -307,7 +307,8 @@
     margin-right: 10px;
   }
 
-  #caixa_sugestoes > div{    
+  #caixa_sugestoes > div{ 
+    display: inline-block;   
     border: solid black 1px;
     text-align: center; 
     margin-left: 75px;
