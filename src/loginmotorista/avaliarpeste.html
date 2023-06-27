@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Avaliar Peste</title>
-  <link href="../loginusuario/cssavaliar.css" rel="stylesheet" type="text/css" />
+  <link href="../loginmotorista/lotacao.css" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
    
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,18 +33,6 @@
   </div>
 </header>
       <div class="meioD">
-        <div class="lista-crianca">
-            <ul class="crianca">
-              <li><input type="checkbox"> Criança 1</li>
-              <li><input type="checkbox"> Criança 2</li>
-              <li><input type="checkbox"> Criança 3</li>
-              <li><input type="checkbox"> Criança 4</li>
-              <li><input type="checkbox"> Criança 5</li>
-              
-            </ul>
-            
-        </div>
-        
         <div class="centro">
         <section class="rating">
         <div class="foto">
@@ -71,7 +59,7 @@
             <textarea id="comment" name="comment" placeholder="Digite seu comentário..."></textarea>
           </div>
           <div class="botao">
-            <button type="submit">Enviar</button>
+            <button onclick="enviar()" type="submit">Enviar</button>
           </div>
         </section>
       </div>
@@ -128,9 +116,10 @@
     <script src="httpvscode-file://vscode-app/c:/programa%C3%A7%C3%A3o/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.htmls://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js%22%3E"></script>
     <script>
+    const idurl = dadosurl.get('id')
     const atual = new URL(window.location.href);
     const params = new URLSearchParams(atual.search);
-    const idcrianca = params.get('idcrianca');
+    const idcrianca = dadosurl.get('idcrianca');
       var ratingValue = 0;
       if(!idurl){
     window.location.href="../telainicial/login.html"
@@ -159,18 +148,13 @@
       axios.post(url, {
         avalicao: ratingValue
       })
-      .then(function(response) {
-        return response.data;
-        alert('Avaliação enviada com sucesso!!');
-        window.location.href='.../loginmotorista/lotacao.html';
-      })
-      .catch(function(error) {
-        console.error(error);
-                throw error; 
-      });
-      preencherdados ()
+      function enviar(){
+          return response.data;
+          alert('Avaliação enviada com sucesso!!');
+          window.location.href='.../loginmotorista/selecionarassento.html';
+      }
 
-function redirecionarhome()
+      function redirecionarhome()
 {
         window.location.href= `../loginmotorista/cadastrarrota.html?id=${idurl} `
 }
