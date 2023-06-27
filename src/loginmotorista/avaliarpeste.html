@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Avaliar Peste</title>
-  <link href="../loginmotorista/lotacao.css" rel="stylesheet" type="text/css" />
+  <link href="../loginmotorista/avaliarpeste.html" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
    <script src="script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,11 @@
        <img class="logo" src="../imagens/logosemfundo.png" alt="TransPeste">
      </div>
      <ul>
-        <li> <a href="../loginmotorista/cadastrarrota.html">Home</a></li>
+        <li> <a href=onclick="redirecionarhome()">Home</a></li>
         <li> <a href="#">Info</a></li>
         <li> <a href="#">Sobre</a></li>
-        <li> <a href="../loginmotorista/perfildefi.html">Perfil</a></li>
-        <li><button type="button"> <a href="../loginmotorista/perfildefi.html">Meu Perfil</a> </button></li>
+        <li> <a href=onclick="redirecionarperfil()">Perfil</a></li>
+        <li><button type="button"> <a href=onclick = "redirecionarperfil()">Meu Perfil</a> </button></li>
       </ul>
     </nav>
   </div>
@@ -125,6 +125,57 @@
     <div class="rodape">
         <p>Copyright © @2023. All Rights Reserved.Designd By TransPeste.</p>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
+    <script src="httpvscode-file://vscode-app/c:/programa%C3%A7%C3%A3o/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.htmls://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js%22%3E"></script>
+    <script>
+    const atual = new URL(window.location.href);
+    const params = new URLSearchParams(atual.search);
+    const idcrianca = params.get('idcrianca');
+      var ratingValue = 0;
+      if(!idurl){
+    window.location.href="../telainicial/login.html"
+}
+      function updateRating(event) {
+        ratingValue = parseInt(event.target.value);
+        console.log("Valor da estrela selecionada: " + ratingValue);
+      }
+      var stars = document.querySelectorAll('.estrela input[type="radio"]');
+      stars.forEach(function(star) {
+      star.addEventListener('click', updateRating);
+      });
+      function getRating() {
+        return axios.get('https://crud-server-json-trans-peste.vercel.app/criancas/'+idcrianca)
+          .then(function(response) {
+            return response.data.avalicao;
+           })
+          .catch(function(error) {
+            console.error(error);
+            throw error; 
+          });
+        }
+      var oldrating=getRating();
+      var newrating=(oldrating+ratingValue)/2;
+      var url = 'https://crud-server-json-trans-peste.vercel.app/criancas?id='+idcrianca;
+      axios.post(url, {
+        avalicao: ratingValue
+      })
+      .then(function(response) {
+        return response.data;
+        alert('Avaliação enviada com sucesso!');
+        window.location.href='.../loginmotorista/lotacao.html';
+      })
+      .catch(function(error) {
+        console.error(error);
+                throw error; 
+      });
+      function redirecionarhome() {
+    window.location.href = `../loginmotorista/cadastrarrota.html?id=${idurl}`;
+      }
+    function redirecionarperfil() {
+    window.location.href = `../loginmotorista/perfildefi.html?id=${idurl}`;
+    }
+    </script>
 
 
 
