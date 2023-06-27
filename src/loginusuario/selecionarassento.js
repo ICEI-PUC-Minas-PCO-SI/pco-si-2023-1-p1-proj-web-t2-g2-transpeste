@@ -4,10 +4,10 @@ var info = [];
 const dadosurl = new URLSearchParams(window.location.search)
 const idurl = dadosurl.get('id')
 
-// if(!idurl)
-// {
-//     window.location.href="../telainicial/login.html"
-// }
+if(!idurl)
+{
+    window.location.href="../telainicial/login.html"
+}
 
 
 $(document).ready(function () {
