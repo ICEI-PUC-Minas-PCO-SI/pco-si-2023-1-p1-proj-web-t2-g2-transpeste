@@ -1,4 +1,4 @@
-Leni Rocha: 
+Leni Rocha: Criação do JavaScript para a tela de perfil do motorista, do veículo, do responsável e das crianças cadastradas no perfil do responsável; algumas alterações no html e css dessas telas.
 
 Jean Estanislau: Reestruturação da tela de gestão de assentos, criação do javascript e das funções desta tela, ajuda na substituição dos alerts por popups da biblioteca sweet alert.
 
