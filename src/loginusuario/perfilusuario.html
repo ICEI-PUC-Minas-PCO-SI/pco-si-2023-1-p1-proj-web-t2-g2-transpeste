@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Perfil do Responsável</title>
-  <link href="responsavel.css" rel="stylesheet" type="text/css" />
-   <script src="scripts.js" defer></script>
+  <link href="peste.css" rel="stylesheet" type="text/css" />
+   <script src="responsaveis.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,50 +23,29 @@
        <img class="logo" src="../imagens/logosemfundo.png" alt="TransPeste">
      </div>
       <ul>
-        <li> <a href="../telainicialusu/cadastrarrota.html">Home</a></li>
+        <li onclick="redirecionarhome()" > <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
-          <li> <a href="../loginusuario/perfilusuario.html">Perfil</a></li>
+          <li onclick="redirecionarperfil()"> <a href="#">Perfil</a></li>
    
-          <button type="button"> <a href="../loginusuario/perfilusuario.html">Meu Perfil</a> </button>
-        </ul>
-        </nav>
-        </div>
-    
-        <div class="meio">
-    
-          <div id="fotoperfil">
-            <img src="../imagens/responsavel.jpeg" alt="imagemperfil">
-          </div>
-    
-            <section id="responsavel">          
-                <h1>Seu Perfil</h1>
-    
-                <p><strong>Nome:</strong> Milena Silva</p>
-                <p><strong>Telefone:</strong> 666-666</p>
-                <p><strong>E-mail:</strong> milenalindinha@transpeste.com.br</p>
-                <p><strong>Data de Nascimento:</strong> 20/08/1989</p>
-                <p><strong>Documento:</strong> 123456789</p>
-                <p><strong>Endereço:</strong> Rua dos Bobos, nº 0, bairro Galba Velozo<p>
-                           
-                <div class="editar">
-                  <p> <a href="../loginusuario/editarusuario.html">Editar  <br> <br>  </a> <a href="../loginusuario/selecionarviagem.html">Alterar viagem</a> <br> <br> <a href="../loginusuario/selecionarviagem.html">Selecionar rota</a>  </p>
-                  <p></p>
-                </div>
-             
-    
+      <button onclick="redirecionarperfil()" type="button"> <a href="#">Meu Perfil</a> </button>
+    </ul>
+    </nav>
+    </div>
+
+    <div class="meio">
+
+         
+        <section id="peste">          
+           
+        </section> 
+
+        <div id="foto-perfil">
+          <img src="caminho_da_foto_de_perfil" alt="Sem foto de perfil">
+          <div id="quadrado-placeholder">
             
-              <h1 class="peste">Suas pestes</h1>
-              <div class="fotopeste">
-                <a href="cadastrarcrianca.html"><img src="../imagens/peste1.jpg" alt="imagemperfil"></a>
-                <a href="cadastrarcrianca.html"><img src="../imagens/capetinha.png" alt="imagemperfil"></a>
-              </div>
-    
-              <div class="cadastrar">
-                <p><a href="cadastrarcrianca.html">Cadastrar</a></p>
-              </div>
-              </div>
-            </section> 
+          </div>
+        </div>
         
                 
     </div>

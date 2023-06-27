@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title>Perfil da Peste</title>
   <link href="peste.css" rel="stylesheet" type="text/css" />
-   <script src="script.js"></script>
+   <script src="criancas.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,45 +23,30 @@
        <img class="logo" src="../imagens/logosemfundo.png" alt="TransPeste">
      </div>
       <ul>
-        <li> <a href="../telainicialusu/cadastrarrota.html">Home</a></li>
+        <li onclick="redirecionarhome()" > <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
-          <li> <a href="../loginusuario/perfilusuario.html">Perfil</a></li>
-      
-      <button type="button"> <a href="../loginusuario/perfilusuario.html">Meu Perfil</a> </button>
-    </ul>
+          <li onclick="redirecionarperfil()"> <a href="#">Perfil</a></li>
+          <button onclick="redirecionarperfil()" type="button"> <a href="#">Meu Perfil</a> </button>
+      </ul>
     </nav>
     </div>
 
     <div class="meio">
 
-      <div id="fotoperfil">
-        <img src="../imagens/peste1.jpg" alt="imagemperfil">
-      </div>
-
-        <section id="peste">          
-            <h1>Perfil da Peste</h1>
-
-            <p><strong>Nome:</strong> Peste 1</p>
-            <p><strong>Telefone:</strong> 333-333</p>
-            <p><strong>Data de Nascimento:</strong> 20/08/2020</p>
-            <p><strong>Documento:</strong> 123456789</p>
-            <p><strong>Escola:</strong> Pestinhas</p>
-            <p><strong>Endereço da escola:</strong> Rua dos Bobos, nº 0, bairro Galba Velozo<p>
-                       
-            <div class="editar">
-              <p><a href="../loginusuario/telacadastrocri.html">Editar</a></p>
-            </div>
-         
-
-        
-          <h1 class="peste">Sua outra peste</h1>
-          <div class="fotopeste">
-            <img src="../imagens/capetinha.png" alt="imagemperfil">
-                    
+          <section id="peste">          
+                           
+                                  
         </section> 
+
+        <div id="foto-perfil">
+          <img src="caminho_da_foto_de_perfil" alt="Sem foto de perfil">
+          <div id="quadrado-placeholder">
+            
+          </div>
+        </div>
         
-                
+                       
     </div>
     
   <section class="Contato">
