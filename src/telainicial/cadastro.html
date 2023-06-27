@@ -163,22 +163,18 @@ function redirecionarParaLogin() {
                 .post('https://crud-server-json-trans-peste.vercel.app/responsaveis', responsavel)
                 .then(function(responseCadastro) {
                   Swal.fire({
-                              position: 'center',
                               icon: 'success',
                               title: 'Responsável cadastrado com sucesso!',
-                              showConfirmButton: false,
-                              timer: 1500
+                              confirmButtonColor: 'green'
                             })
                   // Redireciona para a página de login
                   window.location.href = '../telainicial/login.html';
                 })
                 .catch(function(error) {
                   Swal.fire({
-                              position: 'center',
                               icon: 'success',
                               title: 'Responsável cadastrado com sucesso!',
-                              showConfirmButton: false,
-                              timer: 1500
+                              confirmButtonColor: 'green'
                             })
                   console.error('Erro ao cadastrar o responsável:', error);
                   // Redireciona para a página de login mesmo em caso de erro
@@ -240,10 +236,14 @@ function cadastrarMotorista() {
       .then(function(response) {
         if (response.data.length > 0) {
           // Exibe mensagem de erro caso o email já exista
-          alert('O email informado já está cadastrado. Por favor, escolha outro email.');
+          Swal.fire({
+                      icon: 'error',
+                      title: 'Oops...',
+                      text: 'O e-mail informado já está cadastrado. Por favor, escolha outro e-mail.',
+                      confirmButtonColor: '#EE1C47'
+                    })
         } else {
-          // Verifica se a senha tem exatamente 8 dígitos
-          if (senha.length === 8) {
+          if (senha.length >= 8) {
             // Verifica se a senha e a confirmação de senha são iguais
             if (senha === confirmarSenha) {
               const motorista = {
@@ -258,36 +258,59 @@ function cadastrarMotorista() {
               axios
                 .post('https://crud-server-json-trans-peste.vercel.app/motoristas', motorista)
                 .then(function(response) {
-                  alert('Motorista cadastrado com sucesso! Valide seu veículo');
+                  Swal.fire({
+                              icon: 'success',
+                              title: 'Motorista cadastrado com sucesso! Valide seu veículo',
+                              confirmButtonColor: 'green'
+                            })
                   const motoristaId = response.data.id;
                   // Armazena o motoristaId no localStorage
                   localStorage.setItem('motoristaId', motoristaId);
-                  window.open('../telainicial/validacao.html', '_blank');
+                  window.location.href ='../telainicial/validacao.html', '_blank';
                 })
                 .catch(function(error) {
-                  alert('Motorista cadastrado com sucesso! Valide seu veículo');
+                  Swal.fire({
+                              icon: 'success',
+                              title: 'Motorista cadastrado com sucesso! Valide seu veículo',
+                              confirmButtonColor: 'green'
+                            })
                   console.error('Erro ao cadastrar o motorista:', error);
                   // Abrir a página de validação em uma nova janela ou guia do navegador mesmo em caso de erro
-                  window.open('../telainicial/validacao.html', '_blank');
+                  window.location.href ='../telainicial/validacao.html', '_blank';
                 });
             } else {
               // Exibe mensagem de erro caso a senha e a confirmação de senha sejam diferentes
-              alert('A senha e a confirmação de senha não coincidem.');
+              Swal.fire({
+                      icon: 'error',
+                      title: 'Oops...',
+                      text: 'A senha e a confirmação de senha não coincidem!',
+                      confirmButtonColor: '#EE1C47'
+              })
             }
           } else {
             // Exibe mensagem de erro caso a senha não tenha 8 dígitos
-            alert('A senha deve ter exatamente 8 dígitos.');
+            Swal.fire({
+                      icon: 'error',
+                      title: 'Oops...',
+                      text: 'A senha deve ter pelo menos 8 dígitos!',
+                      confirmButtonColor: '#EE1C47'
+              })
           }
         }
       })
       .catch(function(error) {
         console.error('Erro ao verificar o email:', error);
         // Abrir a página de validação em uma nova janela ou guia do navegador mesmo em caso de erro
-        window.open('../validacao.html', '_blank');
+        window.location.href ='../validacao.html', '_blank';
       });
   } else {
     // Exibe mensagem de erro caso algum campo esteja vazio
-    alert('Por favor, preencha todos os campos!');
+    Swal.fire({
+                      icon: 'error',
+                      title: 'Oops...',
+                      text: 'Por favor, preencha todos os campos!',
+                      confirmButtonColor: '#EE1C47'
+              })
   }
 }
 
