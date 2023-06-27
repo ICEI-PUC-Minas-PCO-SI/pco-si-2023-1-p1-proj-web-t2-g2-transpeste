@@ -11,7 +11,24 @@
       background-position: center;
     }
     
+    a {
+        text-decoration: none;
+        padding-right: 30px;
+    }
     
+    a:hover {
+      text-decoration: underline;
+      cursor: pointer;     
+    }
+
+    #peste > div > p {
+      padding-bottom: 10px;
+    }
+
+    #peste > div >  h1 {
+      padding-bottom: 10px;
+    }
+
     nav {
       display: flex;
       align-items: center;

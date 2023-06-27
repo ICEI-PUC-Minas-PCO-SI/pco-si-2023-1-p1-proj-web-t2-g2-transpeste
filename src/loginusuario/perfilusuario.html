@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Perfil do Responsável</title>
-  <link href="responsavel.css" rel="stylesheet" type="text/css" />
-   <script src="scripts.js" defer></script>
+  <link href="peste.css" rel="stylesheet" type="text/css" />
+   <script src="responsaveis.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,19 +26,26 @@
         <li onclick="redirecionarhome()" > <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
-          <li> <a href="#">Perfil</a></li>
+          <li onclick="redirecionarperfil()"> <a href="#">Perfil</a></li>
    
-      <button type="button"> <a href="#">Meu Perfil</a> </button>
+      <button onclick="redirecionarperfil()" type="button"> <a href="#">Meu Perfil</a> </button>
     </ul>
     </nav>
     </div>
 
     <div class="meio">
 
-     
-        <section id="responsavel">          
+         
+        <section id="peste">          
            
         </section> 
+
+        <div id="foto-perfil">
+          <img src="caminho_da_foto_de_perfil" alt="Sem foto de perfil">
+          <div id="quadrado-placeholder">
+            
+          </div>
+        </div>
         
                 
     </div>
