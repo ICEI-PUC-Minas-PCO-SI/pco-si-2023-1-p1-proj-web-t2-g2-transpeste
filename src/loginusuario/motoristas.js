@@ -50,11 +50,8 @@ const div = document.createElement('div')
         cnh.innerHTML =`<strong>CNH</strong>:${motoristas.cnh}`
         const cnhvenc = document.createElement('p')
         cnhvenc.innerHTML =`<strong>Validade da CNH</strong>:${motoristas.cnhvenc}`
-        const idmotorista = document.createElement('p')
-        idmotorista.innerHTML =`<strong>Validade da CNH</strong>:${motoristas.idmotorista}`
-        
+                
         div.appendChild(h1)
-        div.appendChild(idmotorista)
         div.appendChild(nome)
         div.appendChild(cpf)
         div.appendChild(endereco)
