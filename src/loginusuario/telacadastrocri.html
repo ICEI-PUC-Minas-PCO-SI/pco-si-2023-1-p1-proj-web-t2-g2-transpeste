@@ -2,11 +2,17 @@
 <html>
 
 <head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script> <script src="axios.js"></script>
+
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Cadastro Criança</title>
   <link href="../loginusuario/csscadastrocri.css" rel="stylesheet" type="text/css" />
-  <script src="script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -24,11 +30,11 @@
       </div>
       <div>
         <ul>
-            <li> <a href="../telainicialusu/cadastrarrota.html">Home</a></li>
-            <li> <a href="#">Info</a></li>
-            <li> <a href="#">Sobre</a></li>
-            <li> <a href="../loginusuario/perfilusuario.html">Perfil</a></li>
-            <li><button type="button"> <a href="../loginusuario/perfilusuario.html">Meu Perfil</a> </button></li>
+          <li onclick="redirecionarhome()"> <a href="#">Home</a></li>
+          <li> <a href="#">Info</a></li>
+          <li> <a href="#">Sobre</a></li>
+          <li onclick="redirecionarperfil()"> <a href="#">Perfil</a></li>
+          <li><button type="button" onclick="redirecionarperfil()" > <a href="#">Meu Perfil</a> </button></li>
         </ul>
       </div>
     </nav>
@@ -55,12 +61,12 @@
         
               <div class="input-box">
                 <label for="Data de nascimento">Data de nascimento</label>
-                <input id="Data" type="date"  name="data" placeholder="Data de nascimento da criança" required>
+                <input id="nascimento" type="date"  name="data" placeholder="Data de nascimento da criança" required>
               </div>
         
               <div class="input-box">
                 <label for="cpf">CPF</label>
-                <input id="cpf " type="number"  name="cpf" placeholder="Digite o cpf " required>
+                <input id="cpf" type="number"  name="cpf" placeholder="Digite o cpf " required>
               </div>
               
               <div class="input-box">
@@ -86,12 +92,14 @@
                 </div>
           
   
-            <div class="continue-button">
-                <button><a href="../loginusuario/cadastrarcrianca.html">Salvar</a> </button>
-            </div>
-            <div class="continue-button">
-              <button><a href="../loginusuario/cadastrarcrianca.html">Cadastre aqui outro pestinha</a> </button>
-          </div>
+        
+                <div class="continue-button">
+                  <button onclick="salvar()" onclick="redirecionarperfil()"><a href="#">Salvar</a> </button>
+                </div>
+         
+                <div class="continue-button">
+                  <button onclick="salvar()" onclick="redirecionareditar()"><a href="#">Cadastrar outra Criança</a> </button>
+                </div>
         </form>
     </div>
   </div>
@@ -135,7 +143,56 @@
   <div class="rodape">
     <p>Copyright © @2023. All Rights Reserved.Designd By TransPeste.</p>
   </div>
+<img src="../loginusuario/telacadastrocri.html" alt="">
+  <script>
 
+function redirecionarhome()
+{
+        window.location.href= `../loginmotorista/cadastrarrota.html?id=${idurl} `
+}
+
+function redirecionarperfil()
+{
+        window.location.href= `../loginmotorista/perfildefi.html?id=${idurl} `
+}
+function redirecionareditar()
+{
+        window.location.href= `..../loginusuario/telacadastrocri.html?id=${idurl} `
+}
+
+const urlcriancas = "https://crud-server-json-trans-peste.vercel.app/criancas"
+
+const urlinteira = new URLSearchParams(window.location.search)
+const idurl = urlinteira.get('id') 
+
+async function salvar() {
+  const nome = document.getElementById('nome').value;
+  const telefone = document.getElementById('telefone').value;
+  const nascimento = document.getElementById('nascimento').value;
+  const cpf = document.getElementById('cpf').value;
+  const endereco_escola = document.getElementById('endereço_escola').value;
+  const escola = document.getElementById('escola').value;
+  
+
+  var url = `https://crud-server-json-trans-peste.vercel.app/criancas`;
+
+const res = await  axios.post(`https://crud-server-json-trans-peste.vercel.app/criancas`,{ 
+  id: idurl,
+  nome: nome, 
+  cpf: cpf,
+  telefone: telefone, 
+  nascimento : nascimento,
+  escola: escola,
+  endereco_escola: endereco_escola,
+ 
+}) 
+.catch(function(error) { alert("Criança Cadastrada")});
+
+}
+
+
+  </script>
+ 
 
 
   

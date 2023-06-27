@@ -2,11 +2,18 @@
 <html>
 
 <head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script> <script src="axios.js"></script>
+
+  
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Cadastro Motorista</title>
   <link href="Style.css" rel="stylesheet" type="text/css" />
-  <script src="../loginusuario/editar.js" defer></script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,11 +32,11 @@
       </div>
       <div>
         <ul>
-          <li> <a href="../loginmotorista/cadastrarrota.html">Home</a></li>
-          <li> <a href="../loginmotorista/cadastrarrota.html">Info</a></li>
+          <li onclick="redirecionarhome()"> <a href="#">Home</a></li>
+          <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
-          <li> <a href="../loginmotorista/perfildefi.html">Perfil</a></li>
-          <li><button type="button"> <a href="../loginmotorista/perfildefi.html">Meu Perfil</a> </button></li>
+          <li onclick="redirecionarperfil()"> <a href="#">Perfil</a></li>
+          <li><button type="button" onclick="redirecionarperfil()" > <a href="#">Meu Perfil</a> </button></li>
         </ul>
       </div>
     </nav>
@@ -81,7 +88,7 @@
         
               <div class="input-box">
                 <label for="Data de vencimento">Data de vencimento</label>
-                <input id="Data" type="date"  name="data" placeholder="Digite a data de vencimento da CNH" required>
+                <input id="cnhvenc" type="date"  name="data" placeholder="Digite a data de vencimento da CNH" required>
               </div>
         
             
@@ -100,11 +107,11 @@
                 </div>
           
   
+                <div class="continue-button">
+                  <button onclick="salvar()" onclick="redirecionarperfil()"><a href="#">Salvar</a> </button>
+                </div>
             <div class="continue-button">
-                <button onclick="salvar()"><a href="../loginmotorista/perfildefi.html">Salvar</a> </button>
-            </div>
-            <div class="continue-button">
-              <button><a href="../loginmotorista/cadastroveiculo.html">Cadastre aqui seu veículo</a> </button>
+              <button><a href="#">Cadastre aqui seu veículo</a> </button>
           </div>
         </form>
     </div>
@@ -150,8 +157,72 @@
     <p>Copyright © @2023. All Rights Reserved.Designd By TransPeste.</p>
   </div>
 
+<script>
 
 
+function redirecionarhome()
+{
+        window.location.href= `../loginmotorista/cadastrarrota.html?id=${idurl} `
+}
+
+function redirecionarperfil()
+{
+        window.location.href= `../loginmotorista/perfildefi.html?id=${idurl} `
+}
+
+
+
+
+  const inputnome = document.querySelector('input#nome')
+const inputtelefone = document.querySelector('input#telefone')
+const inputemail = document.querySelector('input#email')
+
+const urlmotoristas = "https://crud-server-json-trans-peste.vercel.app/motoristas"
+
+const urlinteira = new URLSearchParams(window.location.search)
+const idurl = urlinteira.get('id')
+
+async function DadosMotoristas() {
+  console.log(urlmotoristas + '/' + idurl)
+  const dadosnaURL = await fetch(urlmotoristas + '/' + idurl)
+  console.log(dadosnaURL)
+  const dadosquepegueijason = await dadosnaURL.json()
+
+  inputnome.value = dadosquepegueijason.nome + ' ' + dadosquepegueijason.sobrenome
+  inputtelefone.value = dadosquepegueijason.telefone
+  inputemail.value = dadosquepegueijason.email
+}
+DadosMotoristas()
+
+async function salvar() {
+
+  const nascimento = document.getElementById('nascimento').value;
+  const cpf = document.getElementById('cpf').value;
+  const endereco = document.getElementById('endereço').value;
+  const cnh = document.getElementById('cnh').value;
+  const cnhvenc= document.getElementById('cnhvenc').value;
+
+  var url = `https://crud-server-json-trans-peste.vercel.app/responsaveis`;
+
+
+const res = await  axios.put(`https://crud-server-json-trans-peste.vercel.app/motoristas/${idurl}`,{ 
+  id: idurl,
+  nome: inputnome.value,  
+  cpf: cpf,
+  endereco: endereco,
+  nascimento : nascimento,
+  cnh: cnh,
+  cnhvenc: cnhvenc,
+  telefone: inputtelefone.value,
+  email: inputemail.value,
+ 
+}) 
+.then (function (){
+  
+})
+
+}
+</script>
   
 </body>
 

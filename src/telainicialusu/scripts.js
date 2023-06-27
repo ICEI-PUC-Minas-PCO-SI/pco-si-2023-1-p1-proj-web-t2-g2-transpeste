@@ -1,4 +1,5 @@
-const urlresponsavel ="https://crud-server-json-trans-peste.vercel.app/responsaveis"
+
+  const urlresponsavel ="https://crud-server-json-trans-peste.vercel.app/responsaveis"
 const urlmotorista = "https://crud-server-json-trans-peste.vercel.app/motoristas"
 const urlrotas= "https://crud-server-json-trans-peste.vercel.app/rotas"
 const urlcrianca ="https://crud-server-json-trans-peste.vercel.app/criancas"
@@ -125,8 +126,17 @@ async function bemvindo(idresponsavel) {
     const responsavel = await dadosresponsavel.json(); // Corrigido para motorista em vez de motoristas
     console.log(responsavel.type);
     
-   
-     alert( ` Bem vindo ${responsavel.nome} ${responsavel.sobrenome}`)
+
+     $(document).ready(function(){
+      Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: ` Bem vindo ${responsavel.nome} ${responsavel.sobrenome}`,
+        showConfirmButton: false,
+        timer: 1500
+      })
+      
+     })
     
 }
 async function verificarmotorista(idmotorista) {
@@ -150,8 +160,14 @@ async function enviardados() {
    
     if(selectrota.value=="null" || selectmotorista.value=="null"|inputpartida.value==""|| selectcrianca.value=="null")
 {
- 
-alert('Ta faltando informação doidão')
+  $(document).ready(function(){
+  Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Esta faltando informações!',
+    
+  })
+})
 }
 else
 {
@@ -172,7 +188,16 @@ else
       
   }
   )
-  .catch(function(error) { alert("Solitação cadastrada")});
+  .catch(function(error) { $(document).ready(function(){
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Solicitação salva com sucesso',
+      showConfirmButton: false,
+      timer: 1500
+    })
+
+  }) });
 }
  
 }
@@ -207,3 +232,4 @@ else
  
    bemvindo(idurl)
 }
+

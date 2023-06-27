@@ -307,7 +307,8 @@
     margin-right: 10px;
   }
 
-  #caixa_sugestoes > div{    
+  #caixa_sugestoes > div{ 
+    display: inline-block;   
     border: solid black 1px;
     text-align: center; 
     margin-left: 75px;
@@ -322,21 +323,16 @@
   }
 
   #caixa_sugestoes > div > p{
-    padding-bottom: 8px;
+    padding: 30px;
   }
 
   #caixa_sugestoes > div > h2{
-    padding: 5px;
-  }
-
-  #caixa_sugestoes{
-    display: inline-block;
-  }
+    padding: 0px;
+  } 
 
   div > #button1 {
     border: none;
-    background: #2df095;
-    padding: 12px 30px;
+    background: #2df095;   
     border-radius: 30px;
     color: white;
     font-weight: bold;
@@ -348,7 +344,6 @@
   div > #button2 {
     border: none;
     background: #f01212;
-    padding: 12px 30px;
     border-radius: 30px;
     color: white;
     font-weight: bold;

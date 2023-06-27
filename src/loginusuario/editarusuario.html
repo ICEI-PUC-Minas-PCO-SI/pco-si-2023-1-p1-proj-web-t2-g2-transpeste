@@ -2,11 +2,17 @@
 <html>
 
 <head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script> <script src="axios.js"></script>
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Editar Usuário</title>
   <link href="../loginusuario/csscadastrocri.css" rel="stylesheet" type="text/css" />
-  <script src="editar.js" defer></script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,12 +31,13 @@
       </div>
       <div>
         <ul>
+   
           <li onclick="redirecionarhome()"> <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
-          <li> <a href="#">Perfil</a></li>
+          <li onclick="redirecionarperfil()"> <a href="#">Perfil</a></li>
+          <li><button type="button" onclick="redirecionarperfil()" > <a href="#">Meu Perfil</a> </button></li>
 
-          <button type="button"> <a href="#">Meu Perfil</a> </button>
         </ul>
       </div>
     </nav>
@@ -89,7 +96,7 @@
 
 
         <div class="continue-button">
-          <button onclick="salvar()"><a href="#">Salvar</a> </button>
+          <button onclick="salvar()" onclick="redirecionarperfil()"><a href="#">Salvar</a> </button>
         </div>
 
         </form>
@@ -135,7 +142,67 @@
     <div class="rodape">
       <p>Copyright © @2023. All Rights Reserved.Designd By TransPeste.</p>
     </div>
+ 
+<script>
 
+function redirecionarhome()
+{
+        window.location.href= `../telainicialusu/cadastrarrota.html?id=${idurl} `
+}
+
+function redirecionarperfil()
+{
+        window.location.href= `../loginusuario/perfilusuario.html?id=${idurl} `
+}
+
+
+
+  const inputnome = document.querySelector('input#nome')
+const inputtelefone = document.querySelector('input#telefone')
+const inputemail = document.querySelector('input#email')
+
+const urlresponsavel = "https://crud-server-json-trans-peste.vercel.app/responsaveis"
+
+const urlinteira = new URLSearchParams(window.location.search)
+const idurl = urlinteira.get('id')
+
+async function DadosResponsavel() {
+  console.log(urlresponsavel + '/' + idurl)
+  const dadosnaURL = await fetch(urlresponsavel + '/' + idurl)
+  console.log(dadosnaURL)
+  const dadosquepegueijason = await dadosnaURL.json()
+
+  inputnome.value = dadosquepegueijason.nome + ' ' + dadosquepegueijason.sobrenome
+  inputtelefone.value = dadosquepegueijason.telefone
+  inputemail.value = dadosquepegueijason.email
+}
+DadosResponsavel()
+
+async function salvar() {
+  
+  const nascimento = document.getElementById('nascimento').value;
+  const cpf = document.getElementById('cpf').value;
+  const endereco = document.getElementById('endereço').value;
+
+
+  var url = `https://crud-server-json-trans-peste.vercel.app/responsaveis`;
+
+
+const res = await  axios.put(`https://crud-server-json-trans-peste.vercel.app/responsaveis/${idurl}`,{ 
+  id: idurl,
+  nome: inputnome.value,  
+  cpf: cpf,
+  endereco: endereco,
+  telefone: inputtelefone.value,
+  email: inputemail.value,
+  nascimento : nascimento 
+}) 
+.then (function (){
+  
+})
+
+}
+</script>
 </body>
 
 </html>
