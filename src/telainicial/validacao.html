@@ -22,15 +22,17 @@
   <div class="primeira">
     <nav>
      <div>
-       <img class="logo" src="../imagens/logosemfundo.png" alt="TransPeste">
+      <a href="../index.html">
+        <img class="logo" src="../imagens/logosemfundo.png" alt="TransPeste">
+       </a>
      </div>
       <ul>
-        <li> <a href="../telainicial/login.html">Home</a></li>
+        <li> <a href="../telainicial/index.html">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
           <li> <a href="#">Perfil</a></li>
       </ul>
-      <button type="button">Login</button>
+      <button type="button" onclick="redirecionarParaLogin()">Login</button>
     </nav>
   </div>
 </header>
@@ -40,11 +42,11 @@
         <div class="cadastro-container">
           <div class="cadastro-block">
             <h2>Validar Veículo</h2>
-            <input type="text" id="cnh" placeholder="CNH" />
-            <input type="text" id="crv" placeholder="CRV do Veículo" />
-            <input type="text" id="placa" placeholder="Placa do veículo" />
+            <input type="text" id="cnh" placeholder="CNH" oninput="maskCNH(this)" />
+            <input type="text" id="crv" placeholder="CRV do Veículo" oninput="maskCRV(this)" />
+            <input type="text" id="placa" placeholder="Placa do veículo" oninput="maskPlaca(this)" />
             <input type="text" id="autorizacao" placeholder="Autorização do Detran" />
-            <button type="submit" onclick="validarVeiculo()">Validar Veículo</button>
+            <button type="button" onclick="validarVeiculo()">Validar Veículo</button>
           </div>
         </div>
       </section>
@@ -98,32 +100,89 @@
         <p>Copyright © @2023. All Rights Reserved.Designd By TrasPeste.</p>
     </div>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.1.3/jquery.inputmask.min.js"></script>
     <script>
+      function redirecionarParaLogin() {
+        window.location.href = "../telainicial/login.html";
+      }
+    
+      function maskCNH(input) {
+        const value = input.value.replace(/\D/g, '');
+        const maskedValue = value.slice(0, 11); 
+        input.value = maskedValue;
+      }
+    
+      function maskCRV(input) {
+        const value = input.value.replace(/\D/g, ''); 
+        const maskedValue = value.slice(0, 11); 
+        input.value = maskedValue;
+      }
+    
+      function maskPlaca(input) {
+        const value = input.value.replace(/[^a-zA-Z0-9]/g, '');
+        const maskedValue = value.slice(0, 7).toUpperCase();
+        input.value = maskedValue;
+      }
+    
       function validarVeiculo() {
-        const motoristaId = localStorage.getItem('motoristaId');
-        const cnh = document.getElementById('cnh').value;
-        const crv = document.getElementById('crv').value;
-        const placa = document.getElementById('placa').value;
-        const autorizacao = document.getElementById('autorizacao').value;
-      
-        const veiculo = {
-          cnh: cnh,
-          crv: crv,
-          placa: placa,
-          autorizacao: autorizacao
-        };
-      
-        axios.post(`https://crud-server-json-trans-peste.vercel.app/motoristas/${motoristaId}`, veiculo)
-          .then(function(response) {
-            console.log('Veículo validado com sucesso!');
-            // Redirecionar para a próxima página ou realizar outras ações
-            window.location.href = '../loginmotorista/cadastrarrota.html';
+        var cnh = document.getElementById("cnh").value;
+        var crv = document.getElementById("crv").value;
+        var placa = document.getElementById("placa").value;
+        var autorizacao = document.getElementById("autorizacao").value;
+    
+        if (cnh === "" || crv === "" || placa === "" || autorizacao === "") {
+          alert("Por favor, preencha todos os campos.");
+          return;
+        }
+    
+        fetch("https://crud-server-json-trans-peste.vercel.app/veiculos")
+          .then(response => response.json())
+          .then(data => {
+            console.log("Resposta da API:", data);
+    
+            const veiculoEncontrado = data.find(veiculo => veiculo.placa === placa);
+    
+            if (veiculoEncontrado) {
+              alert("A placa já está cadastrada em outro veículo.");
+            } else {
+              alert("Veículo validado com sucesso!");
+              window.location.href = "../telainicial/login.html";
+            }
           })
-          .catch(function(error) {
-            console.error('Erro ao validar o veículo:', error);
+          .catch(error => {
+            console.error("Ocorreu um erro ao verificar a placa:", error);
+            alert("Ocorreu um erro ao verificar a placa. Por favor, tente novamente mais tarde.");
           });
       }
-      </script>
+    
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('cnh').addEventListener('input', function() {
+          maskCNH(this);
+        });
+    
+        document.getElementById('crv').addEventListener('input', function() {
+          maskCRV(this);
+        });
+    
+        document.getElementById('placa').addEventListener('input', function() {
+          maskPlaca(this);
+        });
+    
+        document.getElementById('autorizacao').addEventListener('input', function() {
+          maskCNH(this);
+        });
+      });
+    </script>
+    </body>
+    
+    
+    
+    
+    
+    
+    
 
   
 </body>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title>Cadastro Motorista</title>
   <link href="Style.css" rel="stylesheet" type="text/css" />
-  <script src="script.js"></script>
+  <script src="../loginusuario/editar.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,12 +56,12 @@
         
               <div class="input-box">
                 <label for="Data de nascimento">Data de nascimento</label>
-                <input id="Data" type="date"  name="data" placeholder="Digite a sua data de nascimento" required>
+                <input id="nascimento" type="date"  name="data" placeholder="Digite a sua data de nascimento" required>
               </div>
         
               <div class="input-box">
                 <label for="cpf">CPF</label>
-                <input id="cpf " type="number"  name="cpf" placeholder="Digite aqui seu CPF" required>
+                <input id="cpf" type="number"  name="cpf" placeholder="Digite aqui seu CPF" required>
               </div>
               
               <div class="input-box">
@@ -101,7 +101,7 @@
           
   
             <div class="continue-button">
-                <button><a href="../loginmotorista/perfildefi.html">Salvar</a> </button>
+                <button onclick="salvar()"><a href="../loginmotorista/perfildefi.html">Salvar</a> </button>
             </div>
             <div class="continue-button">
               <button><a href="../loginmotorista/cadastroveiculo.html">Cadastre aqui seu veículo</a> </button>
