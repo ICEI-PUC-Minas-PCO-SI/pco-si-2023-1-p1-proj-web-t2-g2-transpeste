@@ -45,7 +45,7 @@ async function aceitar() {
         })
     })
     alert("Solicitação Aceita com sucesso!");
-    window.location.href= `../loginmotorista/cadastrarrota.html?id=${id} `
+    window.location.href= `../loginmotorista/sugestoes.html?id=${id} `
 }
 
 async function recusar() { 
@@ -61,7 +61,7 @@ async function recusar() {
         })
     })
     alert("Solicitação Recusada com sucesso!");
-    window.location.href= `../loginmotorista/cadastrarrota.html?id=${id} `   
+    window.location.href= `../loginmotorista/sugestoes.html?id=${id} `   
 }
 
 async function obterNomeSolicitante(id) {
@@ -75,12 +75,14 @@ async function obterNomeSolicitante(id) {
     }
   }
 
-function redirecionarhome()
-{
-    window.location.href= `../loginmotorista/cadastrarrota.html?id=${urlID} `
-}
+  function redirecionarhome()
+  {
+          window.location.href= `../loginmotorista/cadastrarrota.html?id=${urlID} `
+  }
+  
+  function redirecionarperfil()
+  {
+          window.location.href= `../loginusuario/perfil_motorista.html?id=${urlID} `
+  }
 
-function redirecionarperfil()
-{
-    window.location.href= `../loginmotorista/perfildefi.html?id=${urlID} `
-}
+

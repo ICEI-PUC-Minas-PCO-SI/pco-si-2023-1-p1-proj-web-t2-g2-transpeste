@@ -72,5 +72,5 @@ function redirecionarhome()
 
 function redirecionarperfil()
 {
-        window.location.href= `../loginmotorista/perfildefi.html?id=${idurl} `
+        window.location.href= `../loginusuario/perfil_motorista.html?id=${idurl} `
 }

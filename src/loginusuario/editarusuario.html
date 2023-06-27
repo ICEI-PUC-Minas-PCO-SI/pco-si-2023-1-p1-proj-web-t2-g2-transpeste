@@ -34,9 +34,8 @@
    
           <li onclick="redirecionarhome()"> <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
-          <li> <a href="#">Sobre</a></li>
-          <li onclick="redirecionarperfil()"> <a href="#">Perfil</a></li>
-          <li><button type="button" onclick="redirecionarperfil()" > <a href="#">Meu Perfil</a> </button></li>
+          <li> <a href="#">Sobre</a></li>       
+          <li><button type="button" onclick="redirecionarperfil()" > <a href="#">Meu Perfil </a> </button></li>
 
         </ul>
       </div>
@@ -191,6 +190,7 @@ async function salvar() {
 const res = await  axios.put(`https://crud-server-json-trans-peste.vercel.app/responsaveis/${idurl}`,{ 
   id: idurl,
   nome: inputnome.value,  
+  sobrenome:inputnome.value,
   cpf: cpf,
   endereco: endereco,
   telefone: inputtelefone.value,
@@ -198,9 +198,18 @@ const res = await  axios.put(`https://crud-server-json-trans-peste.vercel.app/re
   nascimento : nascimento 
 }) 
 .then (function (){
-  
+ 
+})
+.catch(function(error) { alert("Alteração salva com sucesso")
+window.location.href=`../loginusuario/perfilusuario.html?id=${idurl} `
 })
 
+
+
+}
+if(!idurl)
+{
+    window.location.href="../telainicial/login.html"
 }
 </script>
 </body>

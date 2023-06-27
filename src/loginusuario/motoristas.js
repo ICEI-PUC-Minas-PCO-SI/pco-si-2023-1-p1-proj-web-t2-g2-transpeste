@@ -33,7 +33,7 @@ const div = document.createElement('div')
          botaosolicita.innerHTML = "Solicitações pendentes"
          botaosolicita.setAttribute('href',`../loginmotorista/sugestoes.html?id=${motoristas.id}`)
          botaomeusveiculos.innerHTML = "Meus veículos"
-         botaomeusveiculos.setAttribute('href',`../loginusuario/ .html?id=${motoristas.id}`)
+         botaomeusveiculos.setAttribute('href',`../loginusuario/perfil_veiculo.html?id=${motoristas.id}`)
 
          nome.innerHTML = `<strong>Nome</strong>:${motoristas.nome}  ${motoristas.sobrenome}`
          email.innerHTML = `<strong>email</strong>:${motoristas.email}`
@@ -81,5 +81,5 @@ function redirecionarhome()
 
 function redirecionarperfil()
 {
-        window.location.href= `../loginmotorista/perfildefi.html?id=${idurl} `
+        window.location.href= `../loginusuario/perfil_motorista.html?id=${idurl} `
 }

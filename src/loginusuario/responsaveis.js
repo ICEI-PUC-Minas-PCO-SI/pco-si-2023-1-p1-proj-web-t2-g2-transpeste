@@ -23,6 +23,8 @@ const div = document.createElement('div')
          const email = document.createElement('p')
          const botaoeditar = document.createElement('a')
          const botaoviagem = document.createElement('a')
+         botaoviagem.setAttribute("onclick","redirecionarsolicitacoes()")
+         botaoviagem.setAttribute('href',"#")
          const botaocriança = document.createElement('a')
          const spanfotos = document.createElement('span')
          const fotocriança1 = document.createElement('img')
@@ -71,10 +73,19 @@ preencherdados ()
 
 function redirecionarhome()
 {
-        window.location.href= `../loginmotorista/cadastrarrota.html?id=${idurl} `
+        window.location.href= `../telainicialusu/cadastrarrota.html?id=${idurl} `
+}
+
+function redirecionarsolicitacoes()
+{
+        window.location.href= `../loginusuario/solicitacoesUsuario.html?id=${idurl}`
 }
 
 function redirecionarperfil()
 {
         window.location.href= `../loginusuario/perfilusuario.html?id=${idurl} `
+}
+if(!idurl)
+{
+    window.location.href="../telainicial/login.html"
 }

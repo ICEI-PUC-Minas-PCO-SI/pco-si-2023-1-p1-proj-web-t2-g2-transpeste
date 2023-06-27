@@ -49,7 +49,14 @@ function enviardados()
 {
     if(selectrota.value=="null" || selectmotorista.value=="null"|inputchegada.value==""|| inputpartida.value=="")
     {
-    alert('Ta faltando informação doidão')
+        $(document).ready(function(){
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Preencha todas as informações!',
+              
+            })
+          })
     }
     else
     {
@@ -64,7 +71,13 @@ function enviardados()
         
     }
     )
-    .catch(function(error) { alert("Rota cadastrada")});
+    .catch(function(error) {   Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Rota Cadastrada',
+        showConfirmButton: false,
+        timer: 1500
+      })  });
     }
 }
 
@@ -82,7 +95,16 @@ async function bemvindo(idresponsavel) {
     console.log(responsavel.type);
     
    
-     alert( ` Bem vindo ${responsavel.nome} ${responsavel.sobrenome}`)
+    $(document).ready(function(){
+        Swal.fire({
+          position: 'top',
+          icon: 'success',
+          title: ` Bem vindo ${responsavel.nome} ${responsavel.sobrenome}`,
+          showConfirmButton: false,
+          timer: 1500
+        })
+        
+       })
     
 }
 
