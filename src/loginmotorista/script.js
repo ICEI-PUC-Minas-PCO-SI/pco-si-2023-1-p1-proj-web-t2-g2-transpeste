@@ -41,13 +41,58 @@ async function preenhcerveiculo()
     {
         const option = document.createElement('option')
         option.innerHTML ="0 veiculos cadastrados" 
+        option.setAttribute("value","null")
         selectmotorista.appendChild(option) 
     }
 }
 
+async function verificarveiculovazio()
+{
+const dadosveiculo = await fetch(urlveiculos)
+const dadosveiculojson = await dadosveiculo.json()
+var valid = 0;
+dadosveiculojson.map(
+    (post)=>{
+        if(post.motoristasid==idurl)
+        {
+valid ++
+        }
+        
+    }
+   
+)
+if(valid==0)
+{
+
+
+    $(document).ready(function(){
+        Swal.fire({
+            icon: 'info',
+            title: '<strong>Você não tem veiculos cadastrados</strong>',
+            text: 'Cadastre seu veiculo para começar a fazer viagens',
+            footer: '<a href="../loginmotorista/cadastroveiculo.html?id='+idurl+'">Castrar veiculo</a>'
+          })
+    })
+}
+ }
+
+ verificarveiculovazio()
+
 function enviardados()
 {
-    if(selectrota.value=="null" || selectmotorista.value=="null"|inputchegada.value==""|| inputpartida.value=="")
+    if(selectmotorista.value=="null")
+    {
+        console.log("aqui")
+        $(document).ready(function(){
+            Swal.fire({
+                icon: 'info',
+                title: '<strong>Você não tem veiculos cadastrados</strong>',
+                text: 'Cadastre seu veiculo para começar a fazer viagens',
+                footer: '<a href="../loginmotorista/cadastroveiculo.html?id='+idurl+'">Castrar veiculo</a>'
+              })
+        })
+    }
+    else if(selectrota.value=="null" || inputchegada.value==""|| inputpartida.value=="")
     {
         $(document).ready(function(){
             Swal.fire({
@@ -58,6 +103,7 @@ function enviardados()
             })
           })
     }
+    
     else
     {
         const textoselectrota = selectrota.options[selectrota.selectedIndex];
@@ -115,5 +161,5 @@ if(!idurl)
 else
 {
  
-   bemvindo(idurl)
+ //  bemvindo(idurl)
 }

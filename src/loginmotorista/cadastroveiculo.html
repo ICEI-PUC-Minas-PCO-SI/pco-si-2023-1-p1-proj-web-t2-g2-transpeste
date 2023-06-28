@@ -33,7 +33,6 @@
           <li onclick="redirecionarhome()"> <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
-          <li onclick="redirecionarperfil()"> <a href="#">Perfil</a></li>
           <li><button type="button" onclick="redirecionarperfil()" > <a href="#">Meu Perfil</a> </button></li>
         </ul>
       </div>
@@ -142,7 +141,7 @@
   <div class="rodape">
     <p>Copyright © @2023. All Rights Reserved.Designd By TransPeste.</p>
   </div>
-<img src="../loginmotorista/ca" alt="">
+
 <script>
 
 function redirecionarhome()
@@ -152,7 +151,7 @@ function redirecionarhome()
 
 function redirecionarperfil()
 {
-        window.location.href= `../loginmotorista/perfilmoto.html?id=${idurl} `
+        window.location.href= `../loginmotorista/../loginusuario/perfil_motorista.html?id=${idurl} `
 }
 
 
@@ -179,8 +178,10 @@ const res = await  axios.post(`https://crud-server-json-trans-peste.vercel.app/v
   marca: marca,
   placa: placa, 
   ano: ano,
+  assentos:16,
   renavam: renavam,
   chassi: chassi,
+  motoristasid:idurl
  
 }) 
 .catch(function(error) { alert("Veiculo Cadastrado")});
