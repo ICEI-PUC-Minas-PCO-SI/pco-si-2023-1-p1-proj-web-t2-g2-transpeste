@@ -1,11 +1,15 @@
 const dadosurl = new URLSearchParams(window.location.search)
 const idurl = dadosurl.get('id')
+const urlrotas = 'https://crud-server-json-trans-peste.vercel.app/rotas'
+const urlsolicitacao = "https://crud-server-json-trans-peste.vercel.app/solicitacao"
 const urlveiculos = "https://crud-server-json-trans-peste.vercel.app/veiculos"
 const inputpartida =window.document.querySelector('input#partida')
 const inputchegada =window.document.querySelector('input#chegada')
 const selectrota = window.document.querySelector('select#rotas')
 var rotas = ["Santo Agostinho","CEFET", "funec ","Santa Maria","SESI"]
 const selectmotorista=window.document.querySelector('select#motorista')
+
+
 
 function preencherrotas()
 {
@@ -32,6 +36,8 @@ async function preenhcerveiculo()
                 console.log(post.motoristasid)
                 const option = document.createElement('option')
                 option.innerHTML =post.modelo+" "+  post.placa
+                option.setAttribute('value',`${post.placa}`)
+                console.log(option.value)
                 selectmotorista.appendChild(option)
             }
         }
@@ -78,8 +84,42 @@ if(valid==0)
 
  verificarveiculovazio()
 
-function enviardados()
+ 
+
+async function enviardados()
 {
+    const dadosrota = await fetch(urlrotas)
+    const rotajson = await dadosrota.json()
+     var validrota =0
+
+     rotajson.map(
+    (post)=>{
+        if(idurl==post.motoristasid)
+        {
+            console.log('entreiaqui')
+            if(selectmotorista.value==post.placaveiculo && selectrota.value==post.escola)
+            {
+validrota ++
+            }
+        }
+    }
+)
+console.log(validrota)
+if(validrota>0)
+{
+    console.log('mai de uma rota')
+    $(document).ready(function(){
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Ja existe rota atrelada a esse veiculo!',
+          
+        })
+      })
+}
+else
+{
+    console.log(validrota)
     if(selectmotorista.value=="null")
     {
         console.log("aqui")
@@ -103,28 +143,33 @@ function enviardados()
             })
           })
     }
-    
     else
     {
         const textoselectrota = selectrota.options[selectrota.selectedIndex];
     const textorota = textoselectrota.text;
     
     const pedido = {
-        escola:textorota,motoristasid:idurl
+        escola:textorota,motoristasid:idurl,placaveiculo:selectmotorista.value
     }
     axios.post('https://crud-server-json-trans-peste.vercel.app/rotas',pedido)
     .then(function(response){
         
     }
     )
-    .catch(function(error) {   Swal.fire({
+    .catch(function(error) {  
+        window.location.reload()
+        Swal.fire({
         position: 'top-end',
         icon: 'success',
         title: 'Rota Cadastrada',
         showConfirmButton: false,
         timer: 1500
-      })  });
+      }) 
+    
+    });
     }
+}
+    
 }
 
 function redirecionarperfil()
@@ -132,34 +177,10 @@ function redirecionarperfil()
     window.location.href = `../loginusuario/perfil_motorista.html?id=${idurl}`
 }
 
-async function bemvindo(idresponsavel) {
-   
-    const urlresponsavelatualizada = `https://crud-server-json-trans-peste.vercel.app/motoristas/${idresponsavel}`;
-    console.log(urlresponsavelatualizada)
-    const dadosresponsavel = await fetch(urlresponsavelatualizada);
-    const responsavel = await dadosresponsavel.json(); // Corrigido para motorista em vez de motoristas
-    console.log(responsavel.type);
-    
-   
-    $(document).ready(function(){
-        Swal.fire({
-          position: 'top',
-          icon: 'success',
-          title: ` Bem vindo ${responsavel.nome} ${responsavel.sobrenome}`,
-          showConfirmButton: false,
-          timer: 1500
-        })
-        
-       })
-    
-}
+  
+
 
 if(!idurl)
 {
     window.location.href="../telainicial/login.html"
-}
-else
-{
- 
- //  bemvindo(idurl)
 }

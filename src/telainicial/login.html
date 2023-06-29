@@ -2,6 +2,12 @@
 <html>
 
 <head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Login</title>
@@ -131,6 +137,7 @@ function loginResponsavel() {
           var idLogado = responsavelEncontrado.id;
           console.log('Login do responsável realizado com sucesso!');
           // Redirecionar ou realizar outras ações após o login bem-sucedido
+          bemvindoresponsavel(idLogado)
           window.location.href = `../telainicialusu/cadastrarrota.html?id=${idLogado}`;
         } else {
           console.error('E-mail ou senha inválidos para o responsável.');
@@ -171,7 +178,8 @@ function loginMotorista() {
           console.log(idLogado);
           console.log('Login do motorista realizado com sucesso!');
           // Redirecionar ou realizar outras ações após o login bem-sucedido
-          window.location.href = `../loginmotorista/cadastrarrota.html?id=${idLogado}`;
+          bemvindomotorista(idLogado)
+         window.location.href = `../loginmotorista/cadastrarrota.html?id=${idLogado}`;
         } else {
           console.error('E-mail ou senha inválidos para o motorista.');
           Swal.fire({
@@ -197,6 +205,49 @@ function loginMotorista() {
 }
 
 
+async function bemvindoresponsavel(idresponsavel) {
+   
+   const urlresponsavelatualizada = `https://crud-server-json-trans-peste.vercel.app/responsaveis/${idresponsavel}`;
+   console.log(urlresponsavelatualizada)
+   const dadosresponsavel = await fetch(urlresponsavelatualizada);
+   const responsavel = await dadosresponsavel.json(); 
+   console.log(responsavel.type);
+   
+
+    $(document).ready(function(){
+     Swal.fire({
+       position: 'top',
+       icon: 'success',
+       title: ` Bem vindo ${responsavel.nome} ${responsavel.sobrenome}`,
+       showConfirmButton: false,
+       timer: 1500
+     })
+     
+    })
+   
+}
+
+async function bemvindomotorista(idresponsavel) {
+   
+   const urlresponsavelatualizada = `https://crud-server-json-trans-peste.vercel.app/motoristas/${idresponsavel}`;
+   console.log(urlresponsavelatualizada)
+   const dadosresponsavel = await fetch(urlresponsavelatualizada);
+   const responsavel = await dadosresponsavel.json(); // Corrigido para motorista em vez de motoristas
+   console.log(responsavel.type);
+   
+  
+   $(document).ready(function(){
+       Swal.fire({
+         position: 'top',
+         icon: 'success',
+         title: ` Bem vindo ${responsavel.nome} ${responsavel.sobrenome}`,
+         showConfirmButton: false,
+         timer: 1500
+       })
+       
+      })
+ 
+    }
     </script>
 
  
