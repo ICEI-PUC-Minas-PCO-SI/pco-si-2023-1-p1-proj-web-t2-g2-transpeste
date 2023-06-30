@@ -35,7 +35,6 @@
           <li onclick="redirecionarhome()"> <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
-          <li onclick="redirecionarperfil()"> <a href="#">Perfil</a></li>
           <li><button type="button" onclick="redirecionarperfil()" > <a href="#">Meu Perfil</a> </button></li>
         </ul>
       </div>
@@ -151,6 +150,8 @@
       </div>
     </div>
 
+
+
   </section>
 
   <div class="rodape">
@@ -169,6 +170,7 @@ function redirecionarperfil()
 {
         window.location.href= `../loginusuario/perfil_motorista.html?id=${idurl} `
 }
+
 
 
 
@@ -206,8 +208,9 @@ async function salvar() {
 
 
 const res = await  axios.put(`https://crud-server-json-trans-peste.vercel.app/motoristas/${idurl}`,{ 
-  id: idurl,
+ 
   nome: inputnome.value,  
+  sobrenome:inputnome.value,
   cpf: cpf,
   endereco: endereco,
   nascimento : nascimento,
@@ -215,13 +218,16 @@ const res = await  axios.put(`https://crud-server-json-trans-peste.vercel.app/mo
   cnhvenc: cnhvenc,
   telefone: inputtelefone.value,
   email: inputemail.value,
+  senha:"123456ab"
  
 }) 
 .then (function (){
   
 })
-
+.catch(function(error) {alert("Alteração salva")
+window.location.href=`../loginusuario/perfil_motorista.html?id=${idurl} `})
 }
+
 </script>
   
 </body>

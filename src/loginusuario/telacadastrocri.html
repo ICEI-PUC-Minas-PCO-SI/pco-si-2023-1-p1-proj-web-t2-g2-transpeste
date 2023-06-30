@@ -33,7 +33,6 @@
           <li onclick="redirecionarhome()"> <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
-          <li onclick="redirecionarperfil()"> <a href="#">Perfil</a></li>
           <li><button type="button" onclick="redirecionarperfil()" > <a href="#">Meu Perfil</a> </button></li>
         </ul>
       </div>
@@ -145,15 +144,17 @@
   </div>
 <img src="../loginusuario/telacadastrocri.html" alt="">
   <script>
-
+const dadosurl = new URLSearchParams(window.location.search)
+const idurl1 = dadosurl.get('id')
 function redirecionarhome()
 {
-        window.location.href= `../loginmotorista/cadastrarrota.html?id=${idurl} `
+  window.location.href= `../telainicialusu/cadastrarrota.html?id=${idurl} `
+       
 }
 
 function redirecionarperfil()
 {
-        window.location.href= `../loginmotorista/perfildefi.html?id=${idurl} `
+       window.location.href= `../loginusuario/perfilusuario.html?id=${idurl} `
 }
 function redirecionareditar()
 {
@@ -177,17 +178,25 @@ async function salvar() {
   var url = `https://crud-server-json-trans-peste.vercel.app/criancas`;
 
 const res = await  axios.post(`https://crud-server-json-trans-peste.vercel.app/criancas`,{ 
-  id: idurl,
+  
   nome: nome, 
   cpf: cpf,
   telefone: telefone, 
-  nascimento : nascimento,
-  escola: escola,
+  data_nascimento : nascimento,
+  nome_escola: escola,
   endereco_escola: endereco_escola,
+  avalicao:5,
+  responsaveisid:idurl
  
 }) 
-.catch(function(error) { alert("Criança Cadastrada")});
+.catch(function(error) { alert("Criança Cadastrada")
+window.location.href= `../loginusuario/perfilusuario.html?id=${idurl} `
+});
 
+}
+if(!idurl1)
+{
+    window.location.href="../telainicial/login.html"
 }
 
 

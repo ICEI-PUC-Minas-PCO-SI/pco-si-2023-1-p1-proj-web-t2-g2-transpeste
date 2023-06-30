@@ -10,4 +10,4 @@ Pedro Morais:  Criação das telas de cadastro de rotas , criação do sistema d
 
 Otavio Soares: Criação de telas de sugestoes de viagem do usuário e do motorista,recebendo e preenchendo de forma dinamica a página, com integração de JavaScript nas páginas de html e css, fazendo a interação entre páginas.
 
-Guilherme Machado: Deploy do backend no Vercel, Deploy da aplicação na AWS, gerenciamento do git e resolução de conflitos, Criação da página home, adicionada comunicação do front com o back das páginas de login, cadastro e validação. Foi feito o cadastro dos novos usuários par registro no BD e o Login funcional para usuários cadastrados.
+Guilherme Machado: Deploy do backend no Vercel, Deploy da aplicação na AWS e vercel, gerenciamento do git e resolução de conflitos, Criação da página home, adicionada comunicação do front com o back das páginas de login, cadastro e validação. Foi feito o cadastro dos novos usuários par registro no BD e o Login funcional para usuários cadastrados.

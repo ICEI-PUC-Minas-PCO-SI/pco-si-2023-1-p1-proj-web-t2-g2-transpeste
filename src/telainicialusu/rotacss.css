@@ -73,7 +73,7 @@ height: 680px;
 
 background-image: url("../imagens/backgroundtelainicial.jpg");
 display: flex;
-background-size: cover;
+
 }
 .direito {
   width: 70%;

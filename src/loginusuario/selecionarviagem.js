@@ -115,3 +115,8 @@ function redirecionarperfil()
 {
         window.location.href= `../loginusuario/perfilusuario.html?id=${urlID} `
 }
+
+if(!urlID)
+{
+    window.location.href="../telainicial/login.html"
+}

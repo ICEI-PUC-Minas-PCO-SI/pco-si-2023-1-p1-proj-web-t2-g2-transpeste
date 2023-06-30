@@ -3,6 +3,7 @@
 const urlmotorista = "https://crud-server-json-trans-peste.vercel.app/motoristas"
 const urlrotas= "https://crud-server-json-trans-peste.vercel.app/rotas"
 const urlcrianca ="https://crud-server-json-trans-peste.vercel.app/criancas"
+const urlsolicitacao = "https://crud-server-json-trans-peste.vercel.app/solicitacao"
 const dadosurl = new URLSearchParams(window.location.search)
 const idurl = dadosurl.get('id')
 const selectrota = window.document.querySelector('select#rotas')
@@ -34,6 +35,7 @@ if(post.responsaveisid==idurl)
 if(valid==0)
 { const option = document.querySelector('option')
 option.innerHTML ="0 crianças cadastrada"
+option.setAttribute('value',"null")
 selectcrianca.appendChild(option)
 }
 }
@@ -77,7 +79,15 @@ async function preenchermotorista() {
     
   if ( selectrota.value=="null") {
    
-   alert('voce ainda não selecionou uma rota')
+    $(document).ready(function(){
+
+      Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Selecione uma rota!',
+    
+  })
+    })
   } else {
   
     const dadosrotas = await fetch(urlrotas);
@@ -108,6 +118,7 @@ async function preenchermotorista() {
    {
     const option =document.createElement('option')
     option.innerHTML = "Não há motoristas"
+    option.setAttribute('value',"null")
     selectmotorista.appendChild(option)
    }
     
@@ -118,27 +129,7 @@ async function preenchermotorista() {
 
 
 
-async function bemvindo(idresponsavel) {
-   
-    const urlresponsavelatualizada = `https://crud-server-json-trans-peste.vercel.app/responsaveis/${idresponsavel}`;
-    console.log(urlresponsavelatualizada)
-    const dadosresponsavel = await fetch(urlresponsavelatualizada);
-    const responsavel = await dadosresponsavel.json(); // Corrigido para motorista em vez de motoristas
-    console.log(responsavel.type);
-    
 
-     $(document).ready(function(){
-      Swal.fire({
-        position: 'top',
-        icon: 'success',
-        title: ` Bem vindo ${responsavel.nome} ${responsavel.sobrenome}`,
-        showConfirmButton: false,
-        timer: 1500
-      })
-      
-     })
-    
-}
 async function verificarmotorista(idmotorista) {
   
     const urlmotoristaatualizada = `https://crud-server-json-trans-peste.vercel.app/motoristas/${idmotorista}`;
@@ -158,19 +149,22 @@ var dados = {};
 
 async function enviardados() {
    
-    if(selectrota.value=="null" || selectmotorista.value=="null"|inputpartida.value==""|| selectcrianca.value=="null")
+
+ if(selectrota.value=="null" || selectmotorista.value=="null"|inputpartida.value==""|| selectcrianca.value=="null")
 {
+ 
   $(document).ready(function(){
   Swal.fire({
     icon: 'error',
     title: 'Oops...',
-    text: 'Esta faltando informações!',
+    text: 'Preencha todas as informações!',
     
   })
 })
 }
 else
 {
+ 
     const textoselectrota = selectrota.options[selectrota.selectedIndex];
     const textorota = textoselectrota.text;
     const textoselectmotorista = selectmotorista.options[selectmotorista.selectedIndex];
@@ -196,8 +190,9 @@ else
       showConfirmButton: false,
       timer: 1500
     })
-
+window.location.reload()
   }) });
+  
 }
  
 }
@@ -226,10 +221,5 @@ pegaravaliacao(1).then(function(dados_ocupacao) {avaliacao1=dados_ocupacao} )
 if(!idurl)
 {
     window.location.href="../telainicial/login.html"
-}
-else
-{
- 
-   bemvindo(idurl)
 }
 

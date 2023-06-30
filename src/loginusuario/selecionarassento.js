@@ -37,13 +37,16 @@ $(document).ready(function () {
 });
 
 
-function redirecionarhome() {
-    window.location.href = `../loginmotorista/cadastrarrota.html?id=${idurl} `
+function redirecionarhome()
+{
+        window.location.href= `../loginmotorista/cadastrarrota.html?id=${idurl} `
 }
 
-function redirecionarperfil() {
-    window.location.href = `../loginmotorista/perfildefi.html?id=${idurl} `
+function redirecionarperfil()
+{
+        window.location.href= `../loginusuario/perfil_motorista.html?id=${idurl} `
 }
+
 
 function getAssentos() {
     return axios.get('https://crud-server-json-trans-peste.vercel.app/ocupacao')
@@ -111,7 +114,7 @@ function montaobj(assento, crianca, veiculo, responsavel) {
         telResponsavel: responsavel ? responsavel.telefone : '',
         endeResponsavel: responsavel ? responsavel.endereco : '',
         veiculoNome: veiculo ? veiculo.marca + ' - ' + veiculo.modelo : '',
-        link: '/src/loginmotorista/avaliarpeste.html?id=' + idurl + '?idcrianca=' + idlink
+        link: '../loginmotorista/avaliarpeste.html?id=' + idurl + '?idcrianca=' + idlink
     }
 
     info.push(obj);
