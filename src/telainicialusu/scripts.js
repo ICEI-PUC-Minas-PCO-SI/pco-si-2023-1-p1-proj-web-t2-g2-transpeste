@@ -74,6 +74,44 @@ else
 
 preencherrotas(rotas)
 
+async function verificarcriançavazia()
+{
+  const dadoscrianca = await fetch(urlcrianca)
+  const dadoscriancajson = await dadoscrianca.json()
+var valid
+dadoscriancajson.map(
+  (post)=>{
+    console.log("entrei aqui ")
+alert('aqui')
+    valid =0 
+    console.log("valid1"+valid)
+    console.log("respod"+post.responsaveisid)
+    console.log("idurl"+idurl)
+    if(post.responsaveisid==idurl)
+    {
+      console('igual')
+valid++
+    }
+  }
+
+)
+console.log("valid2"+valid)
+if(valid==0)
+{
+  $(document).ready(function(){
+    Swal.fire({
+        icon: 'info',
+        title: '<strong>Você não tem uma Peste cadastrada</strong>',
+        text: 'Cadastre sua Peste para começar a fazer viagens',
+        footer: '<a href="../loginusuario/telacadastrocri.html?id='+idurl+'">Castrar Peste</a>'
+      })
+})
+}
+
+
+}
+verificarcriançavazia()
+
 
 async function preenchermotorista() {
     
@@ -149,8 +187,19 @@ var dados = {};
 
 async function enviardados() {
    
+if(selectcrianca.value=="null")
+{
+  $(document).ready(function(){
+    Swal.fire({
+        icon: 'info',
+        title: '<strong>Você não tem uma Peste cadastrada</strong>',
+        text: 'Cadastre sua Peste para começar a fazer viagens',
+        footer: '<a href="../loginusuario/telacadastrocri.html?id='+idurl+'">Castrar Peste</a>'
+      })
+})
+}
 
- if(selectrota.value=="null" || selectmotorista.value=="null"|inputpartida.value==""|| selectcrianca.value=="null")
+else if(selectrota.value=="null" || selectmotorista.value=="null"|inputpartida.value=="")
 {
  
   $(document).ready(function(){
