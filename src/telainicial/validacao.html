@@ -108,7 +108,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.1.3/jquery.inputmask.min.js"></script>
     <script>
 
-      var motoristaId = localStorage.getItem('motoristaId');
+      const motoristaId = localStorage.getItem('motoristaId');
       function redirecionarParaLogin() {
         window.location.href = "../telainicial/login.html";
       }
@@ -187,16 +187,16 @@
                               title: 'Veículo Validado com Sucesso!',
                               confirmButtonColor: 'green'
                             })
-            window.location.href = "../loginmotorista/cadastrarrota.html";
+            window.location.href = `../loginmotorista/cadastrarrota.html?id=${motoristaId}`;
           })
           .catch(error => {
             console.error("Ocorreu um erro ao salvar o veículo:", error);
-            window.location.href = "../loginmotorista/cadastrarrota.html";
             Swal.fire({
                               icon: 'success',
                               title: 'Veículo Validado com Sucesso!',
                               confirmButtonColor: 'green'
                             })
+                            window.location.href = `../loginmotorista/cadastrarrota.html?id=${motoristaId}`;
           });
       }
     })
