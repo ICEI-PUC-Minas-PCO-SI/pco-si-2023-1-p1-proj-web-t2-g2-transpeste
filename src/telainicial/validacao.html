@@ -154,7 +154,12 @@
       const veiculoEncontrado = data.find(veiculo => veiculo.placa === placa);
 
       if (veiculoEncontrado) {
-        alert("A placa já está cadastrada em outro veículo.");
+        Swal.fire({
+                      icon: 'error',
+                      title: 'Oops...',
+                      text: 'Placa já cadastrada em outro veículo',
+                      confirmButtonColor: '#EE1C47'
+                    })
       } else {
         // A placa não existe, realizar a requisição POST para salvar o novo veículo
         var veiculo = {
