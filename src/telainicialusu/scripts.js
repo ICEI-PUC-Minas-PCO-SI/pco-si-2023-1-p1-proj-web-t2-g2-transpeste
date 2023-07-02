@@ -78,24 +78,21 @@ async function verificarcriançavazia()
 {
   const dadoscrianca = await fetch(urlcrianca)
   const dadoscriancajson = await dadoscrianca.json()
-var valid
+let valid = 0
 dadoscriancajson.map(
   (post)=>{
-    console.log("entrei aqui ")
-alert('aqui')
-    valid =0 
-    console.log("valid1"+valid)
-    console.log("respod"+post.responsaveisid)
-    console.log("idurl"+idurl)
-    if(post.responsaveisid==idurl)
-    {
-      console('igual')
-valid++
+
+
+    if (post.responsaveisid == idurl) {
+
+      valid++;
+      console.log("valid dentro " + valid)
     }
+   
   }
 
 )
-console.log("valid2"+valid)
+
 if(valid==0)
 {
   $(document).ready(function(){
