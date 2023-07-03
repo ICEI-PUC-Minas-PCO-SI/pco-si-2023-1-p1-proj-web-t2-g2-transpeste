@@ -55,8 +55,6 @@ const div = document.createElement('div')
         div.appendChild(assentos)
         div.appendChild(renavam)
         div.appendChild(chassi)
-        div.appendChild(botaoeditar)
-        div.appendChild(botaoassento)
         div.appendChild(spanfotos)
         campopreencher.appendChild(div)
            
@@ -73,4 +71,20 @@ function redirecionarhome()
 function redirecionarperfil()
 {
         window.location.href= `../loginusuario/perfil_motorista.html?id=${idurl} `
+}
+if(!idurl)
+{
+    window.location.href="../telainicial/login.html"
+}
+function editarveiculo()
+{
+        window.location.href= `../loginmotorista/cadastroveiculo.html?id=${idurl} `
+}
+function solicipendentes()
+{
+        window.location.href= `../loginusuario/selecionarassento.html?id=${idurl} `
+}
+function meusveiculos()
+{
+        window.location.href= `../loginusuario/perfil_veiculo.html?id=${idurl} `
 }

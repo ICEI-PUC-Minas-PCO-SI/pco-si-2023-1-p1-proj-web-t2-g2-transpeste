@@ -60,9 +60,6 @@ const div = document.createElement('div')
         div.appendChild(cnhvenc)
         div.appendChild(telefone)
         div.appendChild(email)
-        div.appendChild(botaoeditar)
-        div.appendChild(botaosolicita)
-        div.appendChild(botaomeusveiculos)
         div.appendChild(spanfotos)
         campopreencher.appendChild(div)
 
@@ -80,3 +77,20 @@ function redirecionarperfil()
 {
         window.location.href= `../loginusuario/perfil_motorista.html?id=${idurl} `
 }
+if(!idurl)
+{
+    window.location.href="../telainicial/login.html"
+}
+function editarperfil()
+{
+        window.location.href= `../loginmotorista/perfilmoto.html?id=${idurl} `
+}
+function solicipendentes()
+{
+        window.location.href= `../loginmotorista/sugestoes.html?id=${idurl} `
+}
+function meusveiculos()
+{
+        window.location.href= `../loginusuario/perfil_veiculo.html?id=${idurl} `
+}
+
