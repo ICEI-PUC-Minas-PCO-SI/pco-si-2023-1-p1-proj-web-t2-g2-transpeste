@@ -330,18 +330,8 @@
     padding: 0px;
   } 
 
-  div > #button1 {
-    border: none;
-    background: #2df095;   
-    border-radius: 30px;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    transition: 0.2s;
-    margin: 5px;
-  }
 
-  div > #button2 {
+  #button2 {
     border: none;
     background: #f01212;
     border-radius: 30px;

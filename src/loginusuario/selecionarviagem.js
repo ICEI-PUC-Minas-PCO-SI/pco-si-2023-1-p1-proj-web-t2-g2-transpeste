@@ -9,14 +9,12 @@ async function preencher() {
   const preencherDadosJson = await preencherDados.json();
   preencherDadosJson.map(async (dados) => {
     const h2 = document.createElement("h2");
-    h2.innerHTML = await obterNomeSolicitante(dados.solicitante);
+    h2.innerHTML = await obterNomeMotorista(dados.motoristasid);
+    var pesteNome = await obterNomePeste(dados.criancas);
     const p = document.createElement("p");
     p.innerHTML =
-    "<strong>Rota: </strong>" + dados.escola + "<br>" + "<strong>Partida: </strong>" + dados.partida;
-    const aceitar = document.createElement("button");
-    aceitar.setAttribute("id", "button1");
-    aceitar.setAttribute("onclick", "aceitar()");
-    aceitar.innerHTML = "Aceitar";
+    "<strong>Peste: </strong>"+ pesteNome +  "<br><strong>Rota: </strong>" + dados.escola + "<br>" + "<strong>Partida: </strong>" + dados.partida;
+    
     const deletar = document.createElement("button");
     deletar.setAttribute("id", "button2");
     deletar.setAttribute("onclick", "deletar()");    
@@ -24,84 +22,38 @@ async function preencher() {
     const div = document.createElement("div");
     div.appendChild(h2);
     div.appendChild(p);
-    div.appendChild(aceitar);
     div.appendChild(deletar);
     caixa_sugestoes.appendChild(div);
   });
 }
 
-async function obterNomeSolicitante(id) {
-  const response = await fetch(`https://crud-server-json-trans-peste.vercel.app/responsaveis/${id}`);
+async function obterNomeMotorista(id) {
+  const response = await fetch(`https://crud-server-json-trans-peste.vercel.app/motoristas/${id}`);
   const data = await response.json();
+  
+  return data.nome; 
+}
 
-  if (data && data.nome) {
-    return data.nome;
-  } else {
-    return "Nome não encontrado";
-  }
+async function obterNomePeste(id){
+  const response = await fetch(`https://crud-server-json-trans-peste.vercel.app/criancas/${id}`);
+  const data = await response.json();
+ 
+  return data.nome;
 }
 
 preencher();
 
-async function aceitar() {
-  const preencherDados1 = await fetch(url + "/" + urlID);
-  console.log(url + "/" + urlID);
-  const preencherDadosJson1 = await preencherDados1.json();
-  const veiculoid = 1;
-  console.log(veiculoid);
-  const criancasid = preencherDadosJson1.crianca;
-  console.log(preencherDadosJson1.crianca);
-  const responsavelid = preencherDadosJson1.solicitante;  
-  console.log(preencherDadosJson1.solicitante);
-  const dados = {
-    veiculoid: veiculoid,
-    criancas: criancasid,
-    responsavel: responsavelid,
-  };
-  axios
-    .post("https://crud-server-json-trans-peste.vercel.app/ocupacao", dados)
-    .then(function (response) {
-      
-    })
-    .catch(function (error) {
-      alert("Solicitação aceita!");
-      location.reload();
-    });
-}
-
-// async function recusar() {
-//   const preencherDados2 = await fetch(url1 + "/" + urlID);
-//   const preencherDadosJson2 = await preencherDados2.json();
-//   const veiculoid = 1;
-//   const criancasid = preencherDadosJson2.criancas;
-//   const responsavelid = preencherDadosJson2.responsavel;
-//   const dados = {
-//     veiculoid: veiculoid,
-//     criancas: criancasid,
-//     responsavel: responsavelid,
-//   };
-//   axios
-//    .post("https://crud-server-json-trans-peste.vercel.app/ocupacao", dados)
-//    .then(function (response) {
-//       // Recarregar a página após a solicitação ser recusada
-//       location.reload();
-//     })
-//    .catch(function (error) {
-//       alert("Solicitação recusada!");
-//     });
-// }
-
 async function deletar() {  
   axios
-   .delete("https://my-json-server.typicode.com/Machada1/CRUD-SERVER-JSON-TransPeste/responsaveis/1" )
+   .delete(`https://crud-server-json-trans-peste.vercel.app/solicitacao/${urlID}`)
+   alert(`https://crud-server-json-trans-peste.vercel.app/solicitacao/${urlID}`)
     .then(function (response) {
       
       location.reload();
     })
    .catch(function (error) {
       alert("Deletado!");
-      const div = document.createElement("div");
-      div.innerHTML = "Deletado!";
+      
       location.reload();
     });
 }
