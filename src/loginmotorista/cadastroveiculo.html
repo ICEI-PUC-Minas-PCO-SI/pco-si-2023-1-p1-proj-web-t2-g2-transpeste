@@ -2,11 +2,16 @@
 <html>
 
 <head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script> <script src="axios.js"></script>
+  
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Cadastrar Veiculo</title>
   <link href="Style.css" rel="stylesheet" type="text/css" />
-  <script src="script.js"></script>
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,11 +30,10 @@
       </div>
       <div>
         <ul>
-          <li> <a href="../loginmotorista/cadastrarrota.html">Home</a></li>
+          <li onclick="redirecionarhome()"> <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
-          <li> <a href="../loginmotorista/perfildefi.html">Perfil</a></li>
-          <li><button type="button"> <a href="../loginmotorista/perfildefi.html">Meu Perfil</a> </button></li>
+          <li><button type="button" onclick="redirecionarperfil()" > <a href="#">Meu Perfil</a> </button></li>
         </ul>
       </div>
     </nav>
@@ -46,7 +50,7 @@
             <div class="input_group">
               <div class="input-box">
                 <label for="modelo">Modelo</label>
-                <input id="nome" type="text" name="modelo" placeholder="Digite aqui o modelo do veículo" required>
+                <input id="modelo" type="text" name="modelo" placeholder="Digite aqui o modelo do veículo" required>
               </div>
         
               <div class="input-box">
@@ -61,7 +65,7 @@
         
               <div class="input-box">
                 <label for="ano">Ano do veículo</label>
-                <input id="ano " type="number"  name="ano" placeholder="Digite aqui o ano do veículo" required>
+                <input id="ano" type="number"  name="ano" placeholder="Digite aqui o ano do veículo" required>
               </div>
               
               <div class="input-box">
@@ -91,10 +95,9 @@
                 </div>
           
   
-            <div class="continue-button">
-                <button><a href="../loginmotorista/perfilvan.html">Salvar</a> </button>
-            </div>
-
+                <div class="continue-button">
+                  <button onclick="salvar()" onclick="redirecionarperfil()"><a href="#">Salvar</a> </button>
+                </div>
         </form>
     </div>
   </div>
@@ -139,7 +142,52 @@
     <p>Copyright © @2023. All Rights Reserved.Designd By TransPeste.</p>
   </div>
 
+<script>
 
+function redirecionarhome()
+{
+        window.location.href= `../loginmotorista/cadastrarrota.html?id=${idurl} `
+}
+
+function redirecionarperfil()
+{
+        window.location.href= `../loginmotorista/../loginusuario/perfil_motorista.html?id=${idurl} `
+}
+
+
+
+const urlveiculos = "https://crud-server-json-trans-peste.vercel.app/veiculos"
+
+const urlinteira = new URLSearchParams(window.location.search)
+const idurl = urlinteira.get('id') 
+
+async function salvar() {
+  const modelo = document.getElementById('modelo').value;
+  const marca = document.getElementById('marca').value;
+  const placa = document.getElementById('placa').value;
+  const ano = document.getElementById('ano').value;
+  const renavam = document.getElementById('renavam').value;
+  const chassi = document.getElementById('chassi').value;
+  
+
+  var url = `https://crud-server-json-trans-peste.vercel.app/veiculos`;
+
+const res = await  axios.post(`https://crud-server-json-trans-peste.vercel.app/veiculos`,{ 
+  id: idurl,
+  modelo: modelo, 
+  marca: marca,
+  placa: placa, 
+  ano: ano,
+  assentos:16,
+  renavam: renavam,
+  chassi: chassi,
+  motoristasid:idurl
+ 
+}) 
+.catch(function(error) { alert("Veiculo Cadastrado")});
+
+}
+</script>
 
  
 </body>

@@ -25,7 +25,7 @@ const div = document.createElement('div')
          spanfotos.appendChild(fotocrianca2)
        
          botaoeditar.innerHTML = "Editar Perfil"
-         botaoeditar.setAttribute('href',`../loginusuario/cadastrarcrianca.html?id=${criancas.id}`)
+         botaoeditar.setAttribute('href',`../loginusuario/telacadastrocri.html?id=${criancas.id}`)
          nome.innerHTML = `<strong>Nome</strong>:${criancas.nome} `
          const email = document.createElement('p')
          email.innerHTML = `<strong>email</strong>:${criancas.email}`
@@ -57,8 +57,6 @@ const div = document.createElement('div')
         div.appendChild(nome_escola)
         div.appendChild(enderecoescola)
         div.appendChild(avaliacao)
-        div.appendChild(responsaveisid)
-        div.appendChild(botaoeditar)
         div.appendChild(spanfotos)
         campopreencher.appendChild(div)
 
@@ -69,10 +67,26 @@ preencherdados ()
 
 function redirecionarhome()
 {
-        window.location.href= `../loginmotorista/cadastrarrota.html?id=${idurl} `
+        window.location.href= `../telainicialusu/cadastrarrota.html?id=${idurl} `
 }
 
 function redirecionarperfil()
 {
         window.location.href= `../loginusuario/perfilusuario.html?id=${idurl} `
+}
+if(!idurl)
+{
+    window.location.href="../telainicial/login.html"
+}
+function editarperfilcri()
+{
+        window.location.href= `../loginusuario/telacadastrocri.html?id=${idurl} `
+}
+function cadastracri()
+{
+        window.location.href= `../loginusuario/telacadastrocri.html?id=${idurl} `
+}
+function perfilcri()
+{
+        window.location.href= `../loginusuario/cadastrarcrianca.html?id=${idurl} `
 }

@@ -2,6 +2,11 @@
 <html>
 
 <head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script> <script src="axios.js"></script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rotas sugeridas</title>
@@ -28,11 +33,10 @@
              <img class="logo" src="../imagens/logosemfundo.png" alt="TransPeste">
            </div>
            <ul>
-              <li> <a href="../loginmotorista/cadastrarrota.html">Home</a></li>
+              <li onclick="redirecionarhome()"><a href="#"> Home</a></li>
               <li> <a href="#">Info</a></li>
               <li> <a href="#">Sobre</a></li>
-              <li> <a href="../loginmotorista/perfildefi.html">Perfil</a></li>
-              <li><button type="button"> <a href="../loginmotorista/perfildefi.html">Meu Perfil</a> </button></li>
+              <li><button onclick="redirecionarperfil()" type="button"> <a href="#">Meu Perfil</a> </button></li>
             </ul>
           </nav>
         </div>

@@ -4,6 +4,8 @@ const idurl = dadosurl.get('id')
 const campopreencher = document.querySelector('section#peste')
 
 
+
+
 function redirecionarhome()
 {
         window.location.href= `../telainicialusu/cadastrarrota.html?id=${idurl}`
@@ -21,6 +23,8 @@ const div = document.createElement('div')
          const email = document.createElement('p')
          const botaoeditar = document.createElement('a')
          const botaoviagem = document.createElement('a')
+         botaoviagem.setAttribute("onclick","redirecionarsolicitacoes()")
+         botaoviagem.setAttribute('href',"#")
          const botaocriança = document.createElement('a')
          const spanfotos = document.createElement('span')
          const fotocriança1 = document.createElement('img')
@@ -56,9 +60,6 @@ const div = document.createElement('div')
         div.appendChild(telefone)
         div.appendChild(email)
         div.appendChild(senha)
-        div.appendChild(botaoeditar)
-        div.appendChild(botaoviagem)
-        div.appendChild(botaocriança)
         div.appendChild(spanfotos)
         campopreencher.appendChild(div)
 
@@ -69,10 +70,31 @@ preencherdados ()
 
 function redirecionarhome()
 {
-        window.location.href= `../loginmotorista/cadastrarrota.html?id=${idurl} `
+        window.location.href= `../telainicialusu/cadastrarrota.html?id=${idurl} `
+}
+
+function redirecionarsolicitacoes()
+{
+        window.location.href= `../loginusuario/solicitacoesUsuario.html?id=${idurl}`
 }
 
 function redirecionarperfil()
 {
         window.location.href= `../loginusuario/perfilusuario.html?id=${idurl} `
+}
+if(!idurl)
+{
+    window.location.href="../telainicial/login.html"
+}
+function editarperfil()
+{
+        window.location.href= `../loginusuario/editarusuario.html?id=${idurl} `
+}
+function cadastracri()
+{
+        window.location.href= `../loginusuario/telacadastrocri.html?id=${idurl} `
+}
+function perfilcri()
+{
+        window.location.href= `../loginusuario/cadastrarcrianca.html?id=${idurl} `
 }

@@ -5,6 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Selecionar viagem</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+ 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script> <script src="axios.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link href="rotacss.css" rel="stylesheet" type="text/css" />
   <script src="script.js"></script>
@@ -29,7 +41,6 @@
           <li> <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
-          <li onclick="redirecionarperfil()">  <a href="#">Perfil</a></li>
           <li><button onclick="redirecionarperfil()" type="button"> <a href="#">Meu Perfil</a> </button></li>
         </ul>
       </div>
@@ -46,21 +57,23 @@
         <div id="rota">
         <select  id="rotas" name="rotas">
           <option value="null" selected>Selecione sua rota</option>
-          
+          <option value="null" selected>Selecione sua rota</option>
         </select>
     </div>
         <div style="margin-top: 20px;">
           <input id="partida" class="place" type="text" placeholder="Local de partida">
         </div>
         <div style="margin-top: 20px;">
-          <input id="chegada" class="place" type="text" placeholder="Local de final">
+          <select name="crianca" id="crianca">
+            <option value="null" selected>Selecione sua Criança</option>
+          </select>
         </div>
         <select onclick="preenchermotorista()" name="motorista"  id="motorista" style="margin-top: 20px;">
           <option id="selected" value="null" selected>Selecione o Motorista</option>
         
         </select>
         <div id="but">
-          <button onclick="salvar()"    type="button" style="margin-top: 20px;"> <a >Salvar</a> </button>
+          <button   onclick="enviardados()"    type="button" style="margin-top: 20px;"> <a >Salvar</a> </button>
         </div>
       </form>
 

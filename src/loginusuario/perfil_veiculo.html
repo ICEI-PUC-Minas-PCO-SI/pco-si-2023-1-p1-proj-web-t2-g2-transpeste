@@ -25,7 +25,6 @@
         <li onclick="redirecionarhome()"> <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>
-          <li onclick="redirecionarperfil()"> <a href="#">Perfil</a></li>
           <button onclick="redirecionarperfil()" type="button"> <a href="#">Meu Perfil</a> </button>
       </ul>
     </nav>
@@ -34,15 +33,17 @@
     <div class="meio">
 
         <section id="peste">          
-                                                   
+          <div id="foto-perfil">
+            <img src="caminho_da_foto_de_perfil" alt="Sem foto do veículo">
+            <div id="quadrado-placeholder">
+              <button onclick="editarveiculo()" type="button"> <a href="#">Editar veículo</a> </button>
+          <button onclick="selecassento()" type="button"> <a href="#">Selecionar Assento</a> </button>
+          <button onclick="meusveiculos()" type="button"> <a href="#">Meus Veículos</a> </button> 
+            </div>
+          </div>                                         
         </section> 
 
-        <div id="foto-perfil">
-          <img src="caminho_da_foto_de_perfil" alt="Sem foto de perfil">
-          <div id="quadrado-placeholder">
-            
-          </div>
-        </div>
+        
         
                 
     </div>
