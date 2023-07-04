@@ -4,7 +4,7 @@ Jean Estanislau: Melhoria da página de gerenciamento de assentos, auxílio na m
 
 Ana Clara Lima Marçal:  
 
-Diogo Campos: 
+Diogo Campos: Aprimoramento da pagina de avaliação do comportamento da criança.
 
 Pedro Morais: 
 
