@@ -80,7 +80,7 @@ function editarveiculo()
 {
         window.location.href= `../loginmotorista/cadastroveiculo.html?id=${idurl} `
 }
-function solicipendentes()
+function selecassento()
 {
         window.location.href= `../loginusuario/selecionarassento.html?id=${idurl} `
 }

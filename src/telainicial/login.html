@@ -138,7 +138,10 @@ function loginResponsavel() {
           console.log('Login do responsável realizado com sucesso!');
           // Redirecionar ou realizar outras ações após o login bem-sucedido
           bemvindoresponsavel(idLogado)
-          window.location.href = `../telainicialusu/cadastrarrota.html?id=${idLogado}`;
+          setTimeout(function() {
+  window.location.href = `../telainicialusu/cadastrarrota.html?id=${idLogado}`;
+}, 1200);
+
         } else {
           console.error('E-mail ou senha inválidos para o responsável.');
           Swal.fire({
@@ -179,7 +182,10 @@ function loginMotorista() {
           console.log('Login do motorista realizado com sucesso!');
           // Redirecionar ou realizar outras ações após o login bem-sucedido
           bemvindomotorista(idLogado)
-         window.location.href = `../loginmotorista/cadastrarrota.html?id=${idLogado}`;
+          setTimeout(function() {
+            window.location.href = `../loginmotorista/cadastrarrota.html?id=${idLogado}`;
+          },1200)
+        
         } else {
           console.error('E-mail ou senha inválidos para o motorista.');
           Swal.fire({
@@ -213,6 +219,7 @@ async function bemvindoresponsavel(idresponsavel) {
    const responsavel = await dadosresponsavel.json(); 
    console.log(responsavel.type);
    
+  
 
     $(document).ready(function(){
      Swal.fire({
@@ -234,7 +241,7 @@ async function bemvindomotorista(idresponsavel) {
    const dadosresponsavel = await fetch(urlresponsavelatualizada);
    const responsavel = await dadosresponsavel.json(); // Corrigido para motorista em vez de motoristas
    console.log(responsavel.type);
-   
+ 
   
    $(document).ready(function(){
        Swal.fire({

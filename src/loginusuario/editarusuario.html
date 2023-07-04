@@ -2,6 +2,9 @@
 <html>
 
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
@@ -35,7 +38,7 @@
           <li onclick="redirecionarhome()"> <a href="#">Home</a></li>
           <li> <a href="#">Info</a></li>
           <li> <a href="#">Sobre</a></li>       
-          <li><button type="button" onclick="redirecionarperfil()" > <a href="#">Meu Perfil </a> </button></li>
+          <li><button type="button" onclick="redirecionarperfil()" > <a href="#">Meu Perfil</a> </button></li>
 
         </ul>
       </div>
@@ -93,9 +96,9 @@
           <br>
         </div>
 
-
+        
         <div class="continue-button">
-          <button onclick="salvar()" onclick="redirecionarperfil()"><a href="#">Salvar</a> </button>
+          <button onclick="salvar()" ><a href="#">Salvar</a> </button>
         </div>
 
         </form>
@@ -200,10 +203,21 @@ const res = await  axios.put(`https://crud-server-json-trans-peste.vercel.app/re
 .then (function (){
  
 })
-.catch(function(error) { alert("Alteração salva com sucesso")
-window.location.href=`../loginusuario/perfilusuario.html?id=${idurl} `
+.catch(function(error) { 
+  $(document).ready(function(){
+    Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Alterações salvas com sucesso!',
+  showConfirmButton: false,
+  timer: 1500
 })
+})
+setTimeout(function() {
+ window.location.href = `../loginusuario/perfilusuario.html?id=${idurl}`;
+},1200)
 
+});  
 
 
 }
