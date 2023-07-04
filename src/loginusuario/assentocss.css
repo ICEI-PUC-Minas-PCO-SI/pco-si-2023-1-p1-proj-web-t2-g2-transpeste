@@ -35,6 +35,15 @@
   align-items: center;
 }
 
+.logo {
+  width: 50%;
+}
+
+span {
+  color: #ea1538;
+}
+
+/* Navbar */
 nav {
   display: flex;
   align-items: center;
@@ -43,12 +52,8 @@ nav {
   background-color: #68ace7;
 }
 
-.logo {
+nav .logo {
   width: 50%;
-}
-
-span {
-  color: #ea1538;
 }
 
 nav ul li {
