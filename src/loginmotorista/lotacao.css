@@ -278,18 +278,23 @@
     font-size: 2em; 
   }
   
+  .estrela input[type="radio"] {
+    display: none;
+  }
+
   .estrela label:before {
     content: '\2605'; 
   }
   
-  .estrela input:checked ~ label:before {
-    color: #ffca00; 
-  }
+  .estrela label:hover,
+.estrela input[type="radio"]:checked ~ label {
+  color: #ffca00;
+}
   
-  .estrela label:hover:before {
-    color: #ffca00;
+  .ascendendo {
+    color: #ffca00 !important;
   }
-  
+
   .crianca input[type="checkbox"] {
     align-items: center;
     margin-right: 5px;

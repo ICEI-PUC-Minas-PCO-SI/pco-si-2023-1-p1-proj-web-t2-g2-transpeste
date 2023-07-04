@@ -7,13 +7,14 @@
   <title>Avaliar Peste</title>
   <link href="../loginmotorista/lotacao.css" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
-   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet"
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-  
 </head>
 
 <body>
@@ -37,10 +38,7 @@
         <section class="rating">
         <div class="foto">
             <img src="../imagens/fernando.png" alt="">
-            <figcaption>Fernando Rodriguez</figcaption>
-        </div>
-        <div class="data">
-            21/05/2023
+            <figcaption id="nomeC"></figcaption>
         </div>
         
           <div class="estrela">
@@ -59,7 +57,7 @@
             <textarea id="comment" name="comment" placeholder="Digite seu comentário..."></textarea>
           </div>
           <div class="botao">
-            <button onclick="enviar()" type="submit">Enviar</button>
+            <button type="submit"> <a href="#"onclick= "enviar()">Enviar</a> </button>
           </div>
         </section>
       </div>
@@ -116,6 +114,7 @@
     <script src="httpvscode-file://vscode-app/c:/programa%C3%A7%C3%A3o/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.htmls://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js%22%3E"></script>
     <script>
+    const dadosurl = new URLSearchParams(window.location.search)
     const idurl = dadosurl.get('id')
     const atual = new URL(window.location.href);
     const params = new URLSearchParams(atual.search);
@@ -132,6 +131,18 @@
       stars.forEach(function(star) {
       star.addEventListener('click', updateRating);
       });
+      function nome(){
+        return axios.get('https://crud-server-json-trans-peste.vercel.app/criancas/'+idcrianca)
+        .then(function(response) {
+            return response.data.nome;
+            const nomeC = document.getElementById('nomeC');
+            nomeC.textContent = data.nome;
+           })
+          .catch(function(error) {
+            console.error(error);
+            throw error; 
+          });
+      }
       function getRating() {
         return axios.get('https://crud-server-json-trans-peste.vercel.app/criancas/'+idcrianca)
           .then(function(response) {
@@ -149,9 +160,21 @@
         avalicao: ratingValue
       })
       function enviar(){
-          return response.data;
-          alert('Avaliação enviada com sucesso!!');
-          window.location.href='.../loginmotorista/selecionarassento.html';
+        $(document).ready(function(){
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Avaliação enviada com sucesso!',
+          showConfirmButton: true,
+          confirmButtonText: 'OK',
+          timer: 1500
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href='../loginusuario/selecionarassento.html';
+          }
+        })
+        })
+          
       }
 
       function redirecionarhome()
@@ -163,6 +186,22 @@ function redirecionarperfil()
 {
         window.location.href= `../loginusuario/perfil_motorista.html?id=${idurl} `
 }
+var labels = document.querySelectorAll('.estrela label');
+
+labels.forEach(function(label) {
+  label.addEventListener('mouseover', function() {
+    var currentLabelIndex = Array.from(labels).indexOf(label);
+    for (var i = 0; i <= currentLabelIndex; i++) {
+      labels[i].classList.add('ascendendo');
+    }
+  });
+
+  label.addEventListener('mouseout', function() {
+    labels.forEach(function(label) {
+      label.classList.remove('ascendendo');
+    });
+  });
+});
     </script>
 
 

@@ -2,16 +2,19 @@
 <html>
 
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script> <script src="axios.js"></script>
-  
+
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Cadastrar Veiculo</title>
-  <link href="Style.css" rel="stylesheet" type="text/css" />
+  <link href="../loginusuario/csscadastrocri.css" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,7 +99,7 @@
           
   
                 <div class="continue-button">
-                  <button onclick="salvar()" onclick="redirecionarperfil()"><a href="#">Salvar</a> </button>
+                  <button onclick="salvar()"><a href="#">Salvar</a> </button>
                 </div>
         </form>
     </div>
@@ -146,12 +149,13 @@
 
 function redirecionarhome()
 {
-        window.location.href= `../loginmotorista/cadastrarrota.html?id=${idurl} `
+        window.location.href= `../loginmotorista/cadastrarrota.html?id=${idurl}`
 }
+
 
 function redirecionarperfil()
 {
-        window.location.href= `../loginmotorista/../loginusuario/perfil_motorista.html?id=${idurl} `
+        window.location.href= `../loginmotorista/../loginusuario/perfil_motorista.html?id=${idurl}`
 }
 
 
@@ -161,13 +165,32 @@ const urlveiculos = "https://crud-server-json-trans-peste.vercel.app/veiculos"
 const urlinteira = new URLSearchParams(window.location.search)
 const idurl = urlinteira.get('id') 
 
+ const modelo = document.getElementById('modelo');
+  const marca = document.getElementById('marca');
+  const placa = document.getElementById('placa');
+  const ano = document.getElementById('ano');
+  const renavam = document.getElementById('renavam');
+  const chassi = document.getElementById('chassi');
+
+  async function dados(){
+  const dadosVeiculos = await fetch(urlveiculos+"/"+idurl)
+  const veiculosJson = await dadosVeiculos.json()
+  modelo.value = veiculosJson.modelo
+  marca.value = veiculosJson.marca
+  placa.value = veiculosJson.placa
+  ano.value = veiculosJson.ano
+  renavam.value = veiculosJson.renavam
+  chassi.value = veiculosJson.chassi
+}
+dados()
 async function salvar() {
-  const modelo = document.getElementById('modelo').value;
-  const marca = document.getElementById('marca').value;
-  const placa = document.getElementById('placa').value;
-  const ano = document.getElementById('ano').value;
-  const renavam = document.getElementById('renavam').value;
-  const chassi = document.getElementById('chassi').value;
+   modelo = document.getElementById('modelo').value;
+  marca = document.getElementById('marca').value;
+  placa = document.getElementById('placa').value;
+  ano = document.getElementById('ano').value;
+  renavam = document.getElementById('renavam').value;
+  chassi = document.getElementById('chassi').value;
+  
   
 
   var url = `https://crud-server-json-trans-peste.vercel.app/veiculos`;
@@ -184,9 +207,27 @@ const res = await  axios.post(`https://crud-server-json-trans-peste.vercel.app/v
   motoristasid:idurl
  
 }) 
-.catch(function(error) { alert("Veiculo Cadastrado")});
+        
+.catch(function(error) { 
+  $(document).ready(function(){
+    Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Salvo com sucesso!',
+  showConfirmButton: false,
+  timer: 1500
+})
+  })
+
+setTimeout(function() {
+ window.location.href = `../loginusuario/perfil_veiculo.html?id=${idurl}`;
+},1200)
+
+});  
 
 }
+
+
 </script>
 
  

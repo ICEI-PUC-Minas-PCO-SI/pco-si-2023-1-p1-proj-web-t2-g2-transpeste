@@ -79,7 +79,7 @@
     }
 
     .meio{
-      display: flex;  
+      display:flex;  
       border: 1px solid black;
     }
 
@@ -177,4 +177,28 @@
         font-size: 15px;
     }
 
-   
+    #peste {
+      width: 40%;
+      border: 1px solid black;
+      padding: 10px;
+    }
+    #foto-perfil {
+      text-align: center;
+    }
+    
+    #foto-perfil img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+
+    .botoes-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    .botoes-container button {
+      margin: 0 10px;
+    }
