@@ -10,4 +10,4 @@ Pedro Morais: Pedro Morais:  Correções das telas e notificações da tela inic
 
 Otavio Soares:  Melhoria nas paginas onde existem, funcionalides de motorista e de solicitante, quanto a botões e funcionalides dos mesmos, além de incrementar alerta estilizado.
 
-Guilherme Machado: 
+Guilherme Machado: Gestão do git/git flow, atribuição das melhorias de UX/UI a serem feitas, ajuste dos redirecionamentos das páginas de login, cadastro e validação.
