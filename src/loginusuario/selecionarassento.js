@@ -114,7 +114,7 @@ function montaobj(assento, crianca, veiculo, responsavel) {
         telResponsavel: responsavel ? responsavel.telefone : '',
         endeResponsavel: responsavel ? responsavel.endereco : '',
         veiculoNome: veiculo ? veiculo.marca + ' - ' + veiculo.modelo : '',
-        link: '../loginmotorista/avaliarpeste.html?id=' + idurl + '?idcrianca=' + idlink
+        link: '../loginmotorista/avaliarpeste.html?id=' + idurl + '&idcrianca=' + idlink
     }
 
     info.push(obj);
