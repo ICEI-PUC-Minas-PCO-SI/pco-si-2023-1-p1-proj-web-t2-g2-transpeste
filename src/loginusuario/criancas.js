@@ -57,8 +57,6 @@ const div = document.createElement('div')
         div.appendChild(nome_escola)
         div.appendChild(enderecoescola)
         div.appendChild(avaliacao)
-        div.appendChild(responsaveisid)
-        div.appendChild(botaoeditar)
         div.appendChild(spanfotos)
         campopreencher.appendChild(div)
 
@@ -79,4 +77,16 @@ function redirecionarperfil()
 if(!idurl)
 {
     window.location.href="../telainicial/login.html"
+}
+function editarperfilcri()
+{
+        window.location.href= `../loginusuario/telacadastrocri.html?id=${idurl} `
+}
+function cadastracri()
+{
+        window.location.href= `../loginusuario/telacadastrocri.html?id=${idurl} `
+}
+function perfilcri()
+{
+        window.location.href= `../loginusuario/cadastrarcrianca.html?id=${idurl} `
 }

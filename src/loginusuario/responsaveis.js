@@ -60,9 +60,6 @@ const div = document.createElement('div')
         div.appendChild(telefone)
         div.appendChild(email)
         div.appendChild(senha)
-        div.appendChild(botaoeditar)
-        div.appendChild(botaoviagem)
-        div.appendChild(botaocriança)
         div.appendChild(spanfotos)
         campopreencher.appendChild(div)
 
@@ -88,4 +85,16 @@ function redirecionarperfil()
 if(!idurl)
 {
     window.location.href="../telainicial/login.html"
+}
+function editarperfil()
+{
+        window.location.href= `../loginusuario/editarusuario.html?id=${idurl} `
+}
+function cadastracri()
+{
+        window.location.href= `../loginusuario/telacadastrocri.html?id=${idurl} `
+}
+function perfilcri()
+{
+        window.location.href= `../loginusuario/cadastrarcrianca.html?id=${idurl} `
 }
