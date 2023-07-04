@@ -8,6 +8,6 @@ Diogo Campos:
 
 Pedro Morais: 
 
-Otavio Soares: 
+Otavio Soares:  Melhoria nas paginas onde existem, funcionalides de motorista e de solicitante, quanto a botões e funcionalides dos mesmos, além de incrementar alerta estilizado.
 
 Guilherme Machado: 
