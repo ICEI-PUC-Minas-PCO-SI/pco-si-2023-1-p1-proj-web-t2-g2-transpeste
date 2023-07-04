@@ -4,10 +4,10 @@ var info = [];
 const dadosurl = new URLSearchParams(window.location.search)
 const idurl = dadosurl.get('id')
 
-if(!idurl)
-{
-    window.location.href="../telainicial/login.html"
-}
+ if(!idurl)
+ {
+     window.location.href="../telainicial/login.html"
+ }
 
 
 $(document).ready(function () {
@@ -37,14 +37,12 @@ $(document).ready(function () {
 });
 
 
-function redirecionarhome()
-{
-        window.location.href= `../loginmotorista/cadastrarrota.html?id=${idurl} `
+function redirecionarhome() {
+    window.location.href = `../loginmotorista/cadastrarrota.html?id=${idurl} `
 }
 
-function redirecionarperfil()
-{
-        window.location.href= `../loginusuario/perfil_motorista.html?id=${idurl} `
+function redirecionarperfil() {
+    window.location.href = `../loginusuario/perfil_motorista.html?id=${idurl} `
 }
 
 
@@ -114,7 +112,7 @@ function montaobj(assento, crianca, veiculo, responsavel) {
         telResponsavel: responsavel ? responsavel.telefone : '',
         endeResponsavel: responsavel ? responsavel.endereco : '',
         veiculoNome: veiculo ? veiculo.marca + ' - ' + veiculo.modelo : '',
-        link: '../loginmotorista/avaliarpeste.html?id=' + idurl + '?idcrianca=' + idlink
+        link: '../loginmotorista/avaliarpeste.html?id=' + idurl + '&idcrianca=' + idlink
     }
 
     info.push(obj);
@@ -122,6 +120,8 @@ function montaobj(assento, crianca, veiculo, responsavel) {
 }
 
 function retirarCrianca() {
+
+    var controle = false;
 
 
     document.addEventListener('click', function (event) {
@@ -137,21 +137,10 @@ function retirarCrianca() {
 
                     axios.delete(`https://crud-server-json-trans-peste.vercel.app/ocupacao/${event.target.id}`)
                         .then(function (response) {
-                            window.location.reload();
+
                         })
 
-                    let timerInterval
-                    Swal.fire({
-                        title: 'Peste retirada com sucesso',
-                        icon: 'success',
-                    }).then((result) => {
-                        /* Read more about handling dismissals below */
-                        if (result.dismiss === Swal.DismissReason.backdrop) {
-                            location.reload();
-                        }
-                    })
-
-                    Swal.fire('Peste retirada com sucesso', '', 'success')
+                    controle = true;
 
                 } else if (result.isDenied) {
                     Swal.fire('A peste não foi retirada', '', 'info')
@@ -160,6 +149,10 @@ function retirarCrianca() {
         }
 
     })
+
+    if (controle == true) {
+        location.reload();
+    }
 
 }
 
@@ -201,9 +194,17 @@ function drawCards(page) {
     var innerCol2 = '';
     var innerCol3 = '';
 
-    for (var i = page; i < page + 3; i++) {
-        if (i < info.length)
-            innerCol1 += '<div class="card" style="width: 80%;">\
+    info.sort((a, b) => {
+
+        return a.numAssento - b.numAssento;
+
+    });
+
+    if (info.length > 0) {
+
+        for (var i = page; i < page + 3; i++) {
+            if (i < info.length)
+                innerCol1 += '<div class="card" style="width: 80%;">\
             <div class="card-body">\
             <h5 class="card-title">Assento ' + info[i].numAssento + ' <button type="button" class="btn btn-danger" id="' + info[i].numAssento + '" style = "width: 30%; height: 10%; float: right;"><i class="fa-solid fa-xmark"></i></button> </h5>\
             </div>\
@@ -222,13 +223,13 @@ function drawCards(page) {
             <br>\
             <br>';
 
-    }
+        }
 
-    page = page + 3;
+        page = page + 3;
 
-    for (var i = page; i < page + 3; i++) {
-        if (i < info.length)
-            innerCol2 += '<div class="card" style="width: 80%;">\
+        for (var i = page; i < page + 3; i++) {
+            if (i < info.length)
+                innerCol2 += '<div class="card" style="width: 80%;">\
         <div class="card-body">\
         <h5 class="card-title">Assento ' + info[i].numAssento + ' <button type="button" class="btn btn-danger" id="' + info[i].numAssento + '" style = "width: 30%; height: 10%; float: right;"><i class="fa-solid fa-xmark"></i></button> </h5>\
         </div>\
@@ -246,13 +247,13 @@ function drawCards(page) {
         </div>\
         <br>\
         <br>';
-    }
+        }
 
-    page = page + 3;
+        page = page + 3;
 
-    for (var i = page; i < page + 3; i++) {
-        if (i < info.length)
-            innerCol3 += '<div class="card" style="width: 80%;">\
+        for (var i = page; i < page + 3; i++) {
+            if (i < info.length)
+                innerCol3 += '<div class="card" style="width: 80%;">\
         <div class="card-body">\
         <h5 class="card-title">Assento ' + info[i].numAssento + ' <button type="button" class="btn btn-danger" id="' + info[i].numAssento + '" style = "width: 30%; height: 10%; float: right;"><i class="fa-solid fa-xmark"></i></button> </h5>\
         </div>\
@@ -270,9 +271,11 @@ function drawCards(page) {
         </div>\
         <br>\
         <br>';
-    }
+        }
 
-    document.querySelector(".card-holder").innerHTML = innerCol1;
-    document.querySelector(".card-holder2").innerHTML = innerCol2;
-    document.querySelector(".card-holder3").innerHTML = innerCol3;
+        document.querySelector(".card-holder").innerHTML = innerCol1;
+        document.querySelector(".card-holder2").innerHTML = innerCol2;
+        document.querySelector(".card-holder3").innerHTML = innerCol3;
+
+    }
 }
