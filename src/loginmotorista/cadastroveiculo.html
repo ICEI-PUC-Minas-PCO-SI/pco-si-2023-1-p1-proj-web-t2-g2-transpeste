@@ -184,47 +184,40 @@ const idurl = urlinteira.get('id')
 }
 dados()
 async function salvar() {
-   modelo = document.getElementById('modelo').value;
-  marca = document.getElementById('marca').value;
-  placa = document.getElementById('placa').value;
-  ano = document.getElementById('ano').value;
-  renavam = document.getElementById('renavam').value;
-  chassi = document.getElementById('chassi').value;
-  
-  
+  const modelo = document.getElementById('modelo').value;
+  const marca = document.getElementById('marca').value;
+  const placa = document.getElementById('placa').value;
+  const ano = document.getElementById('ano').value;
+  const renavam = document.getElementById('renavam').value;
+  const chassi = document.getElementById('chassi').value;
 
-  var url = `https://crud-server-json-trans-peste.vercel.app/veiculos`;
+  const idurl = 'https://crud-server-json-trans-peste.vercel.app/veiculos';
 
-const res = await  axios.post(`https://crud-server-json-trans-peste.vercel.app/veiculos`,{ 
-  id: idurl,
-  modelo: modelo, 
-  marca: marca,
-  placa: placa, 
-  ano: ano,
-  assentos:16,
-  renavam: renavam,
-  chassi: chassi,
-  motoristasid:idurl
- 
-}) 
-        
-.catch(function(error) { 
-  $(document).ready(function(){
-    Swal.fire({
-  position: 'center',
-  icon: 'success',
-  title: 'Salvo com sucesso!',
-  showConfirmButton: false,
-  timer: 1500
-})
-  })
+  const res = await axios.post(`https://crud-server-json-trans-peste.vercel.app/veiculos`, {
+    id: idurl,
+    modelo: modelo,
+    marca: marca,
+    placa: placa,
+    ano: ano,
+    assentos: 16,
+    renavam: renavam,
+    chassi: chassi,
+    motoristasid: idurl,
+  }).catch(function(error) {
+    $(document).ready(function() {
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Salvo com sucesso!',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    });
 
-setTimeout(function() {
- window.location.href = `../loginusuario/perfil_veiculo.html?id=${idurl}`;
-},1200)
-
-});  
-
+    setTimeout(function() {
+      window.location.href = `../loginusuario/perfil_veiculo.html?id=${idurl}`;
+    }, 1200);
+  });
 }
 
 

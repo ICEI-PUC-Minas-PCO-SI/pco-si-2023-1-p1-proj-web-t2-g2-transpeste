@@ -187,47 +187,40 @@ dados()
 
 
 async function salvar() {
-   nome = document.getElementById('nome').value;
-   telefone = document.getElementById('telefone').value;
-   nascimento = document.getElementById('nascimento').value;
-   cpf = document.getElementById('cpf').value;
-   endereco_escola = document.getElementById('endereço_escola').value;
-   escola = document.getElementById('escola').value;
-  
+  const nome = document.getElementById('nome').value;
+  const telefone = document.getElementById('telefone').value;
+  const nascimento = document.getElementById('nascimento').value;
+  const cpf = document.getElementById('cpf').value;
+  const endereco_escola = document.getElementById('endereço_escola').value;
+  const escola = document.getElementById('escola').value;
 
-  var url = `https://crud-server-json-trans-peste.vercel.app/criancas`;
+  const idurl = 'https://crud-server-json-trans-peste.vercel.app/criancas';
 
-const res = await  axios.post(`https://crud-server-json-trans-peste.vercel.app/criancas`,{ 
-  
-  nome: nome, 
-  cpf: cpf,
-  telefone: telefone, 
-  data_nascimento : nascimento,
-  nome_escola: escola,
-  endereco_escola: endereco_escola,
-  avalicao:5,
-  responsaveisid:idurl
- 
-}) 
+  const res = await axios.post(`https://crud-server-json-trans-peste.vercel.app/criancas`, {
+    nome: nome,
+    cpf: cpf,
+    telefone: telefone,
+    data_nascimento: nascimento,
+    nome_escola: escola,
+    endereco_escola: endereco_escola,
+    avalicao: 5,
+    responsaveisid: idurl,
+  }).catch(function(error) {
+    $(document).ready(function() {
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Criança Cadastrada!',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    });
 
-.catch(function(error) { 
-  $(document).ready(function(){
-    Swal.fire({
-  position: 'center',
-  icon: 'success',
-  title: 'Criança Cadastrada!',
-  showConfirmButton: false,
-  timer: 1500
-})
-})
-setTimeout(function() {
- window.location.href = `../loginusuario/perfilusuario.html?id=${idurl}`;
-},1200)
-
-});  
-
+    setTimeout(function() {
+      window.location.href = `../loginusuario/perfilusuario.html?id=${idurl}`;
+    }, 1200);
+  });
 }
-
 if(!idurl1)
 {
     window.location.href="../telainicial/login.html"
