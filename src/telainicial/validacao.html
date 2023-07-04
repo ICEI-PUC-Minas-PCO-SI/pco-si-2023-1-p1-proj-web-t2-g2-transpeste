@@ -107,21 +107,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.1.3/jquery.inputmask.min.js"></script>
     <script>
-
       const motoristaId = localStorage.getItem('motoristaId');
+    
       function redirecionarParaLogin() {
         window.location.href = "../telainicial/login.html";
       }
     
       function maskCNH(input) {
         const value = input.value.replace(/\D/g, '');
-        const maskedValue = value.slice(0, 11); 
+        const maskedValue = value.slice(0, 11);
         input.value = maskedValue;
       }
     
       function maskCRV(input) {
-        const value = input.value.replace(/\D/g, ''); 
-        const maskedValue = value.slice(0, 11); 
+        const value = input.value.replace(/\D/g, '');
+        const maskedValue = value.slice(0, 11);
         input.value = maskedValue;
       }
     
@@ -130,7 +130,6 @@
         const maskedValue = value.slice(0, 7).toUpperCase();
         input.value = maskedValue;
       }
-    
       function validarVeiculo() {
   var marca = document.getElementById("marca").value;
   var modelo = document.getElementById("modelo").value;
@@ -147,19 +146,24 @@
 
   // Fazer a requisição GET para obter a lista de veículos existentes
   fetch("https://crud-server-json-trans-peste.vercel.app/veiculos")
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Erro na requisição: " + response.status);
+      }
+      return response.json();
+    })
     .then(data => {
       console.log("Resposta da API:", data);
 
-      const veiculoEncontrado = data.find(veiculo => veiculo.placa === placa);
+      const veiculoEncontrado = data.find(veiculo => veiculo.placa.toLowerCase() === placa.toLowerCase());
 
       if (veiculoEncontrado) {
         Swal.fire({
-                      icon: 'error',
-                      title: 'Oops...',
-                      text: 'Placa já cadastrada em outro veículo',
-                      confirmButtonColor: '#EE1C47'
-                    })
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Placa já cadastrada em outro veículo',
+          confirmButtonColor: '#EE1C47'
+        });
       } else {
         // A placa não existe, realizar a requisição POST para salvar o novo veículo
         var veiculo = {
@@ -179,24 +183,31 @@
           },
           body: JSON.stringify(veiculo)
         })
-          .then(response => response.json())
+          .then(response => {
+            if (!response.ok) {
+              throw new Error("Erro na requisição: " + response.status);
+            }
+            return response.json();
+          })
           .then(data => {
             console.log("Resposta da API:", data);
             Swal.fire({
-                              icon: 'success',
-                              title: 'Veículo Validado com Sucesso!',
-                              confirmButtonColor: 'green'
-                            })
-            window.location.href = `../telainicial/login.html`;
+              icon: 'success',
+              title: 'Veículo Validado com Sucesso!',
+              confirmButtonColor: 'green'
+            }).then(() => {
+              window.location.replace("../telainicial/login.html");
+            });
           })
           .catch(error => {
             console.error("Ocorreu um erro ao salvar o veículo:", error);
             Swal.fire({
-                              icon: 'success',
-                              title: 'Veículo Validado com Sucesso!',
-                              confirmButtonColor: 'green'
-                            })
-                            window.location.href = `../telainicial/login.html`;
+              icon: 'success',
+              title: 'Veículo Validado com Sucesso!',
+              confirmButtonColor: 'green'
+            }).then(() => {
+              window.location.replace("../telainicial/login.html");
+            });
           });
       }
     })
@@ -206,26 +217,25 @@
     });
 }
 
-
-    
-      document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('cnh').addEventListener('input', function() {
+      document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('cnh').addEventListener('input', function () {
           maskCNH(this);
         });
     
-        document.getElementById('crv').addEventListener('input', function() {
+        document.getElementById('crv').addEventListener('input', function () {
           maskCRV(this);
         });
     
-        document.getElementById('placa').addEventListener('input', function() {
+        document.getElementById('placa').addEventListener('input', function () {
           maskPlaca(this);
         });
     
-        document.getElementById('autorizacao').addEventListener('input', function() {
+        document.getElementById('autorizacao').addEventListener('input', function () {
           maskCNH(this);
         });
       });
     </script>
+    
     </body>
     
     
@@ -235,7 +245,7 @@
     
     
 
-  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>
