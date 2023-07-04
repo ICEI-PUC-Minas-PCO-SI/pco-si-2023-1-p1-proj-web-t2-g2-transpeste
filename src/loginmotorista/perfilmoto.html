@@ -2,6 +2,9 @@
 <html>
 
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js%22%3E"></script>
@@ -67,7 +70,7 @@
         
               <div class="input-box">
                 <label for="cpf">CPF</label>
-                <input id="cpf" type="number"  name="cpf" placeholder="Digite aqui seu CPF" required>
+                <input id="cpf" type="text"  name="cpf" placeholder="Digite aqui seu CPF" required>
               </div>
               
               <div class="input-box">
@@ -82,7 +85,7 @@
         
               <div class="input-box">
                 <label for="cnh">CNH</label>
-                <input id="cnh" type="number"  name="cnh" placeholder="Digite aqui o número da sua CNH categoria 'D'" required>
+                <input id="cnh" type="text"  name="cnh" placeholder="Digite aqui o número da sua CNH categoria 'D'" required>
               </div>
         
               <div class="input-box">
@@ -107,11 +110,9 @@
           
   
                 <div class="continue-button">
-                  <button onclick="salvar()" onclick="redirecionarperfil()"><a href="#">Salvar</a> </button>
+                  <button onclick="salvar()"><a href="#">Salvar</a> </button>
                 </div>
-            <div class="continue-button">
-              <button><a href="#">Cadastre aqui seu veículo</a> </button>
-          </div>
+           
         </form>
     </div>
   </div>
@@ -221,11 +222,24 @@ const res = await  axios.put(`https://crud-server-json-trans-peste.vercel.app/mo
   senha:"123456ab"
  
 }) 
-.then (function (){
-  
+
+.catch(function(error) { 
+  $(document).ready(function(){
+    Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Salvo com sucesso!',
+  showConfirmButton: false,
+  timer: 1500
 })
-.catch(function(error) {alert("Alteração salva")
-window.location.href=`../loginusuario/perfil_motorista.html?id=${idurl} `})
+  })
+
+setTimeout(function() {
+ window.location.href = `../loginusuario/perfil_motorista.html?id=${idurl}`;
+},1200)
+
+});   
+
 }
 
 </script>
