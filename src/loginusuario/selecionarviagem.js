@@ -10,7 +10,8 @@ async function preencher() {
   preencherDadosJson.map(async (dados) => {
     const h2 = document.createElement("h2");
     h2.innerHTML = await obterNomeMotorista(dados.motoristasid);
-    var pesteNome = await obterNomePeste(dados.criancas);
+    var pesteNome = await obterNomePeste(dados.crianca);
+    console.log(dados.crianca);
     const p = document.createElement("p");
     p.innerHTML =
     "<strong>Peste: </strong>"+ pesteNome +  "<br><strong>Rota: </strong>" + dados.escola + "<br>" + "<strong>Partida: </strong>" + dados.partida;
@@ -46,15 +47,26 @@ preencher();
 async function deletar() {  
   axios
    .delete(`https://crud-server-json-trans-peste.vercel.app/solicitacao/${urlID}`)
-   alert(`https://crud-server-json-trans-peste.vercel.app/solicitacao/${urlID}`)
+   
     .then(function (response) {
       
       location.reload();
     })
    .catch(function (error) {
-      alert("Deletado!");
-      
-      location.reload();
+        
+    $(document).ready(function(){
+      Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: 'Solicitação cancelada!',
+          showConfirmButton: false,
+          timer: 1500
+      })
+  })
+  setTimeout(function() {
+      window.location.href= `../loginmotorista/sugestoes.html?id=${urlID} `;            
+    },1200) 
+
     });
 }
 
