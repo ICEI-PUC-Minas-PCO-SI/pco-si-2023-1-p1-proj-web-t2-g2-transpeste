@@ -330,10 +330,20 @@
     padding: 0px;
   } 
 
+  #button1 {
+    border: none;
+    background: #0fafee;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.2s;
+    margin: 5px;
+  }
 
   #button2 {
     border: none;
-    background: #f01212;
+    background: #cc0c0c;
     border-radius: 30px;
     color: white;
     font-weight: bold;
