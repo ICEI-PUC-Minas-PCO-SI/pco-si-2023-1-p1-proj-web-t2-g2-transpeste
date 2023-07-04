@@ -335,9 +335,9 @@
     padding: 0px;
   } 
 
-  div > #button1 {
+  #button1 {
     border: none;
-    background: #2df095;   
+    background: #0fafee;
     border-radius: 30px;
     color: white;
     font-weight: bold;
@@ -346,9 +346,9 @@
     margin: 5px;
   }
 
-  div > #button2 {
+  #button2 {
     border: none;
-    background: #f01212;
+    background: #cc0c0c;
     border-radius: 30px;
     color: white;
     font-weight: bold;

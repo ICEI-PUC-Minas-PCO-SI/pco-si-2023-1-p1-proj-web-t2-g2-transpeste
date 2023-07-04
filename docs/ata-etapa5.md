@@ -4,10 +4,10 @@ Jean Estanislau: Melhoria da página de gerenciamento de assentos, auxílio na m
 
 Ana Clara Lima Marçal: Mudança dos alerts nas páginas, melhoria nos estilos das páginas de edição e cadastro, redirecionamento de páginas e alteração da busca de dados na tela de cadastro de criança e veículo. 
 
-Diogo Campos: 
+Diogo Campos: Aprimoramento da pagina de avaliação do comportamento da criança.
 
-Pedro Morais: 
+Pedro Morais: Pedro Morais:  Correções das telas e notificações da tela inicial e atualização dos alertas do site para swal
 
-Otavio Soares: 
+Otavio Soares:  Melhoria nas paginas onde existem, funcionalides de motorista e de solicitante, quanto a botões e funcionalides dos mesmos, além de incrementar alerta estilizado.
 
 Guilherme Machado: 
