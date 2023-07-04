@@ -6,7 +6,7 @@ Ana Clara Lima Marçal:
 
 Diogo Campos: Aprimoramento da pagina de avaliação do comportamento da criança.
 
-Pedro Morais: 
+Pedro Morais: Pedro Morais:  Correções das telas e notificações da tela inicial e atualização dos alertas do site para swal
 
 Otavio Soares:  Melhoria nas paginas onde existem, funcionalides de motorista e de solicitante, quanto a botões e funcionalides dos mesmos, além de incrementar alerta estilizado.
 
